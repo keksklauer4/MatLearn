@@ -1,27 +1,23 @@
 package test;
 
-import main.graph.Edge;
 import main.graph.EdgeList;
+import main.graph.GenericVertex;
 import main.graph.UnknownVertexException;
-import main.graph.Vertex;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.rmi.activation.UnknownObjectException;
-import java.util.List;
 
 public class EdgeListTest {
-    private EdgeList edgeList;
-    private Vertex vertexA;
-    private Vertex vertexB;
+    private EdgeList<GenericVertex> edgeList;
+    private GenericVertex vertexA;
+    private GenericVertex vertexB;
 
     @BeforeEach
     void initialize(){
-        edgeList = new EdgeList();
-        vertexA = new Vertex(0);
-        vertexB = new Vertex(1);
+        edgeList = new EdgeList<>();
+        vertexA = new GenericVertex(0);
+        vertexB = new GenericVertex(1);
     }
 
     @Test
@@ -69,7 +65,7 @@ public class EdgeListTest {
         edgeList.addVertex(vertexB);
     }
 
-    private void assertNumberEdges(final Vertex vertex, int numberForwardEdges, int numberBackwardEdges){
+    private void assertNumberEdges(final GenericVertex vertex, int numberForwardEdges, int numberBackwardEdges){
         Assertions.assertEquals(numberForwardEdges, edgeList.getForwardEdges(vertex).size());
         Assertions.assertEquals(numberBackwardEdges, edgeList.getBackwardEdges(vertex).size());
     }

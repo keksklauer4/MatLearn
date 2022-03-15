@@ -1,9 +1,13 @@
 package main.graph;
 
-public class Vertex {
+public class GenericVertex {
     private int id;
 
-    public Vertex(int id) {
+    public GenericVertex(){
+        id = -1;
+    }
+
+    public GenericVertex(int id) {
         this.id = id;
     }
 

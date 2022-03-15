@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class EdgeList {
+public class EdgeList<Vertex extends GenericVertex> {
     private HashMap<Vertex, List<Edge>> forwardEdges;
     private HashMap<Vertex, List<Edge>> backwardEdges;
 

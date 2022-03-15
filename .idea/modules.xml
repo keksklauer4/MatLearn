@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/03-domain/03-domain.iml" filepath="$PROJECT_DIR$/03-domain/03-domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/04-abstraction/04-abstraction.iml" filepath="$PROJECT_DIR$/04-abstraction/04-abstraction.iml" />
       <module fileurl="file://$PROJECT_DIR$/MatLearn.iml" filepath="$PROJECT_DIR$/MatLearn.iml" />
     </modules>
