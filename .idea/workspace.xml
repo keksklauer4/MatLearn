@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="177bdf72-7b70-4342-bb6f-57f946fbfa8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Corollary.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Corollary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Lemma.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Lemma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/MathematicalDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/MathematicalDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/NamedVertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/NamedVertex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Source.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Source.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Theorem.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Theorem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Topic.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Topic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/algorithm/GenericDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/algorithm/GenericDFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/ProofNetworkRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/ProofNetworkRepository.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

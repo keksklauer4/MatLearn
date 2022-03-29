@@ -1,3 +1,5 @@
+package network;
+
 import entities.NamedVertex;
 
 public interface ProofNetworkRepository {
@@ -8,4 +10,5 @@ public interface ProofNetworkRepository {
     void removeEdge(NamedVertex vertex);
 
     boolean fullValidation();
+
 }
