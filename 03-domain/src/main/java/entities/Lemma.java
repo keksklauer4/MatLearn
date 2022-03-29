@@ -1,4 +1,24 @@
 package entities;
 
-public class Lemma {
+import main.graph.Graph;
+import validators.ContributionValidator;
+import validators.LeafValidator;
+
+public class Lemma extends NamedVertex{
+    public Lemma(String name, String description) {
+        super(name, description);
+    }
+
+    @Override
+    public boolean isFullyValid(Graph<NamedVertex> graph) {
+        // contributes to at least one theorem
+        ContributionValidator validator = new ContributionValidator(graph, this);
+        LeafValidator leafValidator = new LeafValidator(graph, this);
+        return validator.validate() && leafValidator.allLeafsDefinitionsOrAxioms();
+    }
+
+    @Override
+    public boolean isOfType(MatType type) {
+        return type == MatType.LEMMA;
+    }
 }

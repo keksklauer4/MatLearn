@@ -25,5 +25,13 @@ public abstract class NamedVertex extends GenericVertex {
         return true;
     }
 
+    public boolean isFullyValid(final Graph<NamedVertex> graph){
+        return true;
+    }
+
+    public boolean isDefinedType(){
+        return isOfType(MatType.AXIOM) || isOfType(MatType.DEFINITION);
+    }
+
     public abstract boolean isOfType(MatType type);
 }
