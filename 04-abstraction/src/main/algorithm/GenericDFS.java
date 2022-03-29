@@ -47,7 +47,7 @@ public abstract class GenericDFS<Vertex extends GenericVertex> {
         return stop;
     }
 
-    public void runDFS(){
+    protected void runDFS(){
         Stack<StackVertex<Vertex>> vertexStack = new Stack<>();
         vertexStack.push(visitNext(currentVertex));
         while(!vertexStack.isEmpty() && !stop){

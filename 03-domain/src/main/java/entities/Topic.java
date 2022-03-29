@@ -9,7 +9,7 @@ public class Topic extends NamedVertex {
 
     @Override
     public boolean isValid(Graph<NamedVertex> graph) {
-        return super.isValid(graph);
+        return graph.getForwardEdges(this).isEmpty();
     }
 
     @Override
