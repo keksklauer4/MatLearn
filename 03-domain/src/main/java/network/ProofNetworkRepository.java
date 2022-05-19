@@ -1,6 +1,6 @@
-package network;
+package main.java.network;
 
-import entities.NamedVertex;
+import main.java.entities.NamedVertex;
 
 public interface ProofNetworkRepository {
     void addVertex(NamedVertex vertex);

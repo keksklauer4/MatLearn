@@ -1,9 +1,10 @@
-package validators;
+package main.java.validators;
 
-import entities.MatType;
-import entities.NamedVertex;
+
 import main.algorithm.GenericDFS;
 import main.graph.Graph;
+import main.java.entities.MatType;
+import main.java.entities.NamedVertex;
 
 import java.util.List;
 

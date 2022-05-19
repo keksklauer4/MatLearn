@@ -2,9 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="177bdf72-7b70-4342-bb6f-57f946fbfa8f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/00-plugins.iml" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/00-plugins.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/01-adapters.iml" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/01-adapters.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/02-application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/02-application.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/03-domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/03-domain.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Axiom.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Axiom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Corollary.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Corollary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Lemma.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Lemma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/MatType.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/MatType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/MathematicalDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/MathematicalDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/NamedVertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/NamedVertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Source.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Source.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Theorem.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Theorem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Topic.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Topic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetworkDeserializerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetworkDeserializerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetworkRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetworkRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetworkSerializerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetworkSerializerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/validators/ContributionValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/validators/ContributionValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/validators/EdgeValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/validators/EdgeValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/validators/LeafValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/validators/LeafValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatLearn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MatLearn.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,10 +55,11 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/03-domain" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -51,7 +73,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.test in 04-abstraction">
+  <component name="RunManager" selected="Application.MatLearn">
+    <configuration name="MatLearn" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.resources.MatLearn" />
+      <module name="00-plugins" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.resources.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in 04-abstraction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="04-abstraction" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EdgeListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="04-abstraction" />
       <extension name="coverage">
@@ -81,8 +124,57 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="MatLearn" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="MatLearn" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MatLearn" />
+        <item itemvalue="JUnit.All in 04-abstraction" />
         <item itemvalue="JUnit.test in 04-abstraction" />
         <item itemvalue="JUnit.EdgeListTest" />
       </list>

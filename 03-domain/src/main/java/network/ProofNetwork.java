@@ -1,9 +1,9 @@
-package network;
+package main.java.network;
 
-import entities.NamedVertex;
 import main.algorithm.CycleChecker;
 import main.graph.Graph;
 import main.graph.UnknownVertexException;
+import main.java.entities.NamedVertex;
 
 public class ProofNetwork implements ProofNetworkRepository {
     private Graph<NamedVertex> graph;

@@ -1,4 +1,4 @@
-package network;
+package main.java.network;
 
 public interface ProofNetworkSerializerRepository {
     void setSuffix(String suffix);
