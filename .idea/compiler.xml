@@ -7,12 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="MatLearn" />
-        <module name="03-domain" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="03-domain" target="1.5" />
-      <module name="MatLearn" target="1.5" />
+      <module name="03-domain" target="1.8" />
+      <module name="MatLearn" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

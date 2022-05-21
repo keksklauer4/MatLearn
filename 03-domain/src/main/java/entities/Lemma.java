@@ -1,8 +1,8 @@
-package entities;
+package main.java.entities;
 
 import main.graph.Graph;
-import validators.ContributionValidator;
-import validators.LeafValidator;
+import main.java.validators.ContributionValidator;
+import main.java.validators.LeafValidator;
 
 public class Lemma extends NamedVertex{
     public Lemma(String name, String description) {

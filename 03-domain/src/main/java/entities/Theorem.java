@@ -1,7 +1,7 @@
-package entities;
+package main.java.entities;
 
 import main.graph.Graph;
-import validators.LeafValidator;
+import main.java.validators.LeafValidator;
 
 import java.util.Set;
 

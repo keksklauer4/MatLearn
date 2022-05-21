@@ -1,8 +1,8 @@
-package validators;
+package main.java.validators;
 
-import entities.NamedVertex;
 import main.algorithm.GenericDFS;
 import main.graph.Graph;
+import main.java.entities.NamedVertex;
 
 import java.util.HashSet;
 import java.util.List;
