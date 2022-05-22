@@ -8,4 +8,7 @@ public interface Parameter {
     String getParameterName();
 
     String getInput();
+
+    Object getParsedInput() throws InvalidInputException;
+    String getKey();
 }

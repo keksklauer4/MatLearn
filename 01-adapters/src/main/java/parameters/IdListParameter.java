@@ -2,16 +2,20 @@ package main.java.parameters;
 
 import main.java.validators.InvalidInputException;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class IdListParameter implements Parameter {
     private final int id;
     private final String name;
+    private final String key;
     private String input;
 
-    public IdListParameter(int id, String name) {
+    public IdListParameter(int id, String name, String key) {
         this.id = id;
         this.name = name;
+        this.key = key;
     }
 
     @Override
@@ -43,5 +47,22 @@ public class IdListParameter implements Parameter {
         IdListParameter that = (IdListParameter) o;
         return id == that.id &&
                 Objects.equals(name, that.name);
+    }
+
+    @Override
+    public Object getParsedInput() {
+        List<Integer> ids = new ArrayList<>();
+        if (input != null){
+            String[] pieces = input.strip().split(",");
+            for (String piece : pieces){
+                ids.add(Integer.parseInt(piece));
+            }
+        }
+        return ids;
+    }
+
+    @Override
+    public String getKey() {
+        return this.key;
     }
 }

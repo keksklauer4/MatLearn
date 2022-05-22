@@ -8,11 +8,9 @@ import java.util.Scanner;
 
 public class CLICommandHandler {
     private final GenericCommand command;
-    private int parameterIndex;
 
     public CLICommandHandler(final GenericCommand command) {
         this.command = command;
-        parameterIndex = 0;
     }
 
 

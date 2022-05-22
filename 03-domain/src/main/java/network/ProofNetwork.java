@@ -8,8 +8,17 @@ import main.java.entities.NamedVertex;
 public class ProofNetwork implements ProofNetworkRepository {
     private Graph<NamedVertex> graph;
 
+    private static ProofNetwork NETWORK;
+
     public ProofNetwork() {
-        this.graph = new Graph<NamedVertex>();
+        this.graph = new Graph<>();
+    }
+
+    public static ProofNetwork getInstance(){
+        if (NETWORK == null){
+            NETWORK = new ProofNetwork();
+        }
+        return NETWORK;
     }
 
     public void addVertex(NamedVertex vertex) {

@@ -7,11 +7,13 @@ import java.util.Objects;
 public class TextInputParameter implements Parameter {
     private final int id;
     private final String name;
+    private final String key;
     private String input;
 
-    public TextInputParameter(int id, String name) {
+    public TextInputParameter(int id, String name, String key) {
         this.id = id;
         this.name = name;
+        this.key = key;
     }
 
     @Override
@@ -42,5 +44,16 @@ public class TextInputParameter implements Parameter {
         TextInputParameter that = (TextInputParameter) o;
         return id == that.id &&
                 Objects.equals(name, that.name);
+    }
+
+    @Override
+    public Object getParsedInput() {
+        return this.input;
+    }
+
+
+    @Override
+    public String getKey() {
+        return this.key;
     }
 }

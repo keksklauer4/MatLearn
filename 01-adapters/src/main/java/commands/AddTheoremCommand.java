@@ -4,9 +4,12 @@ import main.java.commands.GenericCommand;
 import main.java.parameters.IdListParameter;
 import main.java.parameters.Parameter;
 import main.java.parameters.TextInputParameter;
+import main.java.usecases.AddMathematicalObjectTask;
+import main.java.usecases.MatLearnUseCase;
 import main.java.validators.InvalidInputException;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 public class AddTheoremCommand implements GenericCommand {
@@ -14,10 +17,10 @@ public class AddTheoremCommand implements GenericCommand {
 
     public AddTheoremCommand(){
         this.parameters = Arrays.asList(
-                new TextInputParameter(0, "Name"),
-                new TextInputParameter(1, "Description"),
-                new IdListParameter(2, "Dependencies"),
-                new IdListParameter(3, "Sources")
+                new TextInputParameter(0, "Name", "name"),
+                new TextInputParameter(1, "Description", "desc"),
+                new IdListParameter(2, "Dependencies", "deps"),
+                new IdListParameter(3, "Sources", "sources")
         );
     }
 
@@ -46,5 +49,18 @@ public class AddTheoremCommand implements GenericCommand {
             }
         }
         throw new RuntimeException("Invalid parameter supplied!");
+    }
+
+    @Override
+    public MatLearnUseCase getParametrizedUseCase() {
+        HashMap<String, Object> map = new HashMap<>();
+        try {
+            for (final Parameter parameter : this.parameters) {
+                map.put(parameter.getKey(), parameter.getParsedInput());
+            }
+        } catch (InvalidInputException e) {
+            throw new RuntimeException(e.getMessage());
+        }
+        return new AddMathematicalObjectTask(map);
     }
 }

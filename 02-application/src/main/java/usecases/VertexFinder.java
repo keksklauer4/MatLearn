@@ -1,4 +1,4 @@
-package usecases;
+package main.java.usecases;
 
 public class VertexFinder {
 }
