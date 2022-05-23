@@ -2,6 +2,8 @@ package main.resources;
 
 import main.java.commands.GenericCommand;
 import main.java.parameters.Parameter;
+import main.java.results.UseCaseResult;
+import main.java.usecases.MatLearnUseCase;
 import main.java.validators.InvalidInputException;
 
 import java.util.Scanner;
@@ -21,13 +23,17 @@ public class CLICommandHandler {
             printRemainingParameters();
             if(parseParameter()) nbRemaining--;
         }
+        MatLearnUseCase useCase = command.getParametrizedUseCase();
+        UseCaseResult res = useCase.execute();
+        UseCaseResultDispatcher dispatcher = new UseCaseResultDispatcher(res);
+        dispatcher.outputResult();
     }
 
     private void printRemainingParameters(){
         System.out.println("Parameters:");
         for (final Parameter parameter : command.getParameters()){
             if (parameter.getInput() == null) {
-                System.out.println(parameter.getId() + ") " + parameter.getParameterName() + ": (" + parameter.getInput() + ")");
+                System.out.println(parameter.getId() + ") " + parameter.getParameterName());
             }
         }
     }

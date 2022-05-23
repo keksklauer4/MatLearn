@@ -10,6 +10,8 @@ public class Graph<Vertex extends GenericVertex> {
 
     public Graph() {
         this.vertices = new ArrayList<>();
+        this.idToVertex = new HashMap<>();
+        this.vertices = new ArrayList<>();
     }
 
     public void registerVertex(Vertex vertex){

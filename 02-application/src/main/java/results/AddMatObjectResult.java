@@ -1,6 +1,6 @@
-package main.java.tasks;
+package main.java.results;
 
-public class AddMatObjectResult {
+public class AddMatObjectResult implements UseCaseResult {
     private final int id;
 
     public AddMatObjectResult(int id) {

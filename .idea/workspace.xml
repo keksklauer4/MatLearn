@@ -6,15 +6,11 @@
       <change beforePath="$PROJECT_DIR$/00-plugins/src/main/resources/CLICommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/resources/CLICommandHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddDefinedObjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddDefinedObjectCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddTheoremCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddTheoremCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/GenericCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/GenericCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/parameters/IdListParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/parameters/IdListParameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/parameters/OptionParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/parameters/OptionParameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/parameters/Parameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/parameters/Parameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/parameters/TextInputParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/parameters/TextInputParameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/usecases/LeafExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/LeafExtractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/usecases/SubgraphVisualizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/SubgraphVisualizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/usecases/VertexFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/VertexFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/tasks/AddMatObjectParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/AddMatObjectParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/tasks/AddMatObjectResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/results/AddMatObjectResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/AddMathematicalObjectTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/AddMathematicalObjectTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/MatLearnUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/MatLearnUseCase.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -194,5 +190,26 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/03-domain/src/main/java/entities/NamedVertexFactory.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/01-adapters/src/main/java/parameters/OptionParameter.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/01-adapters/src/main/java/commands/AddDefinedObjectCommand.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

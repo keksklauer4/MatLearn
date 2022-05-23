@@ -1,9 +1,11 @@
 package main.java.commands;
 
 import main.java.commands.GenericCommand;
+import main.java.entities.MatType;
 import main.java.parameters.IdListParameter;
 import main.java.parameters.Parameter;
 import main.java.parameters.TextInputParameter;
+import main.java.usecaseparameters.AddMatObjectParameters;
 import main.java.usecases.AddMathematicalObjectTask;
 import main.java.usecases.MatLearnUseCase;
 import main.java.validators.InvalidInputException;
@@ -61,6 +63,7 @@ public class AddTheoremCommand implements GenericCommand {
         } catch (InvalidInputException e) {
             throw new RuntimeException(e.getMessage());
         }
-        return new AddMathematicalObjectTask(map);
+        map.put("type", MatType.THEOREM);
+        return new AddMathematicalObjectTask(new AddMatObjectParameters(map));
     }
 }

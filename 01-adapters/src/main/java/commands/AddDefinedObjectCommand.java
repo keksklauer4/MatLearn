@@ -5,6 +5,7 @@ import main.java.parameters.IdListParameter;
 import main.java.parameters.OptionParameter;
 import main.java.parameters.Parameter;
 import main.java.parameters.TextInputParameter;
+import main.java.usecaseparameters.AddMatObjectParameters;
 import main.java.usecases.AddMathematicalObjectTask;
 import main.java.usecases.MatLearnUseCase;
 import main.java.validators.InvalidInputException;
@@ -18,7 +19,7 @@ public class AddDefinedObjectCommand implements GenericCommand{
 
     public AddDefinedObjectCommand(){
         this.parameters = Arrays.asList(
-                new OptionParameter(0, "Object type", "matType",
+                new OptionParameter(0, "Object type", "type",
                         new String[]{"Axiom", "Definition"},
                         new MatType[]{MatType.AXIOM, MatType.DEFINITION}),
                 new TextInputParameter(1, "name", "name"),
@@ -63,6 +64,6 @@ public class AddDefinedObjectCommand implements GenericCommand{
         } catch (InvalidInputException e) {
             throw new RuntimeException(e.getMessage());
         }
-        return new AddMathematicalObjectTask(map);
+        return new AddMathematicalObjectTask(new AddMatObjectParameters(map));
     }
 }

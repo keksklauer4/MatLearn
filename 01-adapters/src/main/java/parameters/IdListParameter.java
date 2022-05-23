@@ -2,9 +2,8 @@ package main.java.parameters;
 
 import main.java.validators.InvalidInputException;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class IdListParameter implements Parameter {
     private final int id;
@@ -25,7 +24,7 @@ public class IdListParameter implements Parameter {
 
     @Override
     public void validateInput(final String input) throws InvalidInputException {
-        if (input.strip().matches("([1-9][0-9]*,)*([1-9][0-9]*)"))
+        if (!input.strip().matches("(([1-9]([0-9])*,)*([1-9]([0-9])*))?"))
             throw new InvalidInputException("Invalid id list supplied!");
         this.input = input;
     }
@@ -51,14 +50,14 @@ public class IdListParameter implements Parameter {
 
     @Override
     public Object getParsedInput() {
-        List<Integer> ids = new ArrayList<>();
+        Set<Integer> ids = new HashSet<>();
         if (input != null){
             String[] pieces = input.strip().split(",");
             for (String piece : pieces){
                 ids.add(Integer.parseInt(piece));
             }
         }
-        return ids;
+        return Arrays.asList(ids.toArray());
     }
 
     @Override
