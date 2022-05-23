@@ -5,6 +5,8 @@ import main.graph.Graph;
 import main.graph.UnknownVertexException;
 import main.java.entities.NamedVertex;
 
+import java.util.List;
+
 public class ProofNetwork implements ProofNetworkRepository {
     private Graph<NamedVertex> graph;
 
@@ -55,5 +57,10 @@ public class ProofNetwork implements ProofNetworkRepository {
             }
         }
         return true;
+    }
+
+    @Override
+    public List<NamedVertex> getVertices() {
+        return graph.getVertices();
     }
 }

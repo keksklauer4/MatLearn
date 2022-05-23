@@ -53,17 +53,19 @@ public class CLICommandHandler {
 
     private Parameter selectParameter(){
         Scanner scanner = new Scanner(System.in);
-        int index = scanner.nextInt();
-        // TODO: index using id!
-        return (index >= 0 && index < command.getParameters().size()) ?
-                command.getParameters().get(index) : null;
+        int requestedId = scanner.nextInt();
+        for (final Parameter parameter : command.getParameters()){
+            if (parameter.getId() == requestedId){
+                return parameter;
+            }
+        }
+        return null;
     }
 
     private void parseParameterInput(final Parameter parameter){
         do {
             System.out.print("Enter input: ");
         } while (!readParameter(parameter));
-        System.out.println(parameter.getInput());
     }
 
     private boolean readParameter(final Parameter parameter){
