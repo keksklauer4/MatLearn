@@ -3,16 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="177bdf72-7b70-4342-bb6f-57f946fbfa8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddConnectionCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddConnectionCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/LeavesCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/LeavesCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/ObjectNeighborhoodCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/ObjectNeighborhoodCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/RemoveEdgeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/RemoveEdgeCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/RemoveObjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/RemoveObjectCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/LeafExtractor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetwork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetworkRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetworkRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/graph/EdgeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/graph/EdgeList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/graph/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/resources/UseCaseResultDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/resources/UseCaseResultDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/validators/LeafValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/validators/LeafValidator.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

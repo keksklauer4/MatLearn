@@ -1,11 +1,7 @@
 package main.resources;
 
-import main.java.output.AddMatObjectOutput;
-import main.java.output.FindVertexOutput;
-import main.java.output.UseCaseResultOutput;
-import main.java.results.AddMatObjectResult;
-import main.java.results.FindVertexResult;
-import main.java.results.UseCaseResult;
+import main.java.output.*;
+import main.java.results.*;
 
 import java.util.Map;
 
@@ -14,7 +10,10 @@ public class UseCaseResultDispatcher {
 
     private static Map<Class<?>, UseCaseResultOutput> outputMap = Map.ofEntries(
             Map.entry(AddMatObjectResult.class, new AddMatObjectOutput()),
-            Map.entry(FindVertexResult.class, new FindVertexOutput())
+            Map.entry(FindVertexResult.class, new FindVertexOutput()),
+            Map.entry(ValidCommandResult.class, new NoOutput()),
+            Map.entry(NeighborResult.class, new NeighborOutput()),
+            Map.entry(LeafListingResult.class, new LeafListingOutput())
     );
 
     public UseCaseResultDispatcher(final UseCaseResult result) {
