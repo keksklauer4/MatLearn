@@ -1,15 +1,15 @@
 package main.java.commands;
 
-import main.java.parameters.Parameter;
+import main.java.parameters.ExactlyOneIdParameter;
 import main.java.usecases.MatLearnUseCase;
-import main.java.validators.InvalidInputException;
 
-import java.util.List;
+import java.util.Collections;
 
-public class ObjectNeighborhoodCommand implements GenericCommand {
-    @Override
-    public List<Parameter> getParameters() {
-        return null;
+public class ObjectNeighborhoodCommand extends AbstractCommand {
+    public ObjectNeighborhoodCommand() {
+        super(Collections.singletonList(
+                new ExactlyOneIdParameter(1, "Search id", "vertexId")
+        ));
     }
 
     @Override
@@ -20,11 +20,6 @@ public class ObjectNeighborhoodCommand implements GenericCommand {
     @Override
     public String getHelpText() {
         return null;
-    }
-
-    @Override
-    public void setInput(Parameter p, String input) throws InvalidInputException {
-
     }
 
     @Override

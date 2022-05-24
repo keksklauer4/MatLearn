@@ -1,15 +1,16 @@
 package main.java.commands;
 
-import main.java.parameters.Parameter;
+import main.java.parameters.ExactlyOneIdParameter;
 import main.java.usecases.MatLearnUseCase;
-import main.java.validators.InvalidInputException;
 
-import java.util.List;
+import java.util.Arrays;
 
-public class AddConnectionCommand implements GenericCommand {
-    @Override
-    public List<Parameter> getParameters() {
-        return null;
+public class AddConnectionCommand extends AbstractCommand {
+    public AddConnectionCommand() {
+        super(Arrays.asList(
+                new ExactlyOneIdParameter(1, "Edge from", "fromVertex"),
+                new ExactlyOneIdParameter(2, "Edge to", "toVertex")
+        ));
     }
 
     @Override
@@ -22,10 +23,6 @@ public class AddConnectionCommand implements GenericCommand {
         return null;
     }
 
-    @Override
-    public void setInput(Parameter p, String input) throws InvalidInputException {
-
-    }
 
     @Override
     public MatLearnUseCase getParametrizedUseCase() {

@@ -1,15 +1,16 @@
 package main.java.commands;
 
-import main.java.parameters.Parameter;
+import main.java.parameters.IdListParameter;
 import main.java.usecases.MatLearnUseCase;
-import main.java.validators.InvalidInputException;
 
-import java.util.List;
+import java.util.Arrays;
 
-public class RemoveEdgeCommand implements GenericCommand {
-    @Override
-    public List<Parameter> getParameters() {
-        return null;
+public class RemoveEdgeCommand extends AbstractCommand {
+    public RemoveEdgeCommand() {
+        super(Arrays.asList(
+                new IdListParameter(1, "From vertex ids", "vertexIdsFrom"),
+                new IdListParameter(2, "To vertex ids", "vertexIdsTo")
+        ));
     }
 
     @Override
@@ -22,10 +23,6 @@ public class RemoveEdgeCommand implements GenericCommand {
         return null;
     }
 
-    @Override
-    public void setInput(Parameter p, String input) throws InvalidInputException {
-
-    }
 
     @Override
     public MatLearnUseCase getParametrizedUseCase() {
