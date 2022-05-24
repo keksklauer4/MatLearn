@@ -14,7 +14,7 @@ public class ProofNetwork implements ProofNetworkRepository {
     private static ProofNetwork NETWORK;
     public static ProofNetworkSerializationRepository serializationRepository;
 
-    public ProofNetwork(final ProofNetworkSerializationRepository serializer) {
+    private ProofNetwork(final ProofNetworkSerializationRepository serializer) {
         this.serializer = serializer;
         deserialize();
     }
