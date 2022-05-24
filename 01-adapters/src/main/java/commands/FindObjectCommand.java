@@ -14,7 +14,6 @@ public class FindObjectCommand extends AbstractCommand {
         ));
     }
 
-
     @Override
     public String getName() {
         return "Find object";
@@ -24,8 +23,6 @@ public class FindObjectCommand extends AbstractCommand {
     public String getHelpText() {
         return "Find an object in the proof network given some search string.";
     }
-
-
 
     @Override
     public MatLearnUseCase getParametrizedUseCase() {

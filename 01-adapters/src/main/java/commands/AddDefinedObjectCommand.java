@@ -23,8 +23,6 @@ public class AddDefinedObjectCommand extends AbstractCommand {
         ));
     }
 
-
-
     @Override
     public String getName() {
         return "Add definition or axiom";

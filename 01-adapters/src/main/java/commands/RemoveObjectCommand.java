@@ -3,23 +3,23 @@ package main.java.commands;
 import main.java.parameters.ExactlyOneIdParameter;
 import main.java.usecases.MatLearnUseCase;
 
-import java.util.Arrays;
+import java.util.Collections;
 
 public class RemoveObjectCommand extends AbstractCommand {
     public RemoveObjectCommand() {
-        super(Arrays.asList(
+        super(Collections.singletonList(
                 new ExactlyOneIdParameter(1, "Object id", "vertexId")
         ));
     }
 
     @Override
     public String getName() {
-        return null;
+        return "Remove object";
     }
 
     @Override
     public String getHelpText() {
-        return null;
+        return "Remove a mathematical object given the its id.";
     }
 
     @Override

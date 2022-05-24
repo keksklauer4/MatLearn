@@ -14,12 +14,12 @@ public class LeavesCommand extends AbstractCommand {
 
     @Override
     public String getName() {
-        return null;
+        return "Axioms/Definitions";
     }
 
     @Override
     public String getHelpText() {
-        return null;
+        return "List all axioms and definitions a proven mathematical object relies on.";
     }
 
     @Override

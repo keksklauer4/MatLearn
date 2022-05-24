@@ -15,14 +15,13 @@ public class RemoveEdgeCommand extends AbstractCommand {
 
     @Override
     public String getName() {
-        return null;
+        return "Remove connections";
     }
 
     @Override
     public String getHelpText() {
-        return null;
+        return "Remove all connections for pairs of object ids.";
     }
-
 
     @Override
     public MatLearnUseCase getParametrizedUseCase() {

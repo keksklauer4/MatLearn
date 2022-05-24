@@ -15,12 +15,12 @@ public class AddConnectionCommand extends AbstractCommand {
 
     @Override
     public String getName() {
-        return null;
+        return "Connect two objects";
     }
 
     @Override
     public String getHelpText() {
-        return null;
+        return "Connect two mathematical objects through an edge given the ids of the objects.";
     }
 
 

@@ -14,12 +14,12 @@ public class ObjectNeighborhoodCommand extends AbstractCommand {
 
     @Override
     public String getName() {
-        return null;
+        return "Object neighborhood.";
     }
 
     @Override
     public String getHelpText() {
-        return null;
+        return "List all neighbors of a mathematical object.";
     }
 
     @Override
