@@ -1,6 +1,8 @@
 package main.java.commands;
 
 import main.java.parameters.ExactlyOneIdParameter;
+import main.java.usecaseparameters.SingleObjectParameters;
+import main.java.usecases.ListNeighborsUseCase;
 import main.java.usecases.MatLearnUseCase;
 
 import java.util.Collections;
@@ -24,6 +26,6 @@ public class ObjectNeighborhoodCommand extends AbstractCommand {
 
     @Override
     public MatLearnUseCase getParametrizedUseCase() {
-        return null;
+        return new ListNeighborsUseCase(new SingleObjectParameters(getParameterMap()));
     }
 }

@@ -42,13 +42,9 @@ public class ProofNetwork implements ProofNetworkRepository {
         serialize();
     }
 
-    public void removeVertex(NamedVertex vertex) {
-        // TODO: implement
-        serialize();
-    }
-
-    public void removeEdge(NamedVertex vertex) {
-        // TODO: implement
+    @Override
+    public void removeVertex(final NamedVertex vertex) {
+        graph.removeVertex(vertex);
         serialize();
     }
 
@@ -69,6 +65,17 @@ public class ProofNetwork implements ProofNetworkRepository {
     @Override
     public List<NamedVertex> getVertices() {
         return graph.getVertices();
+    }
+
+    @Override
+    public NamedVertex getVertexById(int vertexId) {
+        return graph.getVertexById(vertexId);
+    }
+
+    @Override
+    public void removeEdgeIfExists(int fromId, int toId) {
+        graph.removeEdge(fromId, toId);
+        serialize();
     }
 
     private void serialize(){

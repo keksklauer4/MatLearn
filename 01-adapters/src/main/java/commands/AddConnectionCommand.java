@@ -1,6 +1,8 @@
 package main.java.commands;
 
 import main.java.parameters.ExactlyOneIdParameter;
+import main.java.usecaseparameters.AddConnectionParameters;
+import main.java.usecases.AddConnectionUseCase;
 import main.java.usecases.MatLearnUseCase;
 
 import java.util.Arrays;
@@ -26,6 +28,6 @@ public class AddConnectionCommand extends AbstractCommand {
 
     @Override
     public MatLearnUseCase getParametrizedUseCase() {
-        return null;
+        return new AddConnectionUseCase(new AddConnectionParameters(getParameterMap()));
     }
 }

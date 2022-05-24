@@ -1,6 +1,8 @@
 package main.java.commands;
 
 import main.java.parameters.ExactlyOneIdParameter;
+import main.java.usecaseparameters.SingleObjectParameters;
+import main.java.usecases.ListLeavesUseCase;
 import main.java.usecases.MatLearnUseCase;
 
 import java.util.Collections;
@@ -24,6 +26,6 @@ public class LeavesCommand extends AbstractCommand {
 
     @Override
     public MatLearnUseCase getParametrizedUseCase() {
-        return null;
+        return new ListLeavesUseCase(new SingleObjectParameters(getParameterMap()));
     }
 }

@@ -1,9 +1,7 @@
 package main.graph;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class EdgeList<Vertex extends GenericVertex> implements Serializable {
     private HashMap<Vertex, List<Edge>> forwardEdges;
@@ -42,6 +40,39 @@ public class EdgeList<Vertex extends GenericVertex> implements Serializable {
         edges.addAll(getBackwardEdges(vertex));
         return edges;
     }
+
+    public void removeEdge(final Vertex vertexFrom, final Vertex vertexTo) {
+        if (forwardEdges.containsKey(vertexFrom)){
+            forwardEdges.get(vertexFrom).remove(new Edge(vertexFrom.getId(), vertexTo.getId()));
+        }
+        if (backwardEdges.containsKey(vertexTo)){
+            backwardEdges.get(vertexTo).remove(new Edge(vertexTo.getId(), vertexFrom.getId()));
+        }
+    }
+
+    public void removeAllWithVertex(final Vertex vertex){
+        List<Edge> forward = forwardEdges.get(vertex);
+        List<Edge> backward = backwardEdges.get(vertex);
+        forwardEdges.remove(vertex);
+        backwardEdges.remove(vertex);
+        Set<Edge> edgesToBeDeleted = new HashSet<>();
+        for (Edge fwd : forward) edgesToBeDeleted.add(fwd.getReverseEdge());
+        for (Edge bwd : backward) edgesToBeDeleted.add(bwd.getReverseEdge());
+        removeEdgeSet(edgesToBeDeleted);
+
+    }
+
+    private void removeEdgeSet(final Set<Edge> edgesToBeDeleted){
+        for (List<Edge> forward : forwardEdges.values()){
+            forward.removeAll(edgesToBeDeleted);
+        }
+
+        for (List<Edge> backward : backwardEdges.values()){
+            backward.removeAll(edgesToBeDeleted);
+        }
+    }
+
+
 
     private boolean containsEdge(final List<Edge> edges, final Edge edge){
         return edges.contains(edge);

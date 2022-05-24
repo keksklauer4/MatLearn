@@ -1,7 +1,9 @@
 package main.java.commands;
 
 import main.java.parameters.ExactlyOneIdParameter;
+import main.java.usecaseparameters.SingleObjectParameters;
 import main.java.usecases.MatLearnUseCase;
+import main.java.usecases.RemoveObjectUseCase;
 
 import java.util.Collections;
 
@@ -24,6 +26,6 @@ public class RemoveObjectCommand extends AbstractCommand {
 
     @Override
     public MatLearnUseCase getParametrizedUseCase() {
-        return null;
+        return new RemoveObjectUseCase(new SingleObjectParameters(getParameterMap()));
     }
 }

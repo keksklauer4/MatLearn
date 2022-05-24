@@ -1,7 +1,9 @@
 package main.java.commands;
 
 import main.java.parameters.IdListParameter;
+import main.java.usecaseparameters.RemoveEdgesParameters;
 import main.java.usecases.MatLearnUseCase;
+import main.java.usecases.RemoveEdgesUseCase;
 
 import java.util.Arrays;
 
@@ -25,6 +27,6 @@ public class RemoveEdgeCommand extends AbstractCommand {
 
     @Override
     public MatLearnUseCase getParametrizedUseCase() {
-        return null;
+        return new RemoveEdgesUseCase(new RemoveEdgesParameters(getParameterMap()));
     }
 }
