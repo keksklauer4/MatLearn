@@ -1,8 +1,9 @@
 package main.graph;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Edge {
+public class Edge implements Serializable {
     private int fromVertex;
     private int toVertex;
 

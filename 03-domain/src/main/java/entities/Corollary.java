@@ -2,9 +2,10 @@ package main.java.entities;
 
 import main.graph.Graph;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Corollary extends NamedVertex{
+public class Corollary extends NamedVertex implements Serializable {
     public Corollary(String name, String description) {
         super(name, description);
     }

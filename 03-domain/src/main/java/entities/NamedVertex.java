@@ -3,7 +3,9 @@ package main.java.entities;
 import main.graph.GenericVertex;
 import main.graph.Graph;
 
-public abstract class NamedVertex extends GenericVertex {
+import java.io.Serializable;
+
+public abstract class NamedVertex extends GenericVertex implements Serializable {
     private String name;
     private String description;
 

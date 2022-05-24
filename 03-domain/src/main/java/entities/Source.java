@@ -2,7 +2,9 @@ package main.java.entities;
 
 import main.graph.Graph;
 
-public class Source extends NamedVertex{
+import java.io.Serializable;
+
+public class Source extends NamedVertex implements Serializable {
     public Source(String name, String description) {
         super(name, description);
     }

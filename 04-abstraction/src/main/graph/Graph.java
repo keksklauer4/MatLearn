@@ -1,8 +1,9 @@
 package main.graph;
 
+import java.io.Serializable;
 import java.util.*;
 
-public class Graph<Vertex extends GenericVertex> {
+public class Graph<Vertex extends GenericVertex> implements Serializable {
     private HashMap<Integer, Vertex> idToVertex;
     private List<Vertex> vertices;
     private EdgeList edges;

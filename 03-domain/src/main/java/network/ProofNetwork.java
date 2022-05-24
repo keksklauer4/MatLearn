@@ -8,23 +8,27 @@ import main.java.entities.NamedVertex;
 import java.util.List;
 
 public class ProofNetwork implements ProofNetworkRepository {
+    private final ProofNetworkSerializationRepository serializer;
     private Graph<NamedVertex> graph;
 
     private static ProofNetwork NETWORK;
+    public static ProofNetworkSerializationRepository serializationRepository;
 
-    public ProofNetwork() {
-        this.graph = new Graph<>();
+    public ProofNetwork(final ProofNetworkSerializationRepository serializer) {
+        this.serializer = serializer;
+        deserialize();
     }
 
     public static ProofNetwork getInstance(){
         if (NETWORK == null){
-            NETWORK = new ProofNetwork();
+            NETWORK = new ProofNetwork(serializationRepository);
         }
         return NETWORK;
     }
 
     public void addVertex(NamedVertex vertex) {
         this.graph.registerVertex(vertex);
+        serialize();
     }
 
     public void addEdge(final NamedVertex fromVertex, final NamedVertex toVertex) {
@@ -35,14 +39,17 @@ public class ProofNetwork implements ProofNetworkRepository {
             throw new UnknownVertexException(fromVertex);
         }
         graph.addEdge(fromVertex, toVertex);
+        serialize();
     }
 
     public void removeVertex(NamedVertex vertex) {
         // TODO: implement
+        serialize();
     }
 
     public void removeEdge(NamedVertex vertex) {
         // TODO: implement
+        serialize();
     }
 
     public boolean fullValidation() {
@@ -62,5 +69,13 @@ public class ProofNetwork implements ProofNetworkRepository {
     @Override
     public List<NamedVertex> getVertices() {
         return graph.getVertices();
+    }
+
+    private void serialize(){
+        serializer.serialize(this.graph);
+    }
+
+    private void deserialize(){
+        this.graph = serializer.deserialize();
     }
 }

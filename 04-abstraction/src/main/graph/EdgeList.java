@@ -1,10 +1,11 @@
 package main.graph;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class EdgeList<Vertex extends GenericVertex> {
+public class EdgeList<Vertex extends GenericVertex> implements Serializable {
     private HashMap<Vertex, List<Edge>> forwardEdges;
     private HashMap<Vertex, List<Edge>> backwardEdges;
 

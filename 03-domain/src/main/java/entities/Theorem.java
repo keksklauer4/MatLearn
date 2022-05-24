@@ -3,9 +3,10 @@ package main.java.entities;
 import main.graph.Graph;
 import main.java.validators.LeafValidator;
 
+import java.io.Serializable;
 import java.util.Set;
 
-public class Theorem extends NamedVertex{
+public class Theorem extends NamedVertex implements Serializable {
     public Theorem(String name, String description) {
         super(name, description);
     }

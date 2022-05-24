@@ -1,6 +1,8 @@
 package main.graph;
 
-public class GenericVertex {
+import java.io.Serializable;
+
+public class GenericVertex implements Serializable {
     private int id;
 
     public GenericVertex(){
