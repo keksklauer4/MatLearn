@@ -11,10 +11,10 @@ public class FindVertexOutput implements UseCaseResultOutput {
         if (res instanceof FindVertexResult){
             FindVertexResult result = (FindVertexResult) res;
             System.out.println("Search: " + result.getSearchString());
-            System.out.println("id \tname \tdescription");
-            for (final NamedVertex vertex : result.getVerticesFound()){
-                System.out.println(vertex.getId() + ") \t" + vertex.getName() + ": \t" + vertex.getDescription());
-            }
+            PrintNamedVertices printer = new PrintNamedVertices(((FindVertexResult) res).getVerticesFound());
+            printer.printHeader();
+            printer.print();
+            System.out.println("\n");
         }
     }
 }

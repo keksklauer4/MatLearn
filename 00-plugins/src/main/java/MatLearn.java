@@ -1,5 +1,6 @@
-package main.resources;
+package main.java;
 
+import main.java.cli.CLIHandler;
 import main.java.network.ProofNetwork;
 import main.java.serialization.ProofNetworkSerializer;
 

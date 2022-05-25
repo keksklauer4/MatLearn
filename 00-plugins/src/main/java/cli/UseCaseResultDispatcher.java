@@ -1,4 +1,4 @@
-package main.resources;
+package main.java.cli;
 
 import main.java.output.*;
 import main.java.results.*;

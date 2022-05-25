@@ -1,8 +1,6 @@
-package main.resources;
+package main.java.cli;
 
 import main.java.commands.GenericCommand;
-import main.java.parameters.Parameter;
-import main.java.validators.InvalidInputException;
 
 import java.util.Scanner;
 

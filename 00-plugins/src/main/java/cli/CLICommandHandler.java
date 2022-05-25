@@ -1,4 +1,4 @@
-package main.resources;
+package main.java.cli;
 
 import main.java.commands.GenericCommand;
 import main.java.parameters.Parameter;
@@ -53,9 +53,16 @@ public class CLICommandHandler {
 
     private Parameter selectParameter(){
         Scanner scanner = new Scanner(System.in);
-        int requestedId = scanner.nextInt();
-        for (final Parameter parameter : command.getParameters()){
-            if (parameter.getId() == requestedId){
+        int requestedId;
+
+        try {
+            requestedId = scanner.nextInt();
+        } catch (Exception e) {
+            return null;
+        }
+
+        for (final Parameter parameter : command.getParameters()) {
+            if (parameter.getId() == requestedId) {
                 return parameter;
             }
         }

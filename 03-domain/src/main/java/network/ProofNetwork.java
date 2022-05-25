@@ -78,6 +78,11 @@ public class ProofNetwork implements ProofNetworkRepository {
         serialize();
     }
 
+    @Override
+    public Graph<NamedVertex> getGraph() {
+        return graph;
+    }
+
     private void serialize(){
         serializer.serialize(this.graph);
     }
