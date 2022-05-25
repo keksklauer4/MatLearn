@@ -2,6 +2,7 @@ package main.java.usecases;
 
 import main.java.entities.NamedVertex;
 import main.java.network.ProofNetwork;
+import main.java.network.ProofNetworkRepository;
 import main.java.results.FindVertexResult;
 import main.java.results.UseCaseResult;
 import main.java.usecaseparameters.FindVertexParameter;
@@ -19,8 +20,7 @@ public class VertexFinder implements MatLearnUseCase {
 
     @Override
     public UseCaseResult execute() {
-        String loweredSearch = parameter.getSearch().strip().toLowerCase();
-        ProofNetwork network = ProofNetwork.getInstance();
+        ProofNetworkRepository network = ProofNetwork.getInstance();
         List<NamedVertex> vertices = network.getVertices()
                 .stream()
                 .filter(parameter::matchesSearch)
