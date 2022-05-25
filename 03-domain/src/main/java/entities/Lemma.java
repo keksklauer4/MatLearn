@@ -4,7 +4,9 @@ import main.graph.Graph;
 import main.java.validators.ContributionValidator;
 import main.java.validators.LeafValidator;
 
-public class Lemma extends NamedVertex{
+import java.io.Serializable;
+
+public class Lemma extends NamedVertex implements Serializable {
     public Lemma(String name, String description) {
         super(name, description);
     }

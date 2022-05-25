@@ -1,15 +1,19 @@
 package main.graph;
 
+import java.io.Serializable;
 import java.util.*;
 
-public class Graph<Vertex extends GenericVertex> {
+public class Graph<Vertex extends GenericVertex> implements Serializable {
     private HashMap<Integer, Vertex> idToVertex;
     private List<Vertex> vertices;
-    private EdgeList edges;
+    private EdgeList<Vertex> edges;
     private int largestId = 0;
 
     public Graph() {
         this.vertices = new ArrayList<>();
+        this.idToVertex = new HashMap<>();
+        this.vertices = new ArrayList<>();
+        this.edges = new EdgeList<>();
     }
 
     public void registerVertex(Vertex vertex){
@@ -35,6 +39,25 @@ public class Graph<Vertex extends GenericVertex> {
 
     public List<Vertex> getVertices() {
         return vertices;
+    }
+
+    public void removeEdge(final Vertex vertexFrom, final Vertex vertexTo){
+        edges.removeEdge(vertexFrom, vertexTo);
+    }
+
+    public void removeEdge(int fromId, int toId){
+        final Vertex vertexFrom = getVertexById(fromId);
+        final Vertex vertexTo = getVertexById(toId);
+        if (vertexFrom == null || vertexTo == null) return;
+        removeEdge(vertexFrom, vertexTo);
+    }
+
+    public void removeVertex(final Vertex vertex){
+        if (idToVertex.containsKey(vertex.getId())){
+            idToVertex.remove(vertex.getId());
+            vertices.remove(vertex);
+            edges.removeAllWithVertex(vertex);
+        }
     }
 
     public List<Vertex> getBackwardEdges(final Vertex vertex){

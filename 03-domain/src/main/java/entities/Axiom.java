@@ -2,7 +2,9 @@ package main.java.entities;
 
 import main.graph.Graph;
 
-public class Axiom extends NamedVertex {
+import java.io.Serializable;
+
+public class Axiom extends NamedVertex implements Serializable {
     public Axiom(String name, String description) {
         super(name, description);
     }

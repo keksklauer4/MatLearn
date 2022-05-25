@@ -8,12 +8,16 @@ import java.util.Objects;
 public class OptionParameter implements Parameter {
     private final int id;
     private final String name;
-    private final String[] options;
+    private final String key;
+    private final String[] optionNames;
+    private final Object[] options;
     private String input;
 
-    public OptionParameter(int id, String name, String[] options) {
+    public OptionParameter(int id, String name, String key, String[] optionNames, Object[] options) {
         this.id = id;
         this.name = name;
+        this.key = key;
+        this.optionNames = optionNames;
         this.options = options;
     }
 
@@ -24,14 +28,7 @@ public class OptionParameter implements Parameter {
 
     @Override
     public void validateInput(final String input) throws InvalidInputException {
-        boolean valid = false;
-        for (String option : options) {
-            if (input.strip().toUpperCase().equals(option.toUpperCase())) {
-                valid = true;
-                break;
-            }
-        }
-        if (valid) this.input = input;
+        if (findMatchingOption(input) != -1) this.input = input;
         else throw new InvalidInputException("Not a valid option chosen!");
     }
 
@@ -53,5 +50,27 @@ public class OptionParameter implements Parameter {
         return id == that.id &&
                 Objects.equals(name, that.name) &&
                 Arrays.equals(options, that.options);
+    }
+
+    @Override
+    public Object getParsedInput() throws InvalidInputException {
+        validateInput(this.input);
+        return options[findMatchingOption(this.input)];
+    }
+
+    private int findMatchingOption(final String input){
+        int index = -1;
+        for (int i = 0; i < optionNames.length; ++i) {
+            if (input != null && input.strip().toUpperCase().equals(optionNames[i].toUpperCase())) {
+                index = i;
+                break;
+            }
+        }
+        return index;
+    }
+
+    @Override
+    public String getKey() {
+        return this.key;
     }
 }

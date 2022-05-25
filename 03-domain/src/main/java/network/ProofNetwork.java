@@ -5,15 +5,30 @@ import main.graph.Graph;
 import main.graph.UnknownVertexException;
 import main.java.entities.NamedVertex;
 
+import java.util.List;
+
 public class ProofNetwork implements ProofNetworkRepository {
+    private final ProofNetworkSerializationRepository serializer;
     private Graph<NamedVertex> graph;
 
-    public ProofNetwork() {
-        this.graph = new Graph<NamedVertex>();
+    private static ProofNetwork NETWORK;
+    public static ProofNetworkSerializationRepository serializationRepository;
+
+    private ProofNetwork(final ProofNetworkSerializationRepository serializer) {
+        this.serializer = serializer;
+        deserialize();
+    }
+
+    public static ProofNetwork getInstance(){
+        if (NETWORK == null){
+            NETWORK = new ProofNetwork(serializationRepository);
+        }
+        return NETWORK;
     }
 
     public void addVertex(NamedVertex vertex) {
         this.graph.registerVertex(vertex);
+        serialize();
     }
 
     public void addEdge(final NamedVertex fromVertex, final NamedVertex toVertex) {
@@ -24,14 +39,13 @@ public class ProofNetwork implements ProofNetworkRepository {
             throw new UnknownVertexException(fromVertex);
         }
         graph.addEdge(fromVertex, toVertex);
+        serialize();
     }
 
-    public void removeVertex(NamedVertex vertex) {
-        // TODO: implement
-    }
-
-    public void removeEdge(NamedVertex vertex) {
-        // TODO: implement
+    @Override
+    public void removeVertex(final NamedVertex vertex) {
+        graph.removeVertex(vertex);
+        serialize();
     }
 
     public boolean fullValidation() {
@@ -46,5 +60,34 @@ public class ProofNetwork implements ProofNetworkRepository {
             }
         }
         return true;
+    }
+
+    @Override
+    public List<NamedVertex> getVertices() {
+        return graph.getVertices();
+    }
+
+    @Override
+    public NamedVertex getVertexById(int vertexId) {
+        return graph.getVertexById(vertexId);
+    }
+
+    @Override
+    public void removeEdgeIfExists(int fromId, int toId) {
+        graph.removeEdge(fromId, toId);
+        serialize();
+    }
+
+    @Override
+    public Graph<NamedVertex> getGraph() {
+        return graph;
+    }
+
+    private void serialize(){
+        serializer.serialize(this.graph);
+    }
+
+    private void deserialize(){
+        this.graph = serializer.deserialize();
     }
 }

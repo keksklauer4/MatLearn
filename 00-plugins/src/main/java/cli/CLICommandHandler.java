@@ -1,18 +1,18 @@
-package main.resources;
+package main.java.cli;
 
 import main.java.commands.GenericCommand;
 import main.java.parameters.Parameter;
+import main.java.results.UseCaseResult;
+import main.java.usecases.MatLearnUseCase;
 import main.java.validators.InvalidInputException;
 
 import java.util.Scanner;
 
 public class CLICommandHandler {
     private final GenericCommand command;
-    private int parameterIndex;
 
     public CLICommandHandler(final GenericCommand command) {
         this.command = command;
-        parameterIndex = 0;
     }
 
 
@@ -23,13 +23,17 @@ public class CLICommandHandler {
             printRemainingParameters();
             if(parseParameter()) nbRemaining--;
         }
+        MatLearnUseCase useCase = command.getParametrizedUseCase();
+        UseCaseResult res = useCase.execute();
+        UseCaseResultDispatcher dispatcher = new UseCaseResultDispatcher(res);
+        dispatcher.outputResult();
     }
 
     private void printRemainingParameters(){
         System.out.println("Parameters:");
         for (final Parameter parameter : command.getParameters()){
             if (parameter.getInput() == null) {
-                System.out.println(parameter.getId() + ") " + parameter.getParameterName() + ": (" + parameter.getInput() + ")");
+                System.out.println(parameter.getId() + ") " + parameter.getParameterName());
             }
         }
     }
@@ -49,17 +53,26 @@ public class CLICommandHandler {
 
     private Parameter selectParameter(){
         Scanner scanner = new Scanner(System.in);
-        int index = scanner.nextInt();
-        // TODO: index using id!
-        return (index >= 0 && index < command.getParameters().size()) ?
-                command.getParameters().get(index) : null;
+        int requestedId;
+
+        try {
+            requestedId = scanner.nextInt();
+        } catch (Exception e) {
+            return null;
+        }
+
+        for (final Parameter parameter : command.getParameters()) {
+            if (parameter.getId() == requestedId) {
+                return parameter;
+            }
+        }
+        return null;
     }
 
     private void parseParameterInput(final Parameter parameter){
         do {
             System.out.print("Enter input: ");
         } while (!readParameter(parameter));
-        System.out.println(parameter.getInput());
     }
 
     private boolean readParameter(final Parameter parameter){

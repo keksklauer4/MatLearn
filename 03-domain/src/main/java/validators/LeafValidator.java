@@ -48,9 +48,7 @@ public class LeafValidator extends GenericDFS<NamedVertex> {
     }
 
     @Override
-    protected void alreadyVisitedVertex(NamedVertex vertex) {
-        return;
-    }
+    protected void alreadyVisitedVertex(NamedVertex vertex) { }
 
     @Override
     protected List<NamedVertex> getAdjacent(NamedVertex vertex) {

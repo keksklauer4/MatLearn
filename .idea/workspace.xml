@@ -3,8 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="177bdf72-7b70-4342-bb6f-57f946fbfa8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/resources/CLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/resources/CLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/resources/MatLearn.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/resources/MatLearn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/resources/CLICommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLICommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/resources/CLICommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLICommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/resources/CLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/resources/MatLearn.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/MatLearn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/resources/UseCaseResultDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/cli/UseCaseResultDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/output/AddMatObjectOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/output/AddMatObjectOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/output/FindVertexOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/output/FindVertexOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/output/LeafListingOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/output/LeafListingOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/output/NeighborOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/output/NeighborOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/output/NoOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/output/NoOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/output/UseCaseResultOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/output/UseCaseResultOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListLeavesUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListLeavesUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListNeighborsUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListNeighborsUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetworkRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetworkRepository.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +37,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="#JAVA_HOME" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="26C9usP4tJujFzeJONz45hJY35t" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -35,10 +56,10 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/03-domain" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -54,11 +75,11 @@
   </component>
   <component name="RunManager" selected="Application.MatLearn">
     <configuration name="MatLearn" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.resources.MatLearn" />
+      <option name="MAIN_CLASS_NAME" value="main.java.MatLearn" />
       <module name="00-plugins" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.resources.*" />
+          <option name="PATTERN" value="main.java.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -68,6 +89,14 @@
     </configuration>
     <configuration name="All in 04-abstraction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="04-abstraction" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in MatLearn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MatLearn" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
@@ -153,8 +182,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MatLearn" />
-        <item itemvalue="JUnit.All in 04-abstraction" />
         <item itemvalue="JUnit.test in 04-abstraction" />
+        <item itemvalue="JUnit.All in MatLearn" />
+        <item itemvalue="JUnit.All in 04-abstraction" />
         <item itemvalue="JUnit.EdgeListTest" />
       </list>
     </recent_temporary>
@@ -184,5 +214,26 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/03-domain/src/main/java/entities/NamedVertexFactory.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/01-adapters/src/main/java/parameters/OptionParameter.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/01-adapters/src/main/java/commands/AddDefinedObjectCommand.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
