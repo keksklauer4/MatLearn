@@ -1,6 +1,7 @@
 package main.java.commands;
 
 import main.java.entities.MatType;
+import main.java.network.ProofNetworkRepository;
 import main.java.parameters.IdListParameter;
 import main.java.parameters.OptionParameter;
 import main.java.parameters.TextInputParameter;
@@ -14,12 +15,12 @@ public class AddDefinedObjectCommand extends AbstractCommand {
 
     public AddDefinedObjectCommand(){
         super(Arrays.asList(
-                new OptionParameter(0, "Object type", "type",
+                new OptionParameter(1, "Object type", "type",
                         new String[]{"Axiom", "Definition"},
                         new MatType[]{MatType.AXIOM, MatType.DEFINITION}),
-                new TextInputParameter(1, "name", "name"),
-                new TextInputParameter(2, "description", "desc"),
-                new IdListParameter(3, "sources", "sources")
+                new TextInputParameter(2, "name", "name"),
+                new TextInputParameter(3, "description", "desc"),
+                new IdListParameter(4, "sources", "sources")
         ));
     }
 
@@ -34,7 +35,7 @@ public class AddDefinedObjectCommand extends AbstractCommand {
     }
 
     @Override
-    public MatLearnUseCase getParametrizedUseCase() {
-        return new AddMathematicalObjectTask(new AddMatObjectParameters(getParameterMap()));
+    public MatLearnUseCase getParametrizedUseCase(ProofNetworkRepository networkRepository) {
+        return new AddMathematicalObjectTask(new AddMatObjectParameters(getParameterMap()), networkRepository);
     }
 }

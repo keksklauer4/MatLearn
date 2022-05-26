@@ -22,6 +22,7 @@ public class ProofNetworkSerializer implements ProofNetworkSerializationReposito
     @Override
     public void serialize(final Graph<NamedVertex> proofNetwork) {
         if (proofNetwork == null) return;
+        System.out.println();
         try (ObjectOutputStream writer = new ObjectOutputStream(new FileOutputStream(prefix, false))) {
             writer.writeObject(proofNetwork);
         } catch (IOException ex) {
@@ -31,14 +32,25 @@ public class ProofNetworkSerializer implements ProofNetworkSerializationReposito
 
     @Override
     public Graph<NamedVertex> deserialize() {
+        File file = new File(prefix);
+        if (!file.exists()) return new Graph<>();
         try (ObjectInputStream reader = new ObjectInputStream(new FileInputStream(prefix))){
             return (Graph<NamedVertex>) reader.readObject();
         } catch (FileNotFoundException e) {
-            return new Graph<NamedVertex>();
+            return new Graph<>();
         } catch (IOException e) {
-            throw new RuntimeException("Could not read file");
+            throw new RuntimeException("Could not read file: " + e.getMessage());
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e.getMessage());
+        }
+    }
+
+    private void createFile(){
+        File file = new File(prefix);
+        if (!file.exists()){
+            try {
+                file.createNewFile();
+            } catch (IOException e) { }
         }
     }
 }

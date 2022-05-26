@@ -1,5 +1,6 @@
 package main.java.commands;
 
+import main.java.network.ProofNetworkRepository;
 import main.java.parameters.ExactlyOneIdParameter;
 import main.java.usecaseparameters.SingleObjectParameters;
 import main.java.usecases.ListLeavesUseCase;
@@ -25,7 +26,7 @@ public class LeavesCommand extends AbstractCommand {
     }
 
     @Override
-    public MatLearnUseCase getParametrizedUseCase() {
-        return new ListLeavesUseCase(new SingleObjectParameters(getParameterMap()));
+    public MatLearnUseCase getParametrizedUseCase(ProofNetworkRepository networkRepository) {
+        return new ListLeavesUseCase(new SingleObjectParameters(getParameterMap()), networkRepository);
     }
 }

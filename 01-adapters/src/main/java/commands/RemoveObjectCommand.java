@@ -1,5 +1,6 @@
 package main.java.commands;
 
+import main.java.network.ProofNetworkRepository;
 import main.java.parameters.ExactlyOneIdParameter;
 import main.java.usecaseparameters.SingleObjectParameters;
 import main.java.usecases.MatLearnUseCase;
@@ -25,7 +26,7 @@ public class RemoveObjectCommand extends AbstractCommand {
     }
 
     @Override
-    public MatLearnUseCase getParametrizedUseCase() {
-        return new RemoveObjectUseCase(new SingleObjectParameters(getParameterMap()));
+    public MatLearnUseCase getParametrizedUseCase(ProofNetworkRepository networkRepository) {
+        return new RemoveObjectUseCase(new SingleObjectParameters(getParameterMap()), networkRepository);
     }
 }

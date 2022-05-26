@@ -1,5 +1,6 @@
 package main.java.commands;
 
+import main.java.network.ProofNetworkRepository;
 import main.java.parameters.ExactlyOneIdParameter;
 import main.java.usecaseparameters.SingleObjectParameters;
 import main.java.usecases.ListNeighborsUseCase;
@@ -25,7 +26,7 @@ public class ObjectNeighborhoodCommand extends AbstractCommand {
     }
 
     @Override
-    public MatLearnUseCase getParametrizedUseCase() {
-        return new ListNeighborsUseCase(new SingleObjectParameters(getParameterMap()));
+    public MatLearnUseCase getParametrizedUseCase(ProofNetworkRepository networkRepository) {
+        return new ListNeighborsUseCase(new SingleObjectParameters(getParameterMap()), networkRepository);
     }
 }

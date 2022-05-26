@@ -1,5 +1,6 @@
 package main.java.commands;
 
+import main.java.network.ProofNetworkRepository;
 import main.java.parameters.IdListParameter;
 import main.java.usecaseparameters.RemoveEdgesParameters;
 import main.java.usecases.MatLearnUseCase;
@@ -26,7 +27,7 @@ public class RemoveEdgeCommand extends AbstractCommand {
     }
 
     @Override
-    public MatLearnUseCase getParametrizedUseCase() {
-        return new RemoveEdgesUseCase(new RemoveEdgesParameters(getParameterMap()));
+    public MatLearnUseCase getParametrizedUseCase(ProofNetworkRepository networkRepository) {
+        return new RemoveEdgesUseCase(new RemoveEdgesParameters(getParameterMap()), networkRepository);
     }
 }

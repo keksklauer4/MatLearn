@@ -1,9 +1,11 @@
-package main.java.network;
+package main.java;
 
 import main.algorithm.CycleChecker;
 import main.graph.Graph;
 import main.graph.UnknownVertexException;
 import main.java.entities.NamedVertex;
+import main.java.network.ProofNetworkRepository;
+import main.java.network.ProofNetworkSerializationRepository;
 
 import java.util.List;
 
@@ -11,19 +13,9 @@ public class ProofNetwork implements ProofNetworkRepository {
     private final ProofNetworkSerializationRepository serializer;
     private Graph<NamedVertex> graph;
 
-    private static ProofNetwork NETWORK;
-    public static ProofNetworkSerializationRepository serializationRepository;
-
-    private ProofNetwork(final ProofNetworkSerializationRepository serializer) {
+    ProofNetwork(final ProofNetworkSerializationRepository serializer) {
         this.serializer = serializer;
         deserialize();
-    }
-
-    public static ProofNetwork getInstance(){
-        if (NETWORK == null){
-            NETWORK = new ProofNetwork(serializationRepository);
-        }
-        return NETWORK;
     }
 
     public void addVertex(NamedVertex vertex) {

@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class NamedVertexFactory {
-    private static final Map<MatType, Class<?>> vertexTypes = Stream.of(
+    private static final Map<MatType, Class<? extends NamedVertex>> vertexTypes = Stream.of(
             new AbstractMap.SimpleEntry<>(MatType.AXIOM, Axiom.class),
             new AbstractMap.SimpleEntry<>(MatType.COROLLARY, Corollary.class),
             new AbstractMap.SimpleEntry<>(MatType.DEFINITION, MathematicalDefinition.class),
@@ -18,8 +18,10 @@ public class NamedVertexFactory {
             new AbstractMap.SimpleEntry<>(MatType.TOPIC, Topic.class)
     ).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));;
 
+    // TODO: Open/Closed Principle
+
     public static NamedVertex create(MatType type, String name, String description){
-        Class<?> t = getClass(type);
+        Class<? extends NamedVertex> t = getClass(type);
         if (!NamedVertex.class.isAssignableFrom(t)) throw new RuntimeException("Retrieved invalid type.");
         try {
             Constructor<?> ctor = t.getConstructor(String.class, String.class);
@@ -30,7 +32,7 @@ public class NamedVertexFactory {
         }
     }
 
-    private static Class<?> getClass(MatType type) {
+    private static Class<? extends NamedVertex> getClass(MatType type) {
         if (!vertexTypes.containsKey(type)) throw new RuntimeException("Invalid type specified!");
         return vertexTypes.get(type);
     }

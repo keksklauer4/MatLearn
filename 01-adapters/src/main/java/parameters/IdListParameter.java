@@ -54,7 +54,7 @@ public class IdListParameter implements Parameter {
         if (input != null){
             String[] pieces = input.strip().split(",");
             for (String piece : pieces){
-                ids.add(Integer.parseInt(piece));
+                if (!piece.isBlank()) ids.add(Integer.parseInt(piece));
             }
         }
         return Arrays.asList(ids.toArray());

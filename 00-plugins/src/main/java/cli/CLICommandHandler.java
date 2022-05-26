@@ -1,6 +1,7 @@
 package main.java.cli;
 
 import main.java.commands.GenericCommand;
+import main.java.network.ProofNetworkRepository;
 import main.java.parameters.Parameter;
 import main.java.results.UseCaseResult;
 import main.java.usecases.MatLearnUseCase;
@@ -9,12 +10,13 @@ import main.java.validators.InvalidInputException;
 import java.util.Scanner;
 
 public class CLICommandHandler {
+    private final ProofNetworkRepository networkRepository;
     private final GenericCommand command;
 
-    public CLICommandHandler(final GenericCommand command) {
+    public CLICommandHandler(ProofNetworkRepository networkRepository, GenericCommand command) {
+        this.networkRepository = networkRepository;
         this.command = command;
     }
-
 
     public void handle(){
         System.out.println(command.getName() + ": " + command.getHelpText());
@@ -23,7 +25,7 @@ public class CLICommandHandler {
             printRemainingParameters();
             if(parseParameter()) nbRemaining--;
         }
-        MatLearnUseCase useCase = command.getParametrizedUseCase();
+        MatLearnUseCase useCase = command.getParametrizedUseCase(networkRepository);
         UseCaseResult res = useCase.execute();
         UseCaseResultDispatcher dispatcher = new UseCaseResultDispatcher(res);
         dispatcher.outputResult();

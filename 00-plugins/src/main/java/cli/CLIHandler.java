@@ -1,10 +1,17 @@
 package main.java.cli;
 
 import main.java.commands.GenericCommand;
+import main.java.network.ProofNetworkRepository;
 
 import java.util.Scanner;
 
 public class CLIHandler {
+    private final ProofNetworkRepository networkRepository;
+
+    public CLIHandler(ProofNetworkRepository networkRepository) {
+        this.networkRepository = networkRepository;
+    }
+
     public void run(){
         System.out.println("Welcome to Matlearn. Choose from one of the following commands:");
         int idx = 1;
@@ -33,7 +40,7 @@ public class CLIHandler {
                 System.out.println("Invalid command.");
             }
         }
-        CLICommandHandler handler = new CLICommandHandler(parsed);
+        CLICommandHandler handler = new CLICommandHandler(networkRepository, parsed);
         handler.handle();
         return true;
     }

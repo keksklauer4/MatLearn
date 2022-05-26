@@ -1,5 +1,6 @@
 package main.java.commands;
 
+import main.java.network.ProofNetworkRepository;
 import main.java.parameters.TextInputParameter;
 import main.java.usecaseparameters.FindVertexParameter;
 import main.java.usecases.MatLearnUseCase;
@@ -25,7 +26,7 @@ public class FindObjectCommand extends AbstractCommand {
     }
 
     @Override
-    public MatLearnUseCase getParametrizedUseCase() {
-        return new VertexFinder(new FindVertexParameter(getParameterMap()));
+    public MatLearnUseCase getParametrizedUseCase(ProofNetworkRepository networkRepository) {
+        return new VertexFinder(new FindVertexParameter(getParameterMap()), networkRepository);
     }
 }

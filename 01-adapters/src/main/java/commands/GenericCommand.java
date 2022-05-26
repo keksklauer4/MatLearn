@@ -1,5 +1,6 @@
 package main.java.commands;
 
+import main.java.network.ProofNetworkRepository;
 import main.java.parameters.Parameter;
 import main.java.usecases.MatLearnUseCase;
 import main.java.validators.InvalidInputException;
@@ -11,5 +12,5 @@ public interface GenericCommand {
     String getName();
     String getHelpText();
     void setInput(final Parameter p, String input) throws InvalidInputException;
-    MatLearnUseCase getParametrizedUseCase();
+    MatLearnUseCase getParametrizedUseCase(ProofNetworkRepository networkRepository);
 }

@@ -1,6 +1,7 @@
 package main.java.commands;
 
 import main.java.entities.MatType;
+import main.java.network.ProofNetworkRepository;
 import main.java.parameters.IdListParameter;
 import main.java.parameters.TextInputParameter;
 import main.java.usecaseparameters.AddMatObjectParameters;
@@ -32,9 +33,9 @@ public class AddTheoremCommand extends AbstractCommand {
 
 
     @Override
-    public MatLearnUseCase getParametrizedUseCase() {
+    public MatLearnUseCase getParametrizedUseCase(ProofNetworkRepository networkRepository) {
         HashMap<String, Object> parameterMap = getParameterMap();
         parameterMap.put("type", MatType.THEOREM);
-        return new AddMathematicalObjectTask(new AddMatObjectParameters(parameterMap));
+        return new AddMathematicalObjectTask(new AddMatObjectParameters(parameterMap), networkRepository);
     }
 }
