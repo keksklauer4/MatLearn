@@ -1,0 +1,47 @@
+
+@startuml
+
+class GenericDFS<Vertex extends GenericVertex> {
+    -Graph<Vertex> graph;
+    -Vertex currentVertex;
+
+    -Set<Vertex> visited;
+    -boolean stop;
+
+    +GenericDFS(Graph<Vertex> graph)
+
+    +GenericDFS(Graph<Vertex> graph, Vertex currentVertex)
+
+    #abstract void unvisitedVertex(Vertex vertex);
+    #abstract void alreadyVisitedVertex(Vertex vertex);
+    #abstract List<Vertex> getAdjacent(Vertex vertex);
+
+    #void setCurrentVertex(Vertex currentVertex)
+
+    #Graph<Vertex> getGraph()
+
+
+    #void stop()
+    #boolean wasStopped()
+
+    #void runDFS()
+
+    -StackVertex<Vertex> visitNext(Vertex vertex)
+
+}
+
+class LeafValidator {
+    -Set<NamedVertex> leafs;
+    -boolean ranDFS;
+
+    +LeafValidator(Graph<NamedVertex> graph, NamedVertex currentVertex)
+
+    +boolean allLeafsDefinitionsOrAxioms()
+    -void runDFSOnce()
+
+    #void unvisitedVertex(NamedVertex vertex)
+    #void alreadyVisitedVertex(NamedVertex vertex)
+    #List<NamedVertex> getAdjacent(NamedVertex vertex)
+}
+
+@enduml

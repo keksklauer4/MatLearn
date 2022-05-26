@@ -13,4 +13,6 @@ public class MathematicalDefinition extends NamedVertex implements Serializable 
     public boolean isOfType(MatType type) {
         return  type == MatType.DEFINITION;
     }
+
+    // TODO: implement isValid
 }

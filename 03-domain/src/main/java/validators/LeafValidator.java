@@ -14,19 +14,15 @@ public class LeafValidator extends GenericDFS<NamedVertex> {
 
     public LeafValidator(Graph<NamedVertex> graph, NamedVertex currentVertex) {
         super(graph, currentVertex);
-        this.leafs = new HashSet<NamedVertex>();
+        this.leafs = new HashSet<>();
         this.ranDFS = false;
-    }
-
-    public Set<NamedVertex> getLeafs(){
-        runDFSOnce();
-        return leafs;
     }
 
     public boolean allLeafsDefinitionsOrAxioms(){
         runDFSOnce();
         for (NamedVertex leaf : leafs){
             if (!leaf.isDefinedType()){
+                // TODO: use exception
                 return false;
             }
         }

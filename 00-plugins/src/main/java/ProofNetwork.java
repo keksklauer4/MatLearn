@@ -6,6 +6,7 @@ import main.graph.UnknownVertexException;
 import main.java.entities.NamedVertex;
 import main.java.network.ProofNetworkRepository;
 import main.java.network.ProofNetworkSerializationRepository;
+import main.java.validators.FullValidator;
 
 import java.util.List;
 
@@ -38,20 +39,6 @@ public class ProofNetwork implements ProofNetworkRepository {
     public void removeVertex(final NamedVertex vertex) {
         graph.removeVertex(vertex);
         serialize();
-    }
-
-    public boolean fullValidation() {
-        CycleChecker<NamedVertex> cycleChecker = new CycleChecker<NamedVertex>(graph);
-        if (cycleChecker.hasCycle()){
-            return false;
-        }
-        for (NamedVertex vertex : graph.getVertices()){
-            boolean valid = vertex.isValid(graph) && vertex.isFullyValid(graph);
-            if (!valid){
-                return false;
-            }
-        }
-        return true;
     }
 
     @Override

@@ -3,37 +3,44 @@ package main.java.cli;
 import main.java.commands.GenericCommand;
 import main.java.network.ProofNetworkRepository;
 
-import java.util.Scanner;
+import java.util.Optional;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class CLIHandler {
     private final ProofNetworkRepository networkRepository;
+    private final InputParser inputParser;
 
     public CLIHandler(ProofNetworkRepository networkRepository) {
         this.networkRepository = networkRepository;
+        this.inputParser = new InputParser();
     }
 
     public void run(){
         System.out.println("Welcome to Matlearn. Choose from one of the following commands:");
+        commandLoop();
+    }
+
+    private void printCommands() {
+        System.out.println("\n");
         int idx = 1;
         for (final GenericCommand command : CLICommands.commands){
             System.out.println(idx++ + ") " + command.getName());
         }
-        commandLoop();
     }
 
     private void commandLoop(){
         boolean abort = false;
         while(!abort){
+            printCommands();
             abort = !retrieveCommand();
         }
     }
 
     private boolean retrieveCommand() {
-        Scanner scanner = new Scanner(System.in);
         GenericCommand parsed = null;
         while(parsed == null){
             System.out.print("Enter command: ");
-            String line = scanner.nextLine().strip();
+            String line = inputParser.parseText();
             if (line.toLowerCase().equals("q")) return false;
             parsed = matchCommandInput(line);
             if (parsed == null){
@@ -46,12 +53,10 @@ public class CLIHandler {
     }
 
     private GenericCommand matchCommandInput(final String line){
-        System.out.println("Line: \"" + line + "\"");
-        for(final GenericCommand command : CLICommands.commands){
-            if (command.getName().toLowerCase().equals(line)){
-                return command;
-            }
-        }
+        Optional<GenericCommand> cmd = CLICommands.commands.stream()
+                .filter(command -> command.getName().toLowerCase().equals(line))
+                .findFirst();
+        if (cmd.isPresent()) return cmd.get();
         try {
             int index = Integer.parseInt(line.strip()) - 1;
             if (index >= 0 && index < CLICommands.commands.size()) {

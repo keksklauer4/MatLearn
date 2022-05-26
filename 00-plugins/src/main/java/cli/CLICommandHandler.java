@@ -7,14 +7,17 @@ import main.java.results.UseCaseResult;
 import main.java.usecases.MatLearnUseCase;
 import main.java.validators.InvalidInputException;
 
+import java.util.Optional;
 import java.util.Scanner;
 
 public class CLICommandHandler {
     private final ProofNetworkRepository networkRepository;
+    private final InputParser inputParser;
     private final GenericCommand command;
 
     public CLICommandHandler(ProofNetworkRepository networkRepository, GenericCommand command) {
         this.networkRepository = networkRepository;
+        this.inputParser = new InputParser();
         this.command = command;
     }
 
@@ -54,34 +57,25 @@ public class CLICommandHandler {
     }
 
     private Parameter selectParameter(){
-        Scanner scanner = new Scanner(System.in);
-        int requestedId;
+        Integer requestedId = inputParser.parseInt();
+        if (requestedId == null) return null;
 
-        try {
-            requestedId = scanner.nextInt();
-        } catch (Exception e) {
-            return null;
-        }
-
-        for (final Parameter parameter : command.getParameters()) {
-            if (parameter.getId() == requestedId) {
-                return parameter;
-            }
-        }
-        return null;
+        Optional<Parameter> parameter = command.getParameters()
+                .stream()
+                .filter(para -> para != null && para.getId() == requestedId)
+                .findFirst();
+        return parameter.orElse(null);
     }
 
     private void parseParameterInput(final Parameter parameter){
         do {
-            System.out.print("Enter input: ");
+            System.out.println("Enter input:");
         } while (!readParameter(parameter));
     }
 
     private boolean readParameter(final Parameter parameter){
         try {
-            Scanner scanner = new Scanner(System.in);
-            String line = scanner.nextLine().strip();
-            command.setInput(parameter, line);
+            command.setInput(parameter, inputParser.parseText());
             return true;
         } catch (InvalidInputException e){
             System.out.println("Invalid input: " + e.getMessage());

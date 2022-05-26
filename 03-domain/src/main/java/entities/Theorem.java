@@ -12,11 +12,6 @@ public class Theorem extends NamedVertex implements Serializable {
     }
 
     @Override
-    public boolean isValid(Graph<NamedVertex> graph) {
-        return true;
-    }
-
-    @Override
     public boolean isOfType(MatType type) {
         return type == MatType.THEOREM;
     }

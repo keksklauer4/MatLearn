@@ -13,4 +13,6 @@ public class Source extends NamedVertex implements Serializable {
     public boolean isOfType(MatType type) {
         return  type == MatType.SOURCE;
     }
+
+    // TODO: implement isValid
 }
