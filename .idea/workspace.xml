@@ -3,31 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="177bdf72-7b70-4342-bb6f-57f946fbfa8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLICommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLICommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AbstractCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AbstractCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddConnectionCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddConnectionCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddDefinedObjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddDefinedObjectCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddTheoremCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddTheoremCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/FindObjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/FindObjectCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/GenericCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/GenericCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/LeavesCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/LeavesCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/ObjectNeighborhoodCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/ObjectNeighborhoodCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/RemoveEdgeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/RemoveEdgeCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/RemoveObjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/RemoveObjectCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/AddConnectionParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/AddConnectionParameters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/AddMatObjectParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/AddMatObjectParameters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/FindVertexParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/FindVertexParameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/RemoveEdgesParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/RemoveEdgesParameters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/SingleObjectParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/SingleObjectParameters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/AddConnectionUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/AddConnectionUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/AddMathematicalObjectTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/AddMathematicalObjectTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListLeavesUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListLeavesUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListNeighborsUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListNeighborsUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/MatLearnUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/MatLearnUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/RemoveEdgesUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/RemoveEdgesUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/RemoveObjectUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/RemoveObjectUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/VertexFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/VertexFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/graph/EdgeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/graph/EdgeList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/graph/Graph.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -190,11 +167,6 @@
           <url>file://$PROJECT_DIR$/01-adapters/src/main/java/commands/AddDefinedObjectCommand.java</url>
           <line>38</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/04-abstraction/src/main/graph/Graph.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/00-plugins/src/main/java/ProofNetwork.java</url>

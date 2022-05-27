@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.*;
 
 public class EdgeList<Vertex extends GenericVertex> implements Serializable {
-    private HashMap<Vertex, List<Edge>> forwardEdges;
-    private HashMap<Vertex, List<Edge>> backwardEdges;
+    private Map<Vertex, List<Edge>> forwardEdges;
+    private Map<Vertex, List<Edge>> backwardEdges;
 
     public EdgeList() {
         this.forwardEdges = new HashMap<>();

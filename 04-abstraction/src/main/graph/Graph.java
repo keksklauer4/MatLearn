@@ -1,13 +1,11 @@
 package main.graph;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Graph<Vertex extends GenericVertex> implements Serializable {
-    private HashMap<Integer, Vertex> idToVertex;
+    private Map<Integer, Vertex> idToVertex;
     private List<Vertex> vertices;
     private EdgeList<Vertex> edges;
     private int largestId = 0;
@@ -75,9 +73,10 @@ public class Graph<Vertex extends GenericVertex> implements Serializable {
     }
 
     private List<Edge> reverseEdgeList(final List<Edge> edgeList){
-        List<Edge> edgesReversed = new ArrayList<>();
-        edgeList.forEach(edge -> edgesReversed.add(edge.getReverseEdge()));
-        return  edgesReversed;
+        return edgeList
+                .stream()
+                .map(Edge::getReverseEdge)
+                .collect(Collectors.toList());
     }
 
     private int getNextId(){

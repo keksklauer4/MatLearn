@@ -1,0 +1,67 @@
+
+@startuml
+
+class Graph< Vertex extends GenericVertex >  implements Serializable {
+    -Map<Integer, Vertex> idToVertex;
+    -List<Vertex> vertices;
+    -EdgeList<Vertex> edges;
+    -int largestId;
+
+    +Graph()
+
+    +void registerVertex(Vertex vertex)
+    +Vertex getVertexById(int id)
+    +List<Vertex> getVertices()
+
+    +void addEdge(final Vertex vertexFrom, final Vertex vertexTo)
+    +List<Vertex> getForwardEdges(final Vertex vertex)
+    +List<Vertex> getBackwardEdges(final Vertex vertex)
+
+
+    +void removeEdge(final Vertex vertexFrom, final Vertex vertexTo)
+    +void removeEdge(int fromId, int toId)
+    +void removeVertex(final Vertex vertex)
+
+
+
+    -List<Vertex> getEndVertices(final List<Edge> edgeList)
+    -List<Edge> reverseEdgeList(final List<Edge> edgeList)
+    -int getNextId()
+}
+
+class EdgeList< Vertex extends GenericVertex > implements Serializable {
+    -Map<Vertex, List<Edge>> forwardEdges;
+    -Map<Vertex, List<Edge>> backwardEdges;
+
+    +EdgeList()
+
+    +void addVertex(final Vertex vertex)
+    +void addEdge(final Vertex fromVertex, final Vertex toVertex)
+    +List<Edge> getForwardEdges(final Vertex vertex)
+    +List<Edge> getBackwardEdges(final Vertex vertex)
+    +List<Edge> getEdges(final Vertex vertex) throws UnknownVertexException
+
+    +void removeEdge(final Vertex vertexFrom, final Vertex vertexTo)
+    +void removeAllWithVertex(final Vertex vertex)
+
+    -void removeEdgeSet(final Set<Edge> edgesToBeDeleted)
+    -boolean containsEdge(final List<Edge> edges, final Edge edge)
+    -void addEdgeIfNotContained(List<Edge> edges, final Vertex fromVertex, final Vertex toVertex)
+    -void checkVertexExists(final Vertex vertex)
+}
+
+class GenericVertex implements Serializable {
+    -int id;
+
+    +GenericVertex()
+    +GenericVertex(int id)
+
+     +int getId()
+    ~void setId(int id)
+
+    +int hashCode()
+}
+
+
+
+@enduml
