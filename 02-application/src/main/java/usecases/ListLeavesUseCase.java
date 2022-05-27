@@ -9,16 +9,10 @@ import main.java.usecaseparameters.SingleObjectParameters;
 import main.java.usecaseparameters.UseCaseParameter;
 
 public class ListLeavesUseCase extends AbstractUseCase<SingleObjectParameters> implements MatLearnUseCase {
-    private final ProofNetworkRepository networkRepository;
-
     public ListLeavesUseCase(ProofNetworkRepository networkRepository) {
-        this.networkRepository = networkRepository;
+        super(networkRepository, SingleObjectParameters.class);
     }
 
-    @Override
-    protected boolean checkCorrectParameterType(UseCaseParameter parameters) {
-        return parameters instanceof SingleObjectParameters;
-    }
 
     @Override
     protected UseCaseResult executeTyped(SingleObjectParameters parameters) {

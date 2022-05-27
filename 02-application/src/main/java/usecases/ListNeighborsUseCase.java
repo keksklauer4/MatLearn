@@ -10,15 +10,8 @@ import main.java.usecaseparameters.UseCaseParameter;
 import java.util.List;
 
 public class ListNeighborsUseCase extends AbstractUseCase<SingleObjectParameters> implements MatLearnUseCase {
-    private final ProofNetworkRepository networkRepository;
-
     public ListNeighborsUseCase(ProofNetworkRepository networkRepository) {
-        this.networkRepository = networkRepository;
-    }
-
-    @Override
-    protected boolean checkCorrectParameterType(UseCaseParameter parameters) {
-        return parameters instanceof SingleObjectParameters;
+        super(networkRepository, SingleObjectParameters.class);
     }
 
     @Override

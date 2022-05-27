@@ -1,9 +1,18 @@
 package main.java.usecases;
 
+import main.java.network.ProofNetworkRepository;
 import main.java.results.UseCaseResult;
 import main.java.usecaseparameters.UseCaseParameter;
 
-public abstract class AbstractUseCase<T> implements MatLearnUseCase {
+public abstract class AbstractUseCase<T extends UseCaseParameter> implements MatLearnUseCase {
+    protected final ProofNetworkRepository networkRepository;
+    private final Class<T> expectedParameterType;
+
+    protected AbstractUseCase(ProofNetworkRepository networkRepository, Class<T> expectedParameterType) {
+        this.networkRepository = networkRepository;
+        this.expectedParameterType = expectedParameterType;
+    }
+
     @Override
     public UseCaseResult execute(UseCaseParameter parameters) {
         if (!checkCorrectParameterType(parameters))
@@ -11,6 +20,9 @@ public abstract class AbstractUseCase<T> implements MatLearnUseCase {
         return executeTyped((T) parameters);
     }
 
-    protected abstract boolean checkCorrectParameterType(UseCaseParameter parameters);
+    private boolean checkCorrectParameterType(UseCaseParameter parameters) {
+        return expectedParameterType.isInstance(parameters);
+    }
+
     protected abstract UseCaseResult executeTyped(T parameters);
 }

@@ -10,15 +10,8 @@ import main.java.usecaseparameters.UseCaseParameter;
 
 
 public class AddMathematicalObjectTask extends AbstractUseCase<AddMatObjectParameters> implements MatLearnUseCase {
-    private final ProofNetworkRepository networkRepository;
-
     public AddMathematicalObjectTask(ProofNetworkRepository networkRepository) {
-        this.networkRepository = networkRepository;
-    }
-
-    @Override
-    protected boolean checkCorrectParameterType(UseCaseParameter parameters) {
-        return parameters instanceof AddMatObjectParameters;
+        super(networkRepository, AddMatObjectParameters.class);
     }
 
     @Override

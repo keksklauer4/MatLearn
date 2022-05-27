@@ -8,15 +8,8 @@ import main.java.usecaseparameters.AddConnectionParameters;
 import main.java.usecaseparameters.UseCaseParameter;
 
 public class AddConnectionUseCase extends AbstractUseCase<AddConnectionParameters> implements MatLearnUseCase {
-    private final ProofNetworkRepository networkRepository;
-
     public AddConnectionUseCase(ProofNetworkRepository networkRepository) {
-        this.networkRepository = networkRepository;
-    }
-
-    @Override
-    protected boolean checkCorrectParameterType(UseCaseParameter parameters) {
-        return parameters instanceof AddConnectionParameters;
+        super(networkRepository, AddConnectionParameters.class);
     }
 
     @Override

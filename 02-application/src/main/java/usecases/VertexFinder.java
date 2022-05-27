@@ -11,15 +11,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class VertexFinder extends AbstractUseCase<FindVertexParameter> implements MatLearnUseCase {
-    private final ProofNetworkRepository networkRepository;
 
     public VertexFinder(ProofNetworkRepository networkRepository) {
-        this.networkRepository = networkRepository;
-    }
-
-    @Override
-    protected boolean checkCorrectParameterType(UseCaseParameter parameters) {
-        return parameters instanceof FindVertexParameter;
+        super(networkRepository, FindVertexParameter.class);
     }
 
     @Override

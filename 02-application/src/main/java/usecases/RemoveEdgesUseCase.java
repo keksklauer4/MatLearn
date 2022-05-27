@@ -8,16 +8,10 @@ import main.java.usecaseparameters.RemoveEdgesParameters;
 import main.java.usecaseparameters.UseCaseParameter;
 
 public class RemoveEdgesUseCase extends AbstractUseCase<RemoveEdgesParameters> implements MatLearnUseCase {
-    private final ProofNetworkRepository networkRepository;
-
     public RemoveEdgesUseCase(ProofNetworkRepository networkRepository) {
-        this.networkRepository = networkRepository;
+        super(networkRepository, RemoveEdgesParameters.class);
     }
 
-    @Override
-    protected boolean checkCorrectParameterType(UseCaseParameter parameters) {
-        return parameters instanceof RemoveEdgesParameters;
-    }
 
     @Override
     protected UseCaseResult executeTyped(RemoveEdgesParameters parameters) {
