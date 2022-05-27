@@ -24,7 +24,7 @@ public class IdListParameter implements Parameter {
 
     @Override
     public void validateInput(final String input) throws InvalidInputException {
-        if (!input.strip().matches("(([1-9]([0-9])*,)*([1-9]([0-9])*))?"))
+        if (!input.replaceAll(" ", "").matches("((([0-9])+,)*([0-9])+)?"))
             throw new InvalidInputException("Invalid id list supplied!");
         this.input = input;
     }

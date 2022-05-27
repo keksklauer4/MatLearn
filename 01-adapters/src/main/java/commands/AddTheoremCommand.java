@@ -14,10 +14,10 @@ import java.util.HashMap;
 public class AddTheoremCommand extends AbstractCommand {
     public AddTheoremCommand(){
         super(Arrays.asList(
-                new TextInputParameter(0, "Name", "name"),
-                new TextInputParameter(1, "Description", "desc"),
-                new IdListParameter(2, "Dependencies", "deps"),
-                new IdListParameter(3, "Sources", "sources")
+                new TextInputParameter(1, "name", "name"),
+                new TextInputParameter(2, "description", "desc"),
+                new IdListParameter(3, "dependencies", "deps"),
+                new IdListParameter(4, "sources", "sources")
         ));
     }
 

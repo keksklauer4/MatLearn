@@ -20,6 +20,7 @@ public class Graph<Vertex extends GenericVertex> implements Serializable {
         vertex.setId(getNextId());
         vertices.add(vertex);
         idToVertex.put(vertex.getId(), vertex);
+        edges.addVertex(vertex);
     }
 
     public Vertex getVertexById(int id){
@@ -66,19 +67,16 @@ public class Graph<Vertex extends GenericVertex> implements Serializable {
 
     private List<Vertex> getEndVertices(final List<Edge> edgeList){
         HashSet<Vertex> endVertices = new HashSet<>();
-        for(Edge edge : edgeList){
-            endVertices.add(idToVertex.get(edge.getToVertex()));
-        }
+        edgeList.forEach(edge -> endVertices.add(idToVertex.get(edge.getToVertex())));
         return new ArrayList<>(endVertices);
     }
 
     private List<Edge> reverseEdgeList(final List<Edge> edgeList){
         List<Edge> edgesReversed = new ArrayList<>();
-        for (Edge edge : edgeList) {
-            edgesReversed.add(edge.getReverseEdge());
-        }
+        edgeList.forEach(edge -> edgesReversed.add(edge.getReverseEdge()));
         return  edgesReversed;
     }
+
     private int getNextId(){
         return largestId++;
     }

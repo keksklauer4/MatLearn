@@ -10,21 +10,23 @@ import java.util.List;
 import java.util.Set;
 
 public class ListLeaves extends GenericDFS<NamedVertex> {
-    private Set<NamedVertex> leaves;
+    private final Set<NamedVertex> leaves;
+    private final NamedVertex current;
 
     public ListLeaves(ProofNetworkRepository network, NamedVertex currentVertex) {
         super(network.getGraph(), currentVertex);
+        this.current = currentVertex;
+        leaves = new HashSet<>();
     }
 
     public List<NamedVertex> listLeaves(){
-        leaves = new HashSet<>();
         runDFS();
         return new ArrayList<>(leaves);
     }
 
     @Override
     protected void unvisitedVertex(NamedVertex vertex) {
-        if (getGraph().getBackwardEdges(vertex).size() == 0){
+        if (getGraph().getBackwardEdges(vertex).size() == 0 && !vertex.equals(current)){
             leaves.add(vertex);
         }
     }

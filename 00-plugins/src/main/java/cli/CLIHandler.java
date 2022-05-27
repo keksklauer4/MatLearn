@@ -23,7 +23,7 @@ public class CLIHandler {
     private void printCommands() {
         System.out.println("\n");
         int idx = 1;
-        for (final GenericCommand command : CLICommands.commands){
+        for (final GenericCommand command : CLICommands.getCommands()){
             System.out.println(idx++ + ") " + command.getName());
         }
     }
@@ -53,14 +53,14 @@ public class CLIHandler {
     }
 
     private GenericCommand matchCommandInput(final String line){
-        Optional<GenericCommand> cmd = CLICommands.commands.stream()
+        Optional<GenericCommand> cmd = CLICommands.getCommands().stream()
                 .filter(command -> command.getName().toLowerCase().equals(line))
                 .findFirst();
         if (cmd.isPresent()) return cmd.get();
         try {
             int index = Integer.parseInt(line.strip()) - 1;
-            if (index >= 0 && index < CLICommands.commands.size()) {
-                return CLICommands.commands.get(index);
+            if (index >= 0 && index < CLICommands.getCommands().size()) {
+                return CLICommands.getCommands().get(index);
             }
         }
         catch(Exception ignored){}

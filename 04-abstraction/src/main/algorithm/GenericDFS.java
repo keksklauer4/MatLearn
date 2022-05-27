@@ -56,7 +56,6 @@ public abstract class GenericDFS<Vertex extends GenericVertex> {
             if (!top.hasNext()){
                 // visited all edges
                 vertexStack.pop();
-                continue;
             }
             else{
                 Vertex next = vertexStack.peek().getNext();

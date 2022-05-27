@@ -1,5 +1,6 @@
 package main.java.cli;
 
+import java.util.Optional;
 import java.util.Scanner;
 
 public class InputParser {
@@ -9,19 +10,25 @@ public class InputParser {
         this.scanner = new Scanner(System.in);
     }
 
-    public Integer parseInt(){
+    public Optional<Integer> parseInt(){
+        resetScanner();
         try{
-            return scanner.nextInt();
+            return Optional.of(Integer.parseInt(scanner.nextLine().strip()));
         } catch (Exception e){
-            return null;
+            return Optional.empty();
         }
     }
 
     public String parseText(){
+        resetScanner();
         try{
             return scanner.nextLine().strip();
         } catch(Exception e){
             return "";
         }
+    }
+
+    private void resetScanner(){
+        scanner.reset();
     }
 }

@@ -20,11 +20,17 @@ public class RemoveEdgesUseCase implements MatLearnUseCase {
     public UseCaseResult execute() {
         List<Integer> fromIds = parameters.getVertexFromIds();
         List<Integer> toIds = parameters.getVertexToIds();
-        if (fromIds == null || toIds == null) return null;
+        if (fromIds == null || toIds == null){
+            return null;
+        }
         for (Integer fromId : fromIds){
-            if (fromId == null) continue;
+            if (fromId == null) {
+                continue;
+            }
             for (Integer toId : toIds){
-                if (toId == null) continue;
+                if (toId == null){
+                    continue;
+                }
                 networkRepository.removeEdgeIfExists(fromId, toId);
             }
         }

@@ -44,4 +44,6 @@ class LeafValidator {
     #List<NamedVertex> getAdjacent(NamedVertex vertex)
 }
 
+GenericDFS <|-- LeafValidator
+
 @enduml

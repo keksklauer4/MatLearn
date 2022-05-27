@@ -56,8 +56,8 @@ public class EdgeList<Vertex extends GenericVertex> implements Serializable {
         forwardEdges.remove(vertex);
         backwardEdges.remove(vertex);
         Set<Edge> edgesToBeDeleted = new HashSet<>();
-        for (Edge fwd : forward) edgesToBeDeleted.add(fwd.getReverseEdge());
-        for (Edge bwd : backward) edgesToBeDeleted.add(bwd.getReverseEdge());
+        forward.forEach(edge -> edgesToBeDeleted.add(edge.getReverseEdge()));
+        backward.forEach(edge -> edgesToBeDeleted.add(edge.getReverseEdge()));
         removeEdgeSet(edgesToBeDeleted);
 
     }

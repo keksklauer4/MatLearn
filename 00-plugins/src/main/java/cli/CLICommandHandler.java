@@ -8,7 +8,6 @@ import main.java.usecases.MatLearnUseCase;
 import main.java.validators.InvalidInputException;
 
 import java.util.Optional;
-import java.util.Scanner;
 
 public class CLICommandHandler {
     private final ProofNetworkRepository networkRepository;
@@ -57,19 +56,19 @@ public class CLICommandHandler {
     }
 
     private Parameter selectParameter(){
-        Integer requestedId = inputParser.parseInt();
-        if (requestedId == null) return null;
+        Optional<Integer> requestedId = inputParser.parseInt();
+        if (requestedId.isEmpty()) return null;
 
         Optional<Parameter> parameter = command.getParameters()
                 .stream()
-                .filter(para -> para != null && para.getId() == requestedId)
+                .filter(para -> para != null && para.getId() == requestedId.get())
                 .findFirst();
         return parameter.orElse(null);
     }
 
     private void parseParameterInput(final Parameter parameter){
         do {
-            System.out.println("Enter input:");
+            System.out.print("Enter input: ");
         } while (!readParameter(parameter));
     }
 

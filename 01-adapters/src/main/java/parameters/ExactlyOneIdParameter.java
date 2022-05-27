@@ -39,7 +39,7 @@ public class ExactlyOneIdParameter implements Parameter {
     @Override
     public Object getParsedInput() throws InvalidInputException {
         Integer parsedId = parseSingleId(this.input);
-        if (parsedId == null) throw new InvalidInputException("Invalid parameter supplied!");
+        if (parsedId == null) throw new InvalidInputException("Invalid id parameter supplied!");
         return parsedId;
     }
 
@@ -49,6 +49,7 @@ public class ExactlyOneIdParameter implements Parameter {
     }
 
     private Integer parseSingleId(final String input){
+        System.out.println(input);
         try {
             return Integer.parseInt(input.strip());
         } catch (Exception e){
