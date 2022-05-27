@@ -3,8 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="177bdf72-7b70-4342-bb6f-57f946fbfa8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/graph/EdgeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/graph/EdgeList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/graph/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/AddConnectionAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/converters/AddConnectionAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/AddMathematicalObjectAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/converters/AddMathematicalObjectAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/FindVertexAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/converters/FindVertexAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/ListLeavesAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/converters/ListLeavesAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/ListNeighborsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/converters/ListNeighborsAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/ParameterMapParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/converters/ParameterMapParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/RemoveEdgesAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/converters/RemoveEdgesAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/RemoveObjectAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/converters/RemoveObjectAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/UseCaseParameterAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/converters/UseCaseParameterAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/UseCaseParameterDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/converters/UseCaseParameterDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/helpers/PairGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/helpers/PairGenerator.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

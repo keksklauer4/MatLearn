@@ -6,25 +6,25 @@ import java.util.List;
 import java.util.Map;
 
 public class ParameterMapParser {
-    protected final Map<String, Object> parameterMap;
+    private final Map<String, Object> parameterMap;
 
-    protected ParameterMapParser(Map<String, Object> parameterMap) {
+    public ParameterMapParser(Map<String, Object> parameterMap) {
         this.parameterMap = parameterMap;
     }
 
-    protected MatType parseMatType(final String key){
+    public MatType parseMatType(final String key){
         return parseSimpleType(key, MatType.class);
     }
 
-    protected String parseString(final String key){
+    public String parseString(final String key){
         return parseSimpleType(key, String.class);
     }
 
-    protected Integer parseInteger(final String key){
+    public Integer parseInteger(final String key){
         return parseSimpleType(key, Integer.class);
     }
 
-    protected List<Integer> parseIntegerList(final String key){
+    public List<Integer> parseIntegerList(final String key){
         Object value = getFromMap(key);
         checkCorrectType(value instanceof List<?>);
         return checkCorrectContainerType((List<?>) value, Integer.class);

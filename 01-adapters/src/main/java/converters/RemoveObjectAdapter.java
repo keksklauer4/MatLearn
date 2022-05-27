@@ -9,10 +9,7 @@ import java.util.Map;
 
 public class RemoveObjectAdapter implements UseCaseParameterAdapter {
     @Override
-    public UseCaseResult executeUseCase(MatLearnUseCase useCase, Map<String, Object> parameterMap) {
-        if (!(useCase instanceof RemoveObjectUseCase)) return null;
-        RemoveObjectUseCase uc = (RemoveObjectUseCase) useCase;
-        ParameterMapParser parser = new ParameterMapParser(parameterMap);
-        return uc.execute(new SingleObjectParameters(parser.parseInteger("vertexId")));
+    public UseCaseResult executeUseCase(MatLearnUseCase useCase, ParameterMapParser parser) {
+        return useCase.execute(new SingleObjectParameters(parser.parseInteger("vertexId")));
     }
 }

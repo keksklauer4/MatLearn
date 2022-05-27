@@ -29,6 +29,6 @@ public class UseCaseParameterDispatcher {
     public UseCaseResult dispatch(){
         return outputMap
                 .get(useCase.getClass())
-                .executeUseCase(useCase, parameterMap);
+                .executeUseCase(useCase, new ParameterMapParser(parameterMap));
     }
 }

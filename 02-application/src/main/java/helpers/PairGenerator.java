@@ -12,6 +12,7 @@ public class PairGenerator<T> {
     }
 
     public void generate(PairFunction<T> functor){
+        if (listA == null || listB == null) return;
         for (final T a : listA){
             for (final T b : listB){
                 if (a != null && b != null){

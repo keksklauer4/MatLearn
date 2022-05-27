@@ -9,10 +9,7 @@ import java.util.Map;
 
 public class ListLeavesAdapter implements UseCaseParameterAdapter {
     @Override
-    public UseCaseResult executeUseCase(MatLearnUseCase useCase, Map<String, Object> parameterMap) {
-        if (!(useCase instanceof ListLeavesUseCase)) return null;
-        ListLeavesUseCase uc = (ListLeavesUseCase) useCase;
-        ParameterMapParser parser = new ParameterMapParser(parameterMap);
-        return uc.execute(new SingleObjectParameters(parser.parseInteger("vertexId")));
+    public UseCaseResult executeUseCase(MatLearnUseCase useCase, ParameterMapParser parser) {
+        return useCase.execute(new SingleObjectParameters(parser.parseInteger("vertexId")));
     }
 }

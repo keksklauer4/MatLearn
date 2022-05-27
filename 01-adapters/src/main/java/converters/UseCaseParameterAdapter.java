@@ -6,5 +6,5 @@ import main.java.usecases.MatLearnUseCase;
 import java.util.Map;
 
 public interface UseCaseParameterAdapter {
-    UseCaseResult executeUseCase(MatLearnUseCase useCase, Map<String, Object> parameterMap);
+    UseCaseResult executeUseCase(MatLearnUseCase useCase, ParameterMapParser parser);
 }
