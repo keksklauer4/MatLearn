@@ -1,9 +1,6 @@
 package main.java.helpers;
 
-import main.java.entities.NamedVertex;
-
 import java.util.List;
-import java.util.concurrent.Callable;
 
 public class PairGenerator<T> {
     private final List<T> listA;

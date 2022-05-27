@@ -22,7 +22,6 @@ public class ProofNetworkSerializer implements ProofNetworkSerializationReposito
     @Override
     public void serialize(final Graph<NamedVertex> proofNetwork) {
         if (proofNetwork == null) return;
-        System.out.println();
         try (ObjectOutputStream writer = new ObjectOutputStream(new FileOutputStream(prefix, false))) {
             writer.writeObject(proofNetwork);
         } catch (IOException ex) {

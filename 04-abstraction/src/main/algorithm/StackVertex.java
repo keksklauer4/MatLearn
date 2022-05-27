@@ -1,6 +1,5 @@
 package main.algorithm;
 
-import main.graph.Edge;
 import main.graph.GenericVertex;
 
 import java.util.List;

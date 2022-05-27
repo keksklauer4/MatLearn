@@ -3,7 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="177bdf72-7b70-4342-bb6f-57f946fbfa8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/ProofNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/ProofNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/output/FindVertexOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/output/FindVertexOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/serialization/ProofNetworkSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/serialization/ProofNetworkSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/parameters/IdListParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/parameters/IdListParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/helpers/PairGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/helpers/PairGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/AddConnectionParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/AddConnectionParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/AddMatObjectParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/AddMatObjectParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/FindVertexParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/FindVertexParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/RemoveEdgesParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/RemoveEdgesParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/SingleObjectParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/SingleObjectParameters.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/RemoveEdgesUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/RemoveEdgesUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/MathematicalDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/MathematicalDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Source.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Source.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Theorem.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Theorem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/algorithm/CycleChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/algorithm/CycleChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/algorithm/GenericDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/algorithm/GenericDFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/algorithm/StackVertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/algorithm/StackVertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/graph/Graph.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -169,12 +187,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/04-abstraction/src/main/graph/Graph.java</url>
-          <line>26</line>
+          <line>29</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/00-plugins/src/main/java/ProofNetwork.java</url>
-          <line>27</line>
+          <line>25</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

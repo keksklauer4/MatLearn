@@ -1,7 +1,5 @@
 package main.java.output;
 
-import main.java.entities.NamedVertex;
-import main.java.results.AddMatObjectResult;
 import main.java.results.FindVertexResult;
 import main.java.results.UseCaseResult;
 

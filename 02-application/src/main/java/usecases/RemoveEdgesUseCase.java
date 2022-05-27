@@ -6,8 +6,6 @@ import main.java.results.UseCaseResult;
 import main.java.results.ValidCommandResult;
 import main.java.usecaseparameters.RemoveEdgesParameters;
 
-import java.util.List;
-
 public class RemoveEdgesUseCase implements MatLearnUseCase {
     private final RemoveEdgesParameters parameters;
     private final ProofNetworkRepository networkRepository;

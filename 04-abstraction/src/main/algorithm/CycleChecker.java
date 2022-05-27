@@ -12,8 +12,8 @@ public class CycleChecker<Vertex extends GenericVertex> extends GenericDFS<Verte
 
     public CycleChecker(Graph<Vertex> graph) {
         super(graph);
-        this.visitedInIteration = new HashMap<Vertex, Integer>();
-        this.remainingVertices = new HashSet<Vertex>(graph.getVertices());
+        this.visitedInIteration = new HashMap<>();
+        this.remainingVertices = new HashSet<>(graph.getVertices());
         this.currentIteration = 0;
     }
 
@@ -29,7 +29,8 @@ public class CycleChecker<Vertex extends GenericVertex> extends GenericDFS<Verte
 
     @Override
     protected void unvisitedVertex(final Vertex vertex) {
-        visitedInIteration.put(vertex, currentIteration);
+        visitedNewVertex(vertex);
+        // visitedInIteration.put(vertex, currentIteration);
     }
 
     @Override

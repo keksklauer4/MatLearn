@@ -4,7 +4,6 @@ import main.java.commands.GenericCommand;
 import main.java.network.ProofNetworkRepository;
 
 import java.util.Optional;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class CLIHandler {
     private final ProofNetworkRepository networkRepository;

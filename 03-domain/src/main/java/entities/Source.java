@@ -1,7 +1,5 @@
 package main.java.entities;
 
-import main.graph.Graph;
-
 import java.io.Serializable;
 
 public class Source extends NamedVertex implements Serializable {

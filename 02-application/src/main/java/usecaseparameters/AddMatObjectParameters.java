@@ -4,6 +4,7 @@ import main.java.entities.MatType;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class AddMatObjectParameters {
     private final String name;
@@ -12,7 +13,7 @@ public class AddMatObjectParameters {
     private final List<Integer> sources;
     private final MatType type;
 
-    public AddMatObjectParameters(final HashMap<String, Object> parameters) {
+    public AddMatObjectParameters(final Map<String, Object> parameters) {
         name = (String) parameters.get("name");
         description = (String) parameters.get("desc");
         dependencies = (List<Integer>) parameters.get("deps");

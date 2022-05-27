@@ -1,7 +1,5 @@
 package main.java.entities;
 
-import main.graph.Graph;
-
 import java.io.Serializable;
 
 public class MathematicalDefinition extends NamedVertex implements Serializable {

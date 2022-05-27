@@ -1,12 +1,13 @@
 package main.java.usecaseparameters;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class AddConnectionParameters {
     private final Integer vertexFromId;
     private final Integer vertexToId;
 
-    public AddConnectionParameters(final HashMap<String, Object> parameters) {
+    public AddConnectionParameters(final Map<String, Object> parameters) {
         vertexFromId = (Integer) parameters.get("fromVertex");
         vertexToId = (Integer) parameters.get("toVertex");
     }

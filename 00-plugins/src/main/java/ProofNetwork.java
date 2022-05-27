@@ -1,12 +1,10 @@
 package main.java;
 
-import main.algorithm.CycleChecker;
 import main.graph.Graph;
 import main.graph.UnknownVertexException;
 import main.java.entities.NamedVertex;
 import main.java.network.ProofNetworkRepository;
 import main.java.network.ProofNetworkSerializationRepository;
-import main.java.validators.FullValidator;
 
 import java.util.List;
 
