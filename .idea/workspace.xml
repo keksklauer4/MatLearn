@@ -3,20 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="177bdf72-7b70-4342-bb6f-57f946fbfa8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLICommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLICommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLICommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLICommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/cli/InputParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/cli/InputParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddTheoremCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddTheoremCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/parameters/ExactlyOneIdParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/parameters/ExactlyOneIdParameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/parameters/IdListParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/parameters/IdListParameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/helpers/ListLeaves.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/helpers/ListLeaves.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/RemoveEdgesUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/RemoveEdgesUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/algorithm/GenericDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/algorithm/GenericDFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/graph/EdgeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/graph/EdgeList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/graph/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProofNetworkStorage" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/srp_positive.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/srp_positive.puml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +15,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>

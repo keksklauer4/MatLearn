@@ -1,5 +1,6 @@
 package main.java.usecases;
 
+import main.java.helpers.PairGenerator;
 import main.java.network.ProofNetworkRepository;
 import main.java.results.UseCaseResult;
 import main.java.results.ValidCommandResult;
@@ -18,22 +19,11 @@ public class RemoveEdgesUseCase implements MatLearnUseCase {
 
     @Override
     public UseCaseResult execute() {
-        List<Integer> fromIds = parameters.getVertexFromIds();
-        List<Integer> toIds = parameters.getVertexToIds();
-        if (fromIds == null || toIds == null){
-            return null;
-        }
-        for (Integer fromId : fromIds){
-            if (fromId == null) {
-                continue;
-            }
-            for (Integer toId : toIds){
-                if (toId == null){
-                    continue;
-                }
-                networkRepository.removeEdgeIfExists(fromId, toId);
-            }
-        }
+        PairGenerator<Integer> pairGenerator = new PairGenerator<>(
+                parameters.getVertexFromIds(),
+                parameters.getVertexToIds());
+        pairGenerator.generate(networkRepository::removeEdgeIfExists);
+
         return new ValidCommandResult();
     }
 }
