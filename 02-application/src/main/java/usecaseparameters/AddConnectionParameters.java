@@ -1,15 +1,14 @@
 package main.java.usecaseparameters;
 
-import java.util.HashMap;
 import java.util.Map;
 
-public class AddConnectionParameters {
+public class AddConnectionParameters implements UseCaseParameter {
     private final Integer vertexFromId;
     private final Integer vertexToId;
 
-    public AddConnectionParameters(final Map<String, Object> parameters) {
-        vertexFromId = (Integer) parameters.get("fromVertex");
-        vertexToId = (Integer) parameters.get("toVertex");
+    public AddConnectionParameters(Integer vertexFromId, Integer vertexToId) {
+        this.vertexFromId = vertexFromId;
+        this.vertexToId = vertexToId;
     }
 
     public Integer getVertexFromId() {

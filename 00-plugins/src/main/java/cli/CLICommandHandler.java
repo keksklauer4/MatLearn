@@ -1,6 +1,7 @@
 package main.java.cli;
 
 import main.java.commands.GenericCommand;
+import main.java.converters.UseCaseParameterDispatcher;
 import main.java.network.ProofNetworkRepository;
 import main.java.parameters.Parameter;
 import main.java.results.UseCaseResult;
@@ -28,10 +29,13 @@ public class CLICommandHandler {
             if(parseParameter()) nbRemaining--;
         }
         MatLearnUseCase useCase = command.getParametrizedUseCase(networkRepository);
-        UseCaseResult res = useCase.execute();
+        UseCaseParameterDispatcher parameterDispatcher = new UseCaseParameterDispatcher(
+                useCase, command.getParameterMap());
+        UseCaseResult res = parameterDispatcher.dispatch();
         UseCaseResultDispatcher dispatcher = new UseCaseResultDispatcher(res);
         dispatcher.outputResult();
     }
+
 
     private void printRemainingParameters(){
         System.out.println("Parameters:");

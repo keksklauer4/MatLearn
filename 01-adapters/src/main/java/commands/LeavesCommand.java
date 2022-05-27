@@ -27,6 +27,6 @@ public class LeavesCommand extends AbstractCommand {
 
     @Override
     public MatLearnUseCase getParametrizedUseCase(ProofNetworkRepository networkRepository) {
-        return new ListLeavesUseCase(new SingleObjectParameters(getParameterMap()), networkRepository);
+        return new ListLeavesUseCase(networkRepository);
     }
 }

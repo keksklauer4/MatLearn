@@ -5,20 +5,24 @@ import main.java.network.ProofNetworkRepository;
 import main.java.results.NeighborResult;
 import main.java.results.UseCaseResult;
 import main.java.usecaseparameters.SingleObjectParameters;
+import main.java.usecaseparameters.UseCaseParameter;
 
 import java.util.List;
 
-public class ListNeighborsUseCase implements MatLearnUseCase {
-    private final SingleObjectParameters parameters;
+public class ListNeighborsUseCase extends AbstractUseCase<SingleObjectParameters> implements MatLearnUseCase {
     private final ProofNetworkRepository networkRepository;
 
-    public ListNeighborsUseCase(SingleObjectParameters parameters, ProofNetworkRepository networkRepository) {
-        this.parameters = parameters;
+    public ListNeighborsUseCase(ProofNetworkRepository networkRepository) {
         this.networkRepository = networkRepository;
     }
 
     @Override
-    public UseCaseResult execute() {
+    protected boolean checkCorrectParameterType(UseCaseParameter parameters) {
+        return parameters instanceof SingleObjectParameters;
+    }
+
+    @Override
+    protected UseCaseResult executeTyped(SingleObjectParameters parameters) {
         NamedVertex vertex = networkRepository.getVertexById(parameters.getVertexId());
         if (vertex == null) return null;
         List<NamedVertex> forward = networkRepository.getGraph().getForwardEdges(vertex);

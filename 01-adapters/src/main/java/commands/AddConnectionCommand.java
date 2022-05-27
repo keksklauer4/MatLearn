@@ -26,9 +26,8 @@ public class AddConnectionCommand extends AbstractCommand {
         return "Connect two mathematical objects through an edge given the ids of the objects.";
     }
 
-
     @Override
     public MatLearnUseCase getParametrizedUseCase(ProofNetworkRepository networkRepository) {
-        return new AddConnectionUseCase(new AddConnectionParameters(getParameterMap()), networkRepository);
+        return new AddConnectionUseCase(networkRepository);
     }
 }

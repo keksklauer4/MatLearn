@@ -27,6 +27,6 @@ public class ObjectNeighborhoodCommand extends AbstractCommand {
 
     @Override
     public MatLearnUseCase getParametrizedUseCase(ProofNetworkRepository networkRepository) {
-        return new ListNeighborsUseCase(new SingleObjectParameters(getParameterMap()), networkRepository);
+        return new ListNeighborsUseCase(networkRepository);
     }
 }

@@ -53,7 +53,7 @@ public class CLIHandler {
 
     private GenericCommand matchCommandInput(final String line){
         Optional<GenericCommand> cmd = CLICommands.getCommands().stream()
-                .filter(command -> command.getName().toLowerCase().equals(line))
+                .filter(command -> command.getName().equalsIgnoreCase(line))
                 .findFirst();
         if (cmd.isPresent()) return cmd.get();
         try {

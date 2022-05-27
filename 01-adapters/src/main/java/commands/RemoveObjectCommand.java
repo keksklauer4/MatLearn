@@ -27,6 +27,6 @@ public class RemoveObjectCommand extends AbstractCommand {
 
     @Override
     public MatLearnUseCase getParametrizedUseCase(ProofNetworkRepository networkRepository) {
-        return new RemoveObjectUseCase(new SingleObjectParameters(getParameterMap()), networkRepository);
+        return new RemoveObjectUseCase(networkRepository);
     }
 }

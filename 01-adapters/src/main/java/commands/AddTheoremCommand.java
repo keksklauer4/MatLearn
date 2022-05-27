@@ -10,6 +10,7 @@ import main.java.usecases.MatLearnUseCase;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
 public class AddTheoremCommand extends AbstractCommand {
     public AddTheoremCommand(){
@@ -31,11 +32,15 @@ public class AddTheoremCommand extends AbstractCommand {
         return "Add a theorem which depends on a set of other mathematical objects";
     }
 
+    @Override
+    public Map<String, Object> getParameterMap() {
+        Map<String, Object> parameterMap = super.getParameterMap();
+        parameterMap.put("type", MatType.THEOREM);
+        return parameterMap;
+    }
 
     @Override
     public MatLearnUseCase getParametrizedUseCase(ProofNetworkRepository networkRepository) {
-        HashMap<String, Object> parameterMap = getParameterMap();
-        parameterMap.put("type", MatType.THEOREM);
-        return new AddMathematicalObjectTask(new AddMatObjectParameters(parameterMap), networkRepository);
+        return new AddMathematicalObjectTask(networkRepository);
     }
 }

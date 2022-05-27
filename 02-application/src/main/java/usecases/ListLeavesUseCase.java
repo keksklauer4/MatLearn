@@ -6,18 +6,22 @@ import main.java.network.ProofNetworkRepository;
 import main.java.results.LeafListingResult;
 import main.java.results.UseCaseResult;
 import main.java.usecaseparameters.SingleObjectParameters;
+import main.java.usecaseparameters.UseCaseParameter;
 
-public class ListLeavesUseCase implements MatLearnUseCase {
-    private final SingleObjectParameters parameters;
+public class ListLeavesUseCase extends AbstractUseCase<SingleObjectParameters> implements MatLearnUseCase {
     private final ProofNetworkRepository networkRepository;
 
-    public ListLeavesUseCase(SingleObjectParameters parameters, ProofNetworkRepository networkRepository) {
-        this.parameters = parameters;
+    public ListLeavesUseCase(ProofNetworkRepository networkRepository) {
         this.networkRepository = networkRepository;
     }
 
     @Override
-    public UseCaseResult execute() {
+    protected boolean checkCorrectParameterType(UseCaseParameter parameters) {
+        return parameters instanceof SingleObjectParameters;
+    }
+
+    @Override
+    protected UseCaseResult executeTyped(SingleObjectParameters parameters) {
         NamedVertex vertex = networkRepository.getVertexById(parameters.getVertexId());
         if (vertex == null) return null;
         ListLeaves lister = new ListLeaves(networkRepository, vertex);

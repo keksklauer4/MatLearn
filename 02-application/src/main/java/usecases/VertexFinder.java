@@ -5,25 +5,29 @@ import main.java.network.ProofNetworkRepository;
 import main.java.results.FindVertexResult;
 import main.java.results.UseCaseResult;
 import main.java.usecaseparameters.FindVertexParameter;
+import main.java.usecaseparameters.UseCaseParameter;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class VertexFinder implements MatLearnUseCase {
-    private final FindVertexParameter parameter;
+public class VertexFinder extends AbstractUseCase<FindVertexParameter> implements MatLearnUseCase {
     private final ProofNetworkRepository networkRepository;
 
-    public VertexFinder(FindVertexParameter parameter, ProofNetworkRepository networkRepository) {
-        this.parameter = parameter;
+    public VertexFinder(ProofNetworkRepository networkRepository) {
         this.networkRepository = networkRepository;
     }
 
     @Override
-    public UseCaseResult execute() {
+    protected boolean checkCorrectParameterType(UseCaseParameter parameters) {
+        return parameters instanceof FindVertexParameter;
+    }
+
+    @Override
+    protected UseCaseResult executeTyped(FindVertexParameter parameters) {
         List<NamedVertex> vertices = networkRepository.getVertices()
                 .stream()
-                .filter(parameter::matchesSearch)
+                .filter(parameters::matchesSearch)
                 .collect(Collectors.toList());
-        return new FindVertexResult(parameter.getSearch(), vertices);
+        return new FindVertexResult(parameters.getSearch(), vertices);
     }
 }

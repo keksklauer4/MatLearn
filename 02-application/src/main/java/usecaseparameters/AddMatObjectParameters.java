@@ -2,23 +2,23 @@ package main.java.usecaseparameters;
 
 import main.java.entities.MatType;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class AddMatObjectParameters {
+public class AddMatObjectParameters implements UseCaseParameter {
     private final String name;
     private final String description;
     private final List<Integer> dependencies;
     private final List<Integer> sources;
     private final MatType type;
 
-    public AddMatObjectParameters(final Map<String, Object> parameters) {
-        name = (String) parameters.get("name");
-        description = (String) parameters.get("desc");
-        dependencies = (List<Integer>) parameters.get("deps");
-        sources = (List<Integer>) parameters.get("sources");
-        type = (MatType) parameters.get("type");
+    public AddMatObjectParameters(String name, String description, List<Integer> dependencies,
+                                  List<Integer> sources, MatType type) {
+        this.name = name;
+        this.description = description;
+        this.dependencies = dependencies;
+        this.sources = sources;
+        this.type = type;
     }
 
     public String getName() {

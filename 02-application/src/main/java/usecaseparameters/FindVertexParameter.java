@@ -2,14 +2,13 @@ package main.java.usecaseparameters;
 
 import main.java.entities.NamedVertex;
 
-import java.util.HashMap;
 import java.util.Map;
 
-public class FindVertexParameter {
+public class FindVertexParameter implements UseCaseParameter {
     private final String search;
 
-    public FindVertexParameter(final Map<String, Object> parameterMap) {
-        this.search = ((String) parameterMap.get("search")).strip();
+    public FindVertexParameter(String search) {
+        this.search = search;
     }
 
     public String getSearch() {

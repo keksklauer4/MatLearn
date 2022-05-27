@@ -36,6 +36,6 @@ public class AddDefinedObjectCommand extends AbstractCommand {
 
     @Override
     public MatLearnUseCase getParametrizedUseCase(ProofNetworkRepository networkRepository) {
-        return new AddMathematicalObjectTask(new AddMatObjectParameters(getParameterMap()), networkRepository);
+        return new AddMathematicalObjectTask(networkRepository);
     }
 }

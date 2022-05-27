@@ -5,8 +5,9 @@ import main.java.validators.InvalidInputException;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public abstract class AbstractCommand implements GenericCommand{
+public abstract class AbstractCommand implements GenericCommand {
     protected final List<Parameter> parameters;
 
 
@@ -28,7 +29,8 @@ public abstract class AbstractCommand implements GenericCommand{
         }
     }
 
-    protected HashMap<String, Object> getParameterMap() {
+    @Override
+    public Map<String, Object> getParameterMap() {
         HashMap<String, Object> parameterMap = new HashMap<>();
         try {
             for (final Parameter parameter : parameters) {

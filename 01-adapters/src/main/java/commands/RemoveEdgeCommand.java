@@ -28,6 +28,6 @@ public class RemoveEdgeCommand extends AbstractCommand {
 
     @Override
     public MatLearnUseCase getParametrizedUseCase(ProofNetworkRepository networkRepository) {
-        return new RemoveEdgesUseCase(new RemoveEdgesParameters(getParameterMap()), networkRepository);
+        return new RemoveEdgesUseCase(networkRepository);
     }
 }

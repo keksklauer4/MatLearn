@@ -27,6 +27,6 @@ public class FindObjectCommand extends AbstractCommand {
 
     @Override
     public MatLearnUseCase getParametrizedUseCase(ProofNetworkRepository networkRepository) {
-        return new VertexFinder(new FindVertexParameter(getParameterMap()), networkRepository);
+        return new VertexFinder(networkRepository);
     }
 }

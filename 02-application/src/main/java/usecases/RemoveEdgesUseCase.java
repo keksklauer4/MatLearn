@@ -5,18 +5,22 @@ import main.java.network.ProofNetworkRepository;
 import main.java.results.UseCaseResult;
 import main.java.results.ValidCommandResult;
 import main.java.usecaseparameters.RemoveEdgesParameters;
+import main.java.usecaseparameters.UseCaseParameter;
 
-public class RemoveEdgesUseCase implements MatLearnUseCase {
-    private final RemoveEdgesParameters parameters;
+public class RemoveEdgesUseCase extends AbstractUseCase<RemoveEdgesParameters> implements MatLearnUseCase {
     private final ProofNetworkRepository networkRepository;
 
-    public RemoveEdgesUseCase(RemoveEdgesParameters parameters, ProofNetworkRepository networkRepository) {
-        this.parameters = parameters;
+    public RemoveEdgesUseCase(ProofNetworkRepository networkRepository) {
         this.networkRepository = networkRepository;
     }
 
     @Override
-    public UseCaseResult execute() {
+    protected boolean checkCorrectParameterType(UseCaseParameter parameters) {
+        return parameters instanceof RemoveEdgesParameters;
+    }
+
+    @Override
+    protected UseCaseResult executeTyped(RemoveEdgesParameters parameters) {
         PairGenerator<Integer> pairGenerator = new PairGenerator<>(
                 parameters.getVertexFromIds(),
                 parameters.getVertexToIds());
