@@ -3,10 +3,7 @@ package main.algorithm;
 import main.graph.GenericVertex;
 import main.graph.Graph;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.Stack;
+import java.util.*;
 
 public abstract class GenericDFS<Vertex extends GenericVertex> {
     private final Graph<Vertex> graph;
@@ -57,15 +54,19 @@ public abstract class GenericDFS<Vertex extends GenericVertex> {
                 vertexStack.pop();
             }
             else{
-                Vertex next = vertexStack.peek().getNext();
-                if (visited.contains(next)){
-                    // already visited this node
-                    alreadyVisitedVertex(next);
-                }
-                else {
-                    vertexStack.push(visitNext(next));
-                }
+                tryVisitNext(vertexStack);
             }
+        }
+    }
+
+    private void tryVisitNext(Stack<StackVertex<Vertex>> vertexStack){
+        Vertex next = vertexStack.peek().getNext();
+        if (visited.contains(next)){
+            // already visited this node
+            alreadyVisitedVertex(next);
+        }
+        else {
+            vertexStack.push(visitNext(next));
         }
     }
 
