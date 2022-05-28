@@ -1,5 +1,6 @@
 package main.java.commands;
 
+import main.java.converters.ParameterMapKeys;
 import main.java.network.ProofNetworkRepository;
 import main.java.parameters.TextInputParameter;
 import main.java.usecaseparameters.FindVertexParameter;
@@ -11,7 +12,7 @@ import java.util.Collections;
 public class FindObjectCommand extends AbstractCommand {
     public FindObjectCommand() {
         super(Collections.singletonList(
-                new TextInputParameter(1, "search", "search")
+                new TextInputParameter(1, "search", ParameterMapKeys.SEARCH_KEY)
         ));
     }
 

@@ -1,5 +1,6 @@
 package main.java.commands;
 
+import main.java.converters.ParameterMapKeys;
 import main.java.entities.MatType;
 import main.java.network.ProofNetworkRepository;
 import main.java.parameters.IdListParameter;
@@ -15,10 +16,10 @@ import java.util.Map;
 public class AddTheoremCommand extends AbstractCommand {
     public AddTheoremCommand(){
         super(Arrays.asList(
-                new TextInputParameter(1, "name", "name"),
-                new TextInputParameter(2, "description", "desc"),
-                new IdListParameter(3, "dependencies", "deps"),
-                new IdListParameter(4, "sources", "sources")
+                new TextInputParameter(1, "name", ParameterMapKeys.NAME_KEY),
+                new TextInputParameter(2, "description", ParameterMapKeys.DESCRIPTION_KEY),
+                new IdListParameter(3, "dependencies", ParameterMapKeys.DEPENDENCIES_KEY),
+                new IdListParameter(4, "sources", ParameterMapKeys.SOURCES_KEY)
         ));
     }
 

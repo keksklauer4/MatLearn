@@ -10,7 +10,7 @@ public interface ProofNetworkRepository {
     void addEdge(NamedVertex fromVertex, NamedVertex toVertex);
 
     void removeVertex(NamedVertex vertex);
-    void removeEdgeIfExists(int fromId, int toId);
+    boolean removeEdgeIfExists(int fromId, int toId);
 
     List<NamedVertex> getVertices();
     NamedVertex getVertexById(int vertexId);

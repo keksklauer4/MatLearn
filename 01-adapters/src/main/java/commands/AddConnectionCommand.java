@@ -1,5 +1,6 @@
 package main.java.commands;
 
+import main.java.converters.ParameterMapKeys;
 import main.java.network.ProofNetworkRepository;
 import main.java.parameters.ExactlyOneIdParameter;
 import main.java.usecaseparameters.AddConnectionParameters;
@@ -11,8 +12,8 @@ import java.util.Arrays;
 public class AddConnectionCommand extends AbstractCommand {
     public AddConnectionCommand() {
         super(Arrays.asList(
-                new ExactlyOneIdParameter(1, "Edge from", "fromVertex"),
-                new ExactlyOneIdParameter(2, "Edge to", "toVertex")
+                new ExactlyOneIdParameter(1, "Edge from", ParameterMapKeys.FROM_VERTEX_KEY),
+                new ExactlyOneIdParameter(2, "Edge to", ParameterMapKeys.TO_VERTEX_KEY)
         ));
     }
 

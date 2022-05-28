@@ -40,4 +40,20 @@ public class AddMatObjectParameters implements UseCaseParameter {
     public MatType getType() {
         return type;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        AddMatObjectParameters that = (AddMatObjectParameters) o;
+
+        if (getName() != null ? !getName().equals(that.getName()) : that.getName() != null) return false;
+        if (getDescription() != null ? !getDescription().equals(that.getDescription()) : that.getDescription() != null)
+            return false;
+        if (getDependencies() != null ? !getDependencies().equals(that.getDependencies()) : that.getDependencies() != null)
+            return false;
+        if (getSources() != null ? !getSources().equals(that.getSources()) : that.getSources() != null) return false;
+        return getType() == that.getType();
+    }
 }

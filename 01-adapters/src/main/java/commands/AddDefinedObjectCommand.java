@@ -1,5 +1,6 @@
 package main.java.commands;
 
+import main.java.converters.ParameterMapKeys;
 import main.java.entities.MatType;
 import main.java.network.ProofNetworkRepository;
 import main.java.parameters.IdListParameter;
@@ -15,12 +16,12 @@ public class AddDefinedObjectCommand extends AbstractCommand {
 
     public AddDefinedObjectCommand(){
         super(Arrays.asList(
-                new OptionParameter(1, "Object type", "type",
+                new OptionParameter(1, "Object type", ParameterMapKeys.TYPE_KEY,
                         new String[]{"Axiom", "Definition"},
                         new MatType[]{MatType.AXIOM, MatType.DEFINITION}),
-                new TextInputParameter(2, "name", "name"),
-                new TextInputParameter(3, "description", "desc"),
-                new IdListParameter(4, "sources", "sources")
+                new TextInputParameter(2, "name", ParameterMapKeys.NAME_KEY),
+                new TextInputParameter(3, "description", ParameterMapKeys.DESCRIPTION_KEY),
+                new IdListParameter(4, "sources", ParameterMapKeys.SOURCES_KEY)
         ));
     }
 

@@ -1,5 +1,6 @@
 package main.java.commands;
 
+import main.java.converters.ParameterMapKeys;
 import main.java.network.ProofNetworkRepository;
 import main.java.parameters.ExactlyOneIdParameter;
 import main.java.usecaseparameters.SingleObjectParameters;
@@ -11,7 +12,7 @@ import java.util.Collections;
 public class LeavesCommand extends AbstractCommand {
     public LeavesCommand(){
         super(Collections.singletonList(
-                new ExactlyOneIdParameter(1, "Search id", "vertexId")
+                new ExactlyOneIdParameter(1, "Search id", ParameterMapKeys.VERTEX_ID_KEY)
         ));
     }
 

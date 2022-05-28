@@ -10,8 +10,8 @@ public class AddConnectionAdapter implements UseCaseParameterAdapter {
     @Override
     public UseCaseResult executeUseCase(MatLearnUseCase useCase, ParameterMapParser parser) {
         return useCase.execute(new AddConnectionParameters(
-                parser.parseInteger("fromVertex"),
-                parser.parseInteger("toVertex"))
+                parser.parseInteger(ParameterMapKeys.FROM_VERTEX_KEY),
+                parser.parseInteger(ParameterMapKeys.TO_VERTEX_KEY))
         );
     }
 }

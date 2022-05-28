@@ -14,5 +14,6 @@
     <orderEntry type="module" module-name="02-application" />
     <orderEntry type="module" module-name="03-domain" />
     <orderEntry type="module" module-name="04-abstraction" />
+    <orderEntry type="library" name="Maven: org.mockito:mockito-all:1.9.5" level="project" />
   </component>
 </module>

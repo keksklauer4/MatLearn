@@ -16,7 +16,7 @@ public class NamedVertexFactory {
             new AbstractMap.SimpleEntry<>(MatType.SOURCE, Source.class),
             new AbstractMap.SimpleEntry<>(MatType.THEOREM, Theorem.class),
             new AbstractMap.SimpleEntry<>(MatType.TOPIC, Topic.class)
-    ).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));;
+    ).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 
     // TODO: Open/Closed Principle
 

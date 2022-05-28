@@ -47,11 +47,12 @@ public class Graph<Vertex extends GenericVertex> implements Serializable {
         edges.removeEdge(vertexFrom, vertexTo);
     }
 
-    public void removeEdge(int fromId, int toId){
+    public boolean removeEdge(int fromId, int toId){
         final Vertex vertexFrom = getVertexById(fromId);
         final Vertex vertexTo = getVertexById(toId);
-        if (vertexFrom == null || vertexTo == null) return;
+        if (vertexFrom == null || vertexTo == null) return false;
         removeEdge(vertexFrom, vertexTo);
+        return true;
     }
 
     public void removeVertex(final Vertex vertex){

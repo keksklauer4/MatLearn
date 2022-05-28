@@ -2,16 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="177bdf72-7b70-4342-bb6f-57f946fbfa8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/uml/application.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uml/value_object.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/AbstractUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/AbstractUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/AddConnectionUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/AddConnectionUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/AddMathematicalObjectTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/AddMathematicalObjectTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListLeavesUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListLeavesUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListNeighborsUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListNeighborsUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/RemoveEdgesUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/RemoveEdgesUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/RemoveObjectUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/RemoveObjectUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/SubgraphVisualizer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/VertexFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/VertexFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/00-plugins.iml" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/00-plugins.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/ProofNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/ProofNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/01-adapters.iml" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/01-adapters.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddConnectionCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddConnectionCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddDefinedObjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddDefinedObjectCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddTheoremCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddTheoremCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/FindObjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/FindObjectCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/LeavesCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/LeavesCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/ObjectNeighborhoodCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/ObjectNeighborhoodCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/RemoveEdgeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/RemoveEdgeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/RemoveObjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/RemoveObjectCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/AddConnectionAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/converters/AddConnectionAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/AddMathematicalObjectAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/converters/AddMathematicalObjectAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/FindVertexAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/converters/FindVertexAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/ListLeavesAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/converters/ListLeavesAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/ListNeighborsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/converters/ListNeighborsAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/RemoveEdgesAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/converters/RemoveEdgesAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/RemoveObjectAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/converters/RemoveObjectAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/02-application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/02-application.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/AddConnectionParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/AddConnectionParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/AddMatObjectParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/AddMatObjectParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/FindVertexParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/FindVertexParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/RemoveEdgesParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/RemoveEdgesParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/SingleObjectParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/SingleObjectParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/03-domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/03-domain.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/NamedVertexFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/NamedVertexFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetworkRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetworkRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/04-abstraction.iml" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/04-abstraction.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/graph/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatLearn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MatLearn.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +77,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -67,16 +91,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MatLearn">
-    <configuration name="MatLearn" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.java.MatLearn" />
-      <module name="00-plugins" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="main.java.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+  <component name="RunManager" selected="JUnit.All in 01-adapters">
+    <configuration name="All in 01-adapters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="01-adapters" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in 02-application" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="02-application" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in 03-domain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="03-domain" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -89,7 +124,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in MatLearn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in MatLearn (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MatLearn" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -97,42 +132,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EdgeListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="04-abstraction" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.EdgeListTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test in 04-abstraction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="04-abstraction" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MatLearn" />
-        <item itemvalue="JUnit.test in 04-abstraction" />
-        <item itemvalue="JUnit.All in MatLearn" />
+        <item itemvalue="JUnit.All in 01-adapters" />
+        <item itemvalue="JUnit.All in 02-application" />
+        <item itemvalue="JUnit.All in 03-domain" />
         <item itemvalue="JUnit.All in 04-abstraction" />
-        <item itemvalue="JUnit.EdgeListTest" />
+        <item itemvalue="JUnit.All in MatLearn (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +178,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/01-adapters/src/main/java/commands/AddDefinedObjectCommand.java</url>
-          <line>38</line>
+          <line>39</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -185,7 +191,32 @@
           <line>20</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/01-adapters/src/main/java/converters/AddMathematicalObjectAdapter.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/01-adapters/src/test/java/converters/AddConnectionAdapterTest.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/01-adapters/src/test/java/converters/AddMathematicalObjectAdapterTest.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/01-adapters/src/test/java/converters/AdapterTest.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/MatLearn$All_in_04_abstraction.ic" NAME="All in 04-abstraction Coverage Results" MODIFIED="1653720618477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/MatLearn$All_in_03_domain.ic" NAME="All in 03-domain Coverage Results" MODIFIED="1653720639305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/MatLearn$All_in_02_application.ic" NAME="All in 02-application Coverage Results" MODIFIED="1653720683368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

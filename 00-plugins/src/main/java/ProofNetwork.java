@@ -50,9 +50,10 @@ public class ProofNetwork implements ProofNetworkRepository {
     }
 
     @Override
-    public void removeEdgeIfExists(int fromId, int toId) {
-        graph.removeEdge(fromId, toId);
+    public boolean removeEdgeIfExists(int fromId, int toId) {
+        boolean exists = graph.removeEdge(fromId, toId);
         serialize();
+        return exists;
     }
 
     @Override

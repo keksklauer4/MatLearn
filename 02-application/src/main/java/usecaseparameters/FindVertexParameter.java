@@ -20,4 +20,14 @@ public class FindVertexParameter implements UseCaseParameter {
         return vertex.getName().strip().toLowerCase().contains(lowered)
                 || vertex.getDescription().strip().toLowerCase().contains(lowered);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        FindVertexParameter that = (FindVertexParameter) o;
+
+        return getSearch() != null ? getSearch().equals(that.getSearch()) : that.getSearch() == null;
+    }
 }

@@ -1,5 +1,6 @@
 package main.java.commands;
 
+import main.java.converters.ParameterMapKeys;
 import main.java.network.ProofNetworkRepository;
 import main.java.parameters.ExactlyOneIdParameter;
 import main.java.usecaseparameters.SingleObjectParameters;
@@ -11,7 +12,7 @@ import java.util.Collections;
 public class RemoveObjectCommand extends AbstractCommand {
     public RemoveObjectCommand() {
         super(Collections.singletonList(
-                new ExactlyOneIdParameter(1, "Object id", "vertexId")
+                new ExactlyOneIdParameter(1, "Object id", ParameterMapKeys.VERTEX_ID_KEY)
         ));
     }
 
