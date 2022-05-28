@@ -1,5 +1,6 @@
 
 @startuml
+
 interface ProofNetworkRepository {
     void addVertex(NamedVertex vertex)
     boolean addEdge(NamedVertex fromVertex, NamedVertex toVertex)
@@ -32,16 +33,11 @@ class ProofNetwork implements ProofNetworkRepository {
     -void deserialize()
 }
 
-class StrictValidator
-interface ValidationExceptionHandler
-class Graph<Vertex extends GenericVertex>
-abstract class GenericVertex
-abstract class NamedVertex extends GenericVertex
+interface ValidationExceptionHandler {
+    boolean handle(ValidationFunctor functor);
+    void handle(ValidationException exception);
+}
 
-ProofNetwork o-- StrictValidator
 ProofNetwork o-- ValidationExceptionHandler
-ProofNetwork o-- Graph
-ProofNetwork o-- NamedVertex
-Graph o-- GenericVertex
 
 @enduml

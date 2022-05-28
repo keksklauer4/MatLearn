@@ -49,3 +49,17 @@
 ## value_object
 ![value_object](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/keksklauer4/MatLearn/finalcountdown/uml/value_object.puml)
 
+
+## ocp_positive
+![ocp_positive](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/keksklauer4/MatLearn/finalcountdown/uml/ocp_positive.puml)
+
+
+## ocp_negative
+![ocp_negative](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/keksklauer4/MatLearn/finalcountdown/uml/ocp_negative.puml)
+
+
+## dip_positive
+![dip_positive](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/keksklauer4/MatLearn/finalcountdown/uml/dip_positive.puml)
+
+## adapter
+![adapter](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/keksklauer4/MatLearn/finalcountdown/uml/adapter.puml)

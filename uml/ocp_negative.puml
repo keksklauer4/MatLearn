@@ -1,0 +1,29 @@
+
+@startuml
+
+class UseCaseResultDispatcher {
+    -UseCaseResult result;
+    -CLIPrinter cliPrinter;
+
+    -{static} Map<Class<? extends UseCaseResult>, UseCaseResultOutput> outputMap
+
+    + UseCaseResultDispatcher(UseCaseResult result, CLIPrinter cliPrinter)
+
+    + void outputResult()
+
+}
+
+interface UseCaseResult
+interface UseCaseResultOutput{
+void printUseCaseResult(UseCaseResult res, CLIPrinter cliPrinter)
+}
+interface CLIPrinter
+
+
+UseCaseResultDispatcher o-- UseCaseResult
+UseCaseResultDispatcher o-- UseCaseResultOutput
+UseCaseResultOutput o-- UseCaseResult
+UseCaseResultDispatcher o-- CLIPrinter
+UseCaseResultOutput o-- CLIPrinter
+
+@enduml

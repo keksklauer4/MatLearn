@@ -21,42 +21,50 @@ abstract class NamedVertex{
     +boolean isValid(final Graph<NamedVertex> graph)
     +boolean isFullyValid(final Graph<NamedVertex> graph)
     +boolean isDefinedType()
-    +abstract boolean isOfType(MatType type)
+    +{abstract} boolean isOfType(MatType type)
+    +{abstract} MatType getType()
 }
 
 class Axiom {
     +boolean isValid(final Graph<NamedVertex> graph)
     +boolean isOfType(MatType type)
+    +MatType getType()
 }
 
 class Corollary {
     +boolean isFullyValid(Graph<NamedVertex> graph)
     +boolean isOfType(MatType type)
+    +MatType getType()
 }
 
 class Lemma {
     +boolean isFullyValid(Graph<NamedVertex> graph)
     +boolean isOfType(MatType type)
+    +MatType getType()
 }
 
 class MathematicalDefinition {
     +boolean isValid(final Graph<NamedVertex> graph)
     +boolean isOfType(MatType type)
+    +MatType getType()
 }
 
 class Source {
     +boolean isValid(final Graph<NamedVertex> graph)
     +boolean isOfType(MatType type)
+    +MatType getType()
 }
 
 class Theorem {
     +boolean isFullyValid(Graph<NamedVertex> graph)
     +boolean isOfType(MatType type)
+    +MatType getType()
 }
 
 class Topic {
     +boolean isValid(final Graph<NamedVertex> graph)
     +boolean isOfType(MatType type)
+    +MatType getType()
 }
 
 GenericVertex <|-- NamedVertex

@@ -6,16 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="177bdf72-7b70-4342-bb6f-57f946fbfa8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/cli/CLICommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/cli/CLICommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/output/UseCaseResultDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/output/UseCaseResultDispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/test/java/de/matlearn/application/usecases/FindVerticesUseCaseUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/test/java/de/matlearn/application/usecases/FindVerticesUseCaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/entities/Lemma.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/entities/Lemma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/validators/ContributionValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/validators/ContributionValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/validators/EdgeValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/abstraction.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/abstraction.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/factory.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/factory.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/srp_negative.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/srp_negative.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/srp_negative_improved.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/srp_negative_improved.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uml/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/uml/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uml/adapter.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/adapter.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uml/dependency_negative.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/dependency_negative.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uml/entity.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/entity.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uml/repository.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/repository.puml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
