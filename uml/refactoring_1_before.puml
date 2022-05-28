@@ -16,7 +16,6 @@ abstract class GenericDFS<Vertex extends GenericVertex> {
     #boolean wasStopped()
     #void runDFS()
 
-    -void tryVisitNext(final Stack<StackVertex<Vertex>> vertexStack)
     -StackVertex<Vertex> visitNext(Vertex vertex)
 
     #{abstract} void unvisitedVertex(final Vertex vertex)
