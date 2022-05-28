@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="177bdf72-7b70-4342-bb6f-57f946fbfa8f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Axiom.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Axiom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Corollary.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Corollary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Lemma.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Lemma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/MathematicalDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/MathematicalDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/NamedVertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/NamedVertex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Source.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Source.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Theorem.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Theorem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Topic.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Topic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/test/java/usecases/VertexFinderUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/test/java/usecases/VertexFinderUseCaseTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +59,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in 01-adapters">
+  <component name="RunManager" selected="JUnit.NamedVertexFactoryTest">
     <configuration name="All in 01-adapters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="01-adapters" />
       <option name="PACKAGE_NAME" value="" />
@@ -90,29 +84,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in 04-abstraction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="04-abstraction" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+    <configuration name="NamedVertexFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="03-domain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.java" />
+      <option name="MAIN_CLASS_NAME" value="test.java.NamedVertexFactoryTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in MatLearn (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MatLearn" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+    <configuration name="VertexFinderUseCaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="02-application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.java.usecases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.java.usecases" />
+      <option name="MAIN_CLASS_NAME" value="test.java.usecases.VertexFinderUseCaseTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.NamedVertexFactoryTest" />
+        <item itemvalue="JUnit.VertexFinderUseCaseTest" />
         <item itemvalue="JUnit.All in 01-adapters" />
         <item itemvalue="JUnit.All in 02-application" />
         <item itemvalue="JUnit.All in 03-domain" />
-        <item itemvalue="JUnit.All in 04-abstraction" />
-        <item itemvalue="JUnit.All in MatLearn (1)" />
       </list>
     </recent_temporary>
   </component>

@@ -37,13 +37,13 @@ public class VertexFinderUseCaseTest extends UseCaseTest<FindVertexResult> {
         Mockito.when(networkRepository.getVertices())
                 .thenReturn(Arrays.asList(
                         new Axiom("correct", "ignore"),
-                        new Theorem("ignore", "correct"),
+                        new Theorem("ignore", "cORRect"),
                         new Source("ignore", "ignore")));
 
         FindVertexResult res = assertCorrectType(useCase, new FindVertexParameter("correct"));
         Assertions.assertEquals(2, res.getVerticesFound().size());
         assertContainsVertex(res, new Axiom("correct", "ignore"));
-        assertContainsVertex(res, new Theorem("ignore", "correct"));
+        assertContainsVertex(res, new Theorem("ignore", "cORRect"));
     }
 
     @Test
@@ -55,7 +55,8 @@ public class VertexFinderUseCaseTest extends UseCaseTest<FindVertexResult> {
         Assertions.assertNotNull(result);
         Assertions.assertTrue(result.getVerticesFound().stream().anyMatch(vertex ->
                     expected.getName().equals(vertex.getName()) &&
-                    expected.getDescription().equals(vertex.getDescription())
+                    expected.getDescription().equals(vertex.getDescription()) &&
+                    expected.getType() == vertex.getType()
         ));
     }
 }
