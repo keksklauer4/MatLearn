@@ -6,7 +6,6 @@ import main.java.network.ProofNetworkRepository;
 import main.java.results.AddMatObjectResult;
 import main.java.results.UseCaseResult;
 import main.java.usecaseparameters.AddMatObjectParameters;
-import main.java.usecaseparameters.UseCaseParameter;
 
 
 public class AddMathematicalObjectTask extends AbstractUseCase<AddMatObjectParameters> implements MatLearnUseCase {

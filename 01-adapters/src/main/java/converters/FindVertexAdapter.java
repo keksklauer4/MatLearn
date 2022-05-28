@@ -3,9 +3,6 @@ package main.java.converters;
 import main.java.results.UseCaseResult;
 import main.java.usecaseparameters.FindVertexParameter;
 import main.java.usecases.MatLearnUseCase;
-import main.java.usecases.VertexFinder;
-
-import java.util.Map;
 
 public class FindVertexAdapter implements UseCaseParameterAdapter {
     @Override

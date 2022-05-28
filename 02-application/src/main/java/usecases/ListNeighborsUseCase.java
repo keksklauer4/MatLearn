@@ -5,7 +5,6 @@ import main.java.network.ProofNetworkRepository;
 import main.java.results.NeighborResult;
 import main.java.results.UseCaseResult;
 import main.java.usecaseparameters.SingleObjectParameters;
-import main.java.usecaseparameters.UseCaseParameter;
 
 import java.util.List;
 

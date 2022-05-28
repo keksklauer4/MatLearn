@@ -1,8 +1,6 @@
 package main.java.converters;
 
 import main.java.results.UseCaseResult;
-import main.java.usecaseparameters.UseCaseParameter;
-import main.java.usecases.MatLearnUseCase;
 import main.java.usecases.*;
 
 import java.util.Map;

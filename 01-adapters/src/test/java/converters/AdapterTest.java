@@ -4,7 +4,6 @@ import main.java.converters.UseCaseParameterDispatcher;
 import main.java.usecaseparameters.UseCaseParameter;
 import main.java.usecases.MatLearnUseCase;
 import org.junit.jupiter.api.Assertions;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 
 import java.util.Map;

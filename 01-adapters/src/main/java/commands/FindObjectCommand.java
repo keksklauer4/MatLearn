@@ -3,7 +3,6 @@ package main.java.commands;
 import main.java.converters.ParameterMapKeys;
 import main.java.network.ProofNetworkRepository;
 import main.java.parameters.TextInputParameter;
-import main.java.usecaseparameters.FindVertexParameter;
 import main.java.usecases.MatLearnUseCase;
 import main.java.usecases.VertexFinder;
 

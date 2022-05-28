@@ -6,7 +6,6 @@ import main.java.network.ProofNetworkRepository;
 import main.java.results.LeafListingResult;
 import main.java.results.UseCaseResult;
 import main.java.usecaseparameters.SingleObjectParameters;
-import main.java.usecaseparameters.UseCaseParameter;
 
 public class ListLeavesUseCase extends AbstractUseCase<SingleObjectParameters> implements MatLearnUseCase {
     public ListLeavesUseCase(ProofNetworkRepository networkRepository) {

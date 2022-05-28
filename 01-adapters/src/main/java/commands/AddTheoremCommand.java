@@ -5,12 +5,10 @@ import main.java.entities.MatType;
 import main.java.network.ProofNetworkRepository;
 import main.java.parameters.IdListParameter;
 import main.java.parameters.TextInputParameter;
-import main.java.usecaseparameters.AddMatObjectParameters;
 import main.java.usecases.AddMathematicalObjectTask;
 import main.java.usecases.MatLearnUseCase;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Map;
 
 public class AddTheoremCommand extends AbstractCommand {

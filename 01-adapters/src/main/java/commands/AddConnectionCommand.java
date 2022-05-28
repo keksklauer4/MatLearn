@@ -3,7 +3,6 @@ package main.java.commands;
 import main.java.converters.ParameterMapKeys;
 import main.java.network.ProofNetworkRepository;
 import main.java.parameters.ExactlyOneIdParameter;
-import main.java.usecaseparameters.AddConnectionParameters;
 import main.java.usecases.AddConnectionUseCase;
 import main.java.usecases.MatLearnUseCase;
 

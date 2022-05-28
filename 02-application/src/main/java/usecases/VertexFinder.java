@@ -5,7 +5,6 @@ import main.java.network.ProofNetworkRepository;
 import main.java.results.FindVertexResult;
 import main.java.results.UseCaseResult;
 import main.java.usecaseparameters.FindVertexParameter;
-import main.java.usecaseparameters.UseCaseParameter;
 
 import java.util.List;
 import java.util.stream.Collectors;

@@ -1,7 +1,5 @@
 package main.java.usecaseparameters;
 
-import java.util.Map;
-
 public class AddConnectionParameters implements UseCaseParameter {
     private final Integer vertexFromId;
     private final Integer vertexToId;

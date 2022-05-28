@@ -4,7 +4,6 @@ import main.java.network.ProofNetworkRepository;
 import main.java.results.UseCaseResult;
 import main.java.results.ValidCommandResult;
 import main.java.usecaseparameters.SingleObjectParameters;
-import main.java.usecaseparameters.UseCaseParameter;
 
 public class RemoveObjectUseCase extends AbstractUseCase<SingleObjectParameters> implements MatLearnUseCase {
     public RemoveObjectUseCase(ProofNetworkRepository networkRepository) {

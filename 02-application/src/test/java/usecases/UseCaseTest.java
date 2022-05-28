@@ -1,6 +1,5 @@
 package test.java.usecases;
 
-import main.java.network.ProofNetworkRepository;
 import main.java.results.UseCaseResult;
 import main.java.usecaseparameters.UseCaseParameter;
 import main.java.usecases.MatLearnUseCase;

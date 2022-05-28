@@ -5,7 +5,6 @@ import main.java.network.ProofNetworkRepository;
 import main.java.results.UseCaseResult;
 import main.java.results.ValidCommandResult;
 import main.java.usecaseparameters.RemoveEdgesParameters;
-import main.java.usecaseparameters.UseCaseParameter;
 
 public class RemoveEdgesUseCase extends AbstractUseCase<RemoveEdgesParameters> implements MatLearnUseCase {
     public RemoveEdgesUseCase(ProofNetworkRepository networkRepository) {

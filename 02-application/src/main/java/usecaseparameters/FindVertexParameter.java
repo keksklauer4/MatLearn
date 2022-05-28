@@ -2,8 +2,6 @@ package main.java.usecaseparameters;
 
 import main.java.entities.NamedVertex;
 
-import java.util.Map;
-
 public class FindVertexParameter implements UseCaseParameter {
     private final String search;
 

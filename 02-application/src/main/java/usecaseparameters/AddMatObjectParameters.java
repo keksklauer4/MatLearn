@@ -3,7 +3,6 @@ package main.java.usecaseparameters;
 import main.java.entities.MatType;
 
 import java.util.List;
-import java.util.Map;
 
 public class AddMatObjectParameters implements UseCaseParameter {
     private final String name;

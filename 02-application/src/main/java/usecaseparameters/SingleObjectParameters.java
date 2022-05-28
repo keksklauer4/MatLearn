@@ -1,7 +1,5 @@
 package main.java.usecaseparameters;
 
-import java.util.Map;
-
 public class SingleObjectParameters implements UseCaseParameter {
     private final Integer vertexId;
 

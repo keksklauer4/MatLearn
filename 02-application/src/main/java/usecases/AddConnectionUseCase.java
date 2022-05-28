@@ -5,7 +5,6 @@ import main.java.network.ProofNetworkRepository;
 import main.java.results.UseCaseResult;
 import main.java.results.ValidCommandResult;
 import main.java.usecaseparameters.AddConnectionParameters;
-import main.java.usecaseparameters.UseCaseParameter;
 
 public class AddConnectionUseCase extends AbstractUseCase<AddConnectionParameters> implements MatLearnUseCase {
     public AddConnectionUseCase(ProofNetworkRepository networkRepository) {

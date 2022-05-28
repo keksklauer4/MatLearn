@@ -4,7 +4,6 @@ import main.java.converters.ParameterMapKeys;
 import main.java.entities.MatType;
 import main.java.usecaseparameters.AddMatObjectParameters;
 import main.java.usecases.AddMathematicalObjectTask;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

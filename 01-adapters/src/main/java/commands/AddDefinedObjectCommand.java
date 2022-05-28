@@ -6,7 +6,6 @@ import main.java.network.ProofNetworkRepository;
 import main.java.parameters.IdListParameter;
 import main.java.parameters.OptionParameter;
 import main.java.parameters.TextInputParameter;
-import main.java.usecaseparameters.AddMatObjectParameters;
 import main.java.usecases.AddMathematicalObjectTask;
 import main.java.usecases.MatLearnUseCase;
 

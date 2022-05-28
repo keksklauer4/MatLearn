@@ -3,7 +3,6 @@ package test.java.converters;
 import main.java.converters.ParameterMapKeys;
 import main.java.usecaseparameters.AddConnectionParameters;
 import main.java.usecases.AddConnectionUseCase;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
