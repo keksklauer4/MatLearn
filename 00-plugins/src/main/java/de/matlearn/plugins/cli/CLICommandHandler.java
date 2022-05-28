@@ -32,6 +32,10 @@ public class CLICommandHandler {
             printRemainingParameters();
             if(parseParameter()) nbRemaining--;
         }
+        runCommand();
+    }
+
+    private void runCommand() {
         MatLearnUseCase useCase = command.getParametrizedUseCase(networkRepository);
         UseCaseParameterDispatcher parameterDispatcher = new UseCaseParameterDispatcher(
                 useCase, command.getParameterMap());

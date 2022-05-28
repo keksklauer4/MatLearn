@@ -9,7 +9,7 @@ public class UseCaseResultDispatcher {
     private final UseCaseResult result;
     private final CLIPrinter cliPrinter;
 
-    private static Map<Class<?>, UseCaseResultOutput> outputMap = Map.ofEntries(
+    private static Map<Class<? extends UseCaseResult>, UseCaseResultOutput> outputMap = Map.ofEntries(
             Map.entry(AddMatObjectResult.class, new AddMatObjectOutput()),
             Map.entry(FindVertexResult.class, new FindVertexOutput()),
             Map.entry(ValidCommandResult.class, new NoOutput()),

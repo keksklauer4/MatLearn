@@ -20,7 +20,7 @@ public class ContributionValidator extends GenericDFS<NamedVertex> {
         this.foundContribution = false;
     }
 
-    public void validate() throws NoTheoremContributionValidationException {
+    public void contributesToTheorem() throws NoTheoremContributionValidationException {
         runDFS();
         if (!foundContribution)
             throw new NoTheoremContributionValidationException(lemma);

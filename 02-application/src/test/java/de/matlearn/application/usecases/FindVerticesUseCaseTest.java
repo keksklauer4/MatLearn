@@ -17,11 +17,11 @@ import org.mockito.Mockito;
 import java.util.Arrays;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class FindVerticesUseCaseUseCaseTest extends UseCaseTest<FindVertexResult> {
+public class FindVerticesUseCaseTest extends UseCaseTest<FindVertexResult> {
     private ProofNetworkRepository networkRepository;
     private FindVerticesUseCase useCase;
 
-    public FindVerticesUseCaseUseCaseTest() {
+    public FindVerticesUseCaseTest() {
         super(FindVertexResult.class);
     }
 

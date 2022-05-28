@@ -16,7 +16,7 @@ public class Lemma extends NamedVertex implements Serializable {
     public void isFullyValid(Graph<NamedVertex> graph) throws ValidationException {
         ContributionValidator contributionValidator = new ContributionValidator(graph, this);
         LeafValidator leafValidator = new LeafValidator(graph, this);
-        contributionValidator.validate();
+        contributionValidator.contributesToTheorem();
         leafValidator.allLeafsDefinitionsOrAxioms();
     }
 
