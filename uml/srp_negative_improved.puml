@@ -19,7 +19,8 @@ class FullValidator {
     +FullValidator(ProofNetworkRepository network)
 
     +boolean isFullyValid()
-
-
 }
+
+FullValidator o-- ProofNetworkRepository
+
 @enduml

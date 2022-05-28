@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="177bdf72-7b70-4342-bb6f-57f946fbfa8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/uml/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/adapter.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/adapter.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/dependency_negative.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/dependency_negative.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/entity.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/entity.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/repository.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/repository.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uml/srp_negative_improved.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/srp_negative_improved.puml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
