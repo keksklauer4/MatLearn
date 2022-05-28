@@ -7,6 +7,7 @@ import de.matlearn.adapters.parameters.Parameter;
 import de.matlearn.application.results.UseCaseResult;
 import de.matlearn.application.usecases.MatLearnUseCase;
 import de.matlearn.adapters.validators.InvalidInputException;
+import de.matlearn.plugins.output.UseCaseResultDispatcher;
 
 import java.util.Optional;
 
@@ -14,15 +15,18 @@ public class CLICommandHandler {
     private final ProofNetworkRepository networkRepository;
     private final InputParser inputParser;
     private final GenericCommand command;
+    private final CLIPrinter cliPrinter;
 
-    public CLICommandHandler(ProofNetworkRepository networkRepository, GenericCommand command) {
+    public CLICommandHandler(ProofNetworkRepository networkRepository, GenericCommand command, CLIPrinter cliPrinter) {
         this.networkRepository = networkRepository;
         this.inputParser = new InputParser();
         this.command = command;
+        this.cliPrinter = cliPrinter;
     }
 
     public void handle(){
-        System.out.println(command.getName() + ": " + command.getHelpText());
+        cliPrinter.printLineSeparator();
+        cliPrinter.printLine(command.getName() + ": " + command.getHelpText());
         int nbRemaining = command.getParameters().size();
         while(nbRemaining > 0) {
             printRemainingParameters();
@@ -32,16 +36,16 @@ public class CLICommandHandler {
         UseCaseParameterDispatcher parameterDispatcher = new UseCaseParameterDispatcher(
                 useCase, command.getParameterMap());
         UseCaseResult res = parameterDispatcher.dispatch();
-        UseCaseResultDispatcher dispatcher = new UseCaseResultDispatcher(res);
+        UseCaseResultDispatcher dispatcher = new UseCaseResultDispatcher(res, cliPrinter);
         dispatcher.outputResult();
     }
 
 
     private void printRemainingParameters(){
-        System.out.println("Parameters:");
+        cliPrinter.printLine("Parameters:");
         for (final Parameter parameter : command.getParameters()){
             if (parameter.getInput() == null) {
-                System.out.println(parameter.getId() + ") " + parameter.getParameterName());
+                cliPrinter.printLine(parameter.getId() + ") " + parameter.getParameterName());
             }
         }
     }
@@ -49,12 +53,13 @@ public class CLICommandHandler {
     private boolean parseParameter(){
         Parameter parameter = null;
         while(parameter == null) {
-            System.out.println("Enter parameter index: ");
+            cliPrinter.print("Enter parameter index: ");
             parameter = selectParameter();
             if (parameter == null || parameter.getInput() != null) {
-                System.out.println("Invalid index.");
+                cliPrinter.printLine("\nInvalid index.");
             }
         }
+        cliPrinter.printLineSeparator();
         parseParameterInput(parameter);
         return true;
     }
@@ -72,7 +77,7 @@ public class CLICommandHandler {
 
     private void parseParameterInput(final Parameter parameter){
         do {
-            System.out.print("Enter input: ");
+            cliPrinter.print("Enter input: ");
         } while (!readParameter(parameter));
     }
 
@@ -81,7 +86,7 @@ public class CLICommandHandler {
             command.setInput(parameter, inputParser.parseText());
             return true;
         } catch (InvalidInputException e){
-            System.out.println("Invalid input: " + e.getMessage());
+            cliPrinter.printLine("Invalid input: " + e.getMessage());
             return false;
         }
     }

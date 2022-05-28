@@ -2,21 +2,22 @@ package de.matlearn.plugins.output;
 
 import de.matlearn.application.results.NeighborResult;
 import de.matlearn.application.results.UseCaseResult;
+import de.matlearn.plugins.cli.CLIPrinter;
 
 public class NeighborOutput implements UseCaseResultOutput {
     @Override
-    public void printUseCaseResult(UseCaseResult res) {
+    public void printUseCaseResult(UseCaseResult res, CLIPrinter cliPrinter) {
         if (res instanceof NeighborResult){
             NeighborResult result = (NeighborResult) res;
-            System.out.println("\n");
-            PrintNamedVertices parentPrinter = new PrintNamedVertices(result.getParents());
-            PrintNamedVertices descPrinter = new PrintNamedVertices(result.getDescendants());
+            cliPrinter.printLine();
+            PrintNamedVertices parentPrinter = new PrintNamedVertices(result.getParents(), cliPrinter);
+            PrintNamedVertices descPrinter = new PrintNamedVertices(result.getDescendants(), cliPrinter);
 
-            System.out.println("Direct parents are:");
+            cliPrinter.printLine("Direct parents are:");
             parentPrinter.printAll();
-            System.out.println("\nDirect descendants:");
+            cliPrinter.printLine("\nDirect descendants:");
             descPrinter.printAll();
-            System.out.println("\n");
+            cliPrinter.printLine();
         }
     }
 }

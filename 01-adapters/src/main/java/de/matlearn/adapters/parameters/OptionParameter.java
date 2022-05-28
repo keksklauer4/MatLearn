@@ -15,10 +15,10 @@ public class OptionParameter implements Parameter {
 
     public OptionParameter(int id, String name, String key, String[] optionNames, Object[] options) {
         this.id = id;
-        this.name = name;
         this.key = key;
         this.optionNames = optionNames;
         this.options = options;
+        this.name = getMergedName(name, optionNames);
     }
 
     @Override
@@ -72,5 +72,16 @@ public class OptionParameter implements Parameter {
     @Override
     public String getKey() {
         return this.key;
+    }
+
+    private String getMergedName(final String name, final String[] optionNames) {
+        StringBuilder builder = new StringBuilder(name);
+        builder.append("; \t Choose from: [");
+        for (int i = 0; i < optionNames.length; ++i) {
+            builder.append(optionNames[i]);
+            if (i + 1 != optionNames.length) builder.append(", ");
+        }
+        builder.append(']');
+        return builder.toString();
     }
 }

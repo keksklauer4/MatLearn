@@ -1,9 +1,9 @@
-package main.java.cli;
+package de.matlearn.plugins.cli;
 
-public class CLIPrinter {
+public interface CLIPrinter {
+    void printLine(final String text);
+    void printLine();
+    void print(final String text);
 
-
-    public void printLine(final String text){
-        System.out.println(text);
-    }
+    void printLineSeparator();
 }

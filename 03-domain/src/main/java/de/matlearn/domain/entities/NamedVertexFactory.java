@@ -18,8 +18,6 @@ public class NamedVertexFactory {
             new AbstractMap.SimpleEntry<>(MatType.TOPIC, Topic.class)
     ).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 
-    // TODO: Open/Closed Principle
-
     public static NamedVertex create(MatType type, String name, String description){
         Class<? extends NamedVertex> t = getClass(type);
         if (!NamedVertex.class.isAssignableFrom(t)) throw new RuntimeException("Retrieved invalid type.");

@@ -33,6 +33,7 @@ public class ProofNetwork implements ProofNetworkRepository {
         else if (graph.getVertexById(toVertex.getId()) == null){
             throw new UnknownVertexException(fromVertex);
         }
+        if (fromVertex.equals(toVertex)) return;
         graph.addEdge(fromVertex, toVertex);
         modifiedGraph();
     }

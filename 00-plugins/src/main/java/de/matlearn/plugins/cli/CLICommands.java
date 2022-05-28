@@ -10,14 +10,16 @@ public class CLICommands {
     public static List<GenericCommand> getCommands() {
         return Arrays.asList(
                 new AddDefinedObjectCommand(),
-                new AddTheoremCommand(),
+                new AddProvenResultCommand(),
+                new AddGeneralObjectCommand(),
                 new FindObjectCommand(),
                 new FullValidationCommand(),
                 new AddConnectionCommand(),
                 new LeavesCommand(),
                 new ObjectNeighborhoodCommand(),
                 new RemoveEdgeCommand(),
-                new RemoveObjectCommand()
+                new RemoveObjectCommand(),
+                new ExerciseCommand()
         );
     }
 }

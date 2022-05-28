@@ -17,7 +17,7 @@ public abstract class AdapterTest<T extends MatLearnUseCase, P extends UseCasePa
         this.useCaseType = useCaseType;
         this.parameterType = parameterType;
         useCase = Mockito.mock(useCaseType);
-        Mockito.when(useCase.execute(Mockito.anyObject()))
+        Mockito.when(useCase.execute(Mockito.any()))
                 .then( obj -> {
                     Assertions.assertEquals(parameterType, obj.getClass());
                     if (parameterType.isInstance(obj)) assertCorrectObject((P) obj);

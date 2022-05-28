@@ -17,7 +17,8 @@ public class UseCaseParameterDispatcher {
             Map.entry(RemoveEdgesUseCase.class, new RemoveEdgesAdapter()),
             Map.entry(RemoveObjectUseCase.class, new RemoveObjectAdapter()),
             Map.entry(FindVerticesUseCase.class, new FindVertexAdapter()),
-            Map.entry(FullValidationUseCase.class, new FullValidationAdapter())
+            Map.entry(FullValidationUseCase.class, new EmptyAdapter()),
+            Map.entry(ExerciseUseCase.class, new EmptyAdapter())
     );
 
     public UseCaseParameterDispatcher(MatLearnUseCase useCase, Map<String, Object> parameterMap) {

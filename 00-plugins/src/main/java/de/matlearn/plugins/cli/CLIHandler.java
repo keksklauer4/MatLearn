@@ -8,22 +8,24 @@ import java.util.Optional;
 public class CLIHandler {
     private final ProofNetworkRepository networkRepository;
     private final InputParser inputParser;
+    private final CLIPrinter cliPrinter;
 
-    public CLIHandler(ProofNetworkRepository networkRepository) {
+    public CLIHandler(ProofNetworkRepository networkRepository, CLIPrinter cliPrinter) {
         this.networkRepository = networkRepository;
         this.inputParser = new InputParser();
+        this.cliPrinter = cliPrinter;
     }
 
     public void run(){
-        System.out.println("Welcome to Matlearn. Choose from one of the following commands:");
+        cliPrinter.printLine("Welcome to Matlearn. Choose from one of the following commands:");
         commandLoop();
     }
 
     private void printCommands() {
-        System.out.println("\n");
+        cliPrinter.printLine();
         int idx = 1;
         for (final GenericCommand command : CLICommands.getCommands()){
-            System.out.println(idx++ + ") " + command.getName());
+            cliPrinter.printLine(idx++ + ") " + command.getName());
         }
     }
 
@@ -38,15 +40,15 @@ public class CLIHandler {
     private boolean retrieveCommand() {
         GenericCommand parsed = null;
         while(parsed == null){
-            System.out.print("Enter command: ");
+            cliPrinter.print("Enter command: ");
             String line = inputParser.parseText();
             if (line.toLowerCase().equals("q")) return false;
             parsed = matchCommandInput(line);
             if (parsed == null){
-                System.out.println("Invalid command.");
+                cliPrinter.printLine("Invalid command.");
             }
         }
-        CLICommandHandler handler = new CLICommandHandler(networkRepository, parsed);
+        CLICommandHandler handler = new CLICommandHandler(networkRepository, parsed, cliPrinter);
         handler.handle();
         return true;
     }

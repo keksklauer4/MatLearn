@@ -18,7 +18,7 @@ public class CycleChecker<Vertex extends GenericVertex> extends GenericDFS<Verte
     }
 
     public boolean hasCycle(){
-        while(!wasStopped() || !remainingVertices.isEmpty()){
+        while(!wasStopped() && !remainingVertices.isEmpty() && remainingVertices.iterator().hasNext()){
             Vertex v = remainingVertices.iterator().next();
             this.setCurrentVertex(v);
             runDFS();

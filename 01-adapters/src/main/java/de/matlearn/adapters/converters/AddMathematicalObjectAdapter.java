@@ -12,7 +12,7 @@ public class AddMathematicalObjectAdapter implements UseCaseParameterAdapter {
         return useCase.execute(new AddMatObjectParameters(
                 parser.parseString(ParameterMapKeys.NAME_KEY),
                 parser.parseString(ParameterMapKeys.DESCRIPTION_KEY),
-                new ArrayList<>(),
+                parser.parseIntegerList(ParameterMapKeys.DEPENDENCIES_KEY),
                 parser.parseIntegerList(ParameterMapKeys.SOURCES_KEY),
                 parser.parseMatType(ParameterMapKeys.TYPE_KEY))
         );

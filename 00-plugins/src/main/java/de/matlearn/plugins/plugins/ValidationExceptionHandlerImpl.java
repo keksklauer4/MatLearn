@@ -1,9 +1,9 @@
 package de.matlearn.plugins.plugins;
 
-import main.java.cli.CLIPrinter;
 import de.matlearn.domain.exceptions.ValidationException;
 import de.matlearn.domain.exceptions.ValidationExceptionHandler;
 import de.matlearn.domain.exceptions.ValidationFunctor;
+import de.matlearn.plugins.cli.CLIPrinter;
 
 public class ValidationExceptionHandlerImpl implements ValidationExceptionHandler {
     private final CLIPrinter printer;
