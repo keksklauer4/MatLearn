@@ -20,7 +20,7 @@ class StackVertex<Vertex extends GenericVertex> {
     }
 
     public boolean hasNext(){
-        return false;
+        return edgeIndex < adjacentVertices.size();
     }
 
     public Vertex getNext(){

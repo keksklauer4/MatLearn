@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ProofNetworkRepository {
     void addVertex(NamedVertex vertex);
-    void addEdge(NamedVertex fromVertex, NamedVertex toVertex);
+    boolean addEdge(NamedVertex fromVertex, NamedVertex toVertex);
 
     void removeVertex(NamedVertex vertex);
     boolean removeEdgeIfExists(int fromId, int toId);

@@ -49,7 +49,6 @@ public class ExactlyOneIdParameter implements Parameter {
     }
 
     private Integer parseSingleId(final String input){
-        System.out.println(input);
         try {
             return Integer.parseInt(input.strip());
         } catch (Exception e){

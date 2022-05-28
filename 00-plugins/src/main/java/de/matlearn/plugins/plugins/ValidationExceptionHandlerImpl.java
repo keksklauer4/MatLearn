@@ -25,6 +25,6 @@ public class ValidationExceptionHandlerImpl implements ValidationExceptionHandle
 
     @Override
     public void handle(ValidationException exception) {
-        printer.printLine(exception.getMessage());
+        printer.printLine("Validation error: " + exception.getMessage());
     }
 }

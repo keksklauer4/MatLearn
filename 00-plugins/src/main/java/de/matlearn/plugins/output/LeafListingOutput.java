@@ -9,11 +9,12 @@ public class LeafListingOutput implements UseCaseResultOutput {
     public void printUseCaseResult(UseCaseResult res, CLIPrinter cliPrinter) {
         if (res instanceof LeafListingResult){
             LeafListingResult result = (LeafListingResult) res;
-            System.out.println("\nLeaves are:\n");
+            cliPrinter.printLine("\nLeaves are:");
+            cliPrinter.printLineSeparator();
             PrintNamedVertices leaves = new PrintNamedVertices(result.getLeaves(), cliPrinter);
             leaves.printHeader();
             leaves.print();
-            System.out.println("\n");
+            cliPrinter.printLine();
         }
     }
 }

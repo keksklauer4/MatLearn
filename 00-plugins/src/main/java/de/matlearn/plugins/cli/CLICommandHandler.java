@@ -70,7 +70,7 @@ public class CLICommandHandler {
 
         Optional<Parameter> parameter = command.getParameters()
                 .stream()
-                .filter(para -> para != null && para.getId() == requestedId.get())
+                .filter(para -> para != null && para.getId() == requestedId.get() && para.getInput() == null)
                 .findFirst();
         return parameter.orElse(null);
     }

@@ -40,6 +40,7 @@ public abstract class NamedVertex extends GenericVertex implements Serializable 
     @Override
     public String toString() {
         return "{" +
+                "id=" + getId() + "," +
                 "name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", type='" + getType().toString() + "'" +

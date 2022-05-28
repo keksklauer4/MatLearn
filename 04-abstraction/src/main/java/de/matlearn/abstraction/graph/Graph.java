@@ -64,20 +64,13 @@ public class Graph<Vertex extends GenericVertex> implements Serializable {
     }
 
     public List<Vertex> getBackwardEdges(final Vertex vertex){
-        return getEndVertices(reverseEdgeList(edges.getBackwardEdges(vertex)));
+        return getEndVertices(edges.getBackwardEdges(vertex));
     }
 
     private List<Vertex> getEndVertices(final List<Edge> edgeList){
         HashSet<Vertex> endVertices = new HashSet<>();
         edgeList.forEach(edge -> endVertices.add(idToVertex.get(edge.getToVertex())));
         return new ArrayList<>(endVertices);
-    }
-
-    private List<Edge> reverseEdgeList(final List<Edge> edgeList){
-        return edgeList
-                .stream()
-                .map(Edge::getReverseEdge)
-                .collect(Collectors.toList());
     }
 
     private int getNextId(){

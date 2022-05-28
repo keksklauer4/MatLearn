@@ -26,16 +26,16 @@ public class ProofNetwork implements ProofNetworkRepository {
         modifiedGraph();
     }
 
-    public void addEdge(final NamedVertex fromVertex, final NamedVertex toVertex) {
+    public boolean addEdge(final NamedVertex fromVertex, final NamedVertex toVertex) {
         if (graph.getVertexById(fromVertex.getId()) == null){
             throw new UnknownVertexException(fromVertex);
         }
         else if (graph.getVertexById(toVertex.getId()) == null){
             throw new UnknownVertexException(fromVertex);
         }
-        if (fromVertex.equals(toVertex)) return;
+        if (fromVertex.equals(toVertex)) return false;
         graph.addEdge(fromVertex, toVertex);
-        modifiedGraph();
+        return modifiedGraph();
     }
 
     @Override
@@ -71,10 +71,14 @@ public class ProofNetwork implements ProofNetworkRepository {
         return exceptionHandler;
     }
 
-    private void modifiedGraph(){
+    private boolean modifiedGraph(){
         StrictValidator validator = new StrictValidator(this);
-        if (validator.validate()) serialize();
-        else deserialize();
+        if (validator.validate()){
+            serialize();
+            return true;
+        }
+        deserialize();
+        return false;
     }
 
     private void serialize(){

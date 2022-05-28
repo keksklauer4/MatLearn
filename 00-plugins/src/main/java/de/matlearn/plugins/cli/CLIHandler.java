@@ -22,11 +22,14 @@ public class CLIHandler {
     }
 
     private void printCommands() {
-        cliPrinter.printLine();
+        cliPrinter.printLineSeparator();
+        cliPrinter.printLine("Commands:");
+        cliPrinter.printLineSeparator();
         int idx = 1;
         for (final GenericCommand command : CLICommands.getCommands()){
             cliPrinter.printLine(idx++ + ") " + command.getName());
         }
+        cliPrinter.printLineSeparator();
     }
 
     private void commandLoop(){

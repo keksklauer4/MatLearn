@@ -16,7 +16,7 @@ public class FullValidator {
     public boolean isFullyValid(){
         boolean valid = (new StrictValidator(network)).validate();
         for (NamedVertex vertex : network.getVertices()){
-            valid |= exceptionHandler.handle(() -> vertex.isFullyValid(network.getGraph()));
+            valid &= exceptionHandler.handle(() -> vertex.isFullyValid(network.getGraph()));
         }
         return valid;
     }

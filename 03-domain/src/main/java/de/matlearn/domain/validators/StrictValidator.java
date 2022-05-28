@@ -18,7 +18,7 @@ public class StrictValidator {
     public boolean validate() {
         boolean valid = exceptionHandler.handle(this::checkForCycles);
         for (final NamedVertex vertex : network.getVertices()){
-            valid |= exceptionHandler.handle(() -> vertex.isValid(network.getGraph()));
+            valid &= exceptionHandler.handle(() -> vertex.isValid(network.getGraph()));
         }
         return valid;
     }

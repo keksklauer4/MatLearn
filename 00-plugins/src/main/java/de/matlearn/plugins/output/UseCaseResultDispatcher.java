@@ -17,7 +17,8 @@ public class UseCaseResultDispatcher {
             Map.entry(NeighborResult.class, new NeighborOutput()),
             Map.entry(LeafListingResult.class, new LeafListingOutput()),
             Map.entry(FailedUseCaseResult.class, new FailedUseCaseOutput()),
-            Map.entry(RandomExerciseResult.class, new ExerciseOutput())
+            Map.entry(RandomExerciseResult.class, new ExerciseOutput()),
+            Map.entry(ShowAllObjectsResult.class, new ShowAllObjectsOutput())
     );
 
     public UseCaseResultDispatcher(UseCaseResult result, CLIPrinter cliPrinter) {

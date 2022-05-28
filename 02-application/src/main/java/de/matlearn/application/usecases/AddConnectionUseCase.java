@@ -19,8 +19,8 @@ public class AddConnectionUseCase extends AbstractUseCase<AddConnectionParameter
         Optional<NamedVertex> from = getVertexById(parameters.getVertexFromId());
         Optional<NamedVertex> to = getVertexById(parameters.getVertexToId());
         if (from.isPresent() && to.isPresent()){
-            networkRepository.addEdge(from.get(), to.get());
-            return new ValidCommandResult();
+            boolean validEdge = networkRepository.addEdge(from.get(), to.get());
+            if (validEdge) return new ValidCommandResult();
         }
         return new FailedUseCaseResult();
     }

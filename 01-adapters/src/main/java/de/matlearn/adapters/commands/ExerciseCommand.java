@@ -12,12 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ExerciseCommand implements GenericCommand {
-    @Override
-    public List<Parameter> getParameters() {
-        return new ArrayList<>();
-    }
-
+public class ExerciseCommand extends ParameterlessCommand {
     @Override
     public String getName() {
         return "Random question";
@@ -29,17 +24,7 @@ public class ExerciseCommand implements GenericCommand {
     }
 
     @Override
-    public void setInput(Parameter p, String input) throws InvalidInputException {
-        return;
-    }
-
-    @Override
     public MatLearnUseCase getParametrizedUseCase(ProofNetworkRepository networkRepository) {
         return new ExerciseUseCase(networkRepository, new RandomExtractorImpl());
-    }
-
-    @Override
-    public Map<String, Object> getParameterMap() {
-        return new HashMap<>();
     }
 }

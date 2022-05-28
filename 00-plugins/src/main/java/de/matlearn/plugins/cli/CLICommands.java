@@ -9,6 +9,7 @@ import java.util.List;
 public class CLICommands {
     public static List<GenericCommand> getCommands() {
         return Arrays.asList(
+                new ShowAllObjectsCommand(),
                 new AddDefinedObjectCommand(),
                 new AddProvenResultCommand(),
                 new AddGeneralObjectCommand(),
