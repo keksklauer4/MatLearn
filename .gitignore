@@ -25,5 +25,6 @@ hs_err_pid*
 # Own
 .idea/*
 out/*
-
+*/target/*
 ProofNetworkStorage
+.idea/

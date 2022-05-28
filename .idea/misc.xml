@@ -5,6 +5,10 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/03-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/00-plugins/pom.xml" />
+        <option value="$PROJECT_DIR$/04-abstraction/pom.xml" />
+        <option value="$PROJECT_DIR$/01-adapters/pom.xml" />
+        <option value="$PROJECT_DIR$/02-application/pom.xml" />
       </list>
     </option>
   </component>

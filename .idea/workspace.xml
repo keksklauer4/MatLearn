@@ -5,18 +5,150 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="177bdf72-7b70-4342-bb6f-57f946fbfa8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/00-plugins/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-adapters/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/converters/UseCaseParameterAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-application/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-domain/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04-abstraction/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLICommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLICommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/cli/UseCaseResultDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/cli/UseCaseResultDispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/plugins/ProofNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/plugins/ProofNetwork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/plugins/ValidationExceptionHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/plugins/ValidationExceptionHandlerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/FullValidationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/FullValidationCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/AbstractUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/AbstractUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/AddConnectionUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/AddConnectionUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/FullValidationUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/FullValidationUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListLeavesUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListLeavesUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListNeighborsUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListNeighborsUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/exceptions/ValidationExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/exceptions/ValidationExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/00-plugins.iml" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/00-plugins.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/MatLearn.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/MatLearn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLICommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/cli/CLICommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLICommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/cli/CLICommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/cli/CLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLIPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/cli/CLIPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/cli/InputParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/cli/InputParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/cli/UseCaseResultDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/cli/UseCaseResultDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/output/AddMatObjectOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/output/AddMatObjectOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/output/FailedUseCaseOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/output/FailedUseCaseOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/output/FindVertexOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/output/FindVertexOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/output/LeafListingOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/output/LeafListingOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/output/NeighborOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/output/NeighborOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/output/NoOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/output/NoOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/output/PrintNamedVertices.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/output/PrintNamedVertices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/output/UseCaseResultOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/output/UseCaseResultOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/plugins/ProofNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/plugins/ProofNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/plugins/ProofNetworkSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/plugins/ProofNetworkSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/plugins/ValidationExceptionHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/plugins/ValidationExceptionHandlerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/01-adapters.iml" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/01-adapters.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AbstractCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/commands/AbstractCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddConnectionCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/commands/AddConnectionCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddDefinedObjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/commands/AddDefinedObjectCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/AddTheoremCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/commands/AddTheoremCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/FindObjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/commands/FindObjectCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/FullValidationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/commands/FullValidationCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/GenericCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/commands/GenericCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/LeavesCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/commands/LeavesCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/ObjectNeighborhoodCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/commands/ObjectNeighborhoodCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/RemoveEdgeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/commands/RemoveEdgeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/RemoveObjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/commands/RemoveObjectCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/AddConnectionAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/converters/AddConnectionAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/AddMathematicalObjectAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/converters/AddMathematicalObjectAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/FindVertexAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/converters/FindVertexAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/FullValidationAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/converters/FullValidationAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/ListLeavesAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/converters/ListLeavesAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/ListNeighborsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/converters/ListNeighborsAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/ParameterMapKeys.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/converters/ParameterMapKeys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/ParameterMapParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/converters/ParameterMapParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/RemoveEdgesAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/converters/RemoveEdgesAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/RemoveObjectAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/converters/RemoveObjectAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/UseCaseParameterAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/UseCaseParameterDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/converters/UseCaseParameterDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/parameters/ExactlyOneIdParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/parameters/ExactlyOneIdParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/parameters/IdListParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/parameters/IdListParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/parameters/OptionParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/parameters/OptionParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/parameters/Parameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/parameters/Parameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/parameters/TextInputParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/parameters/TextInputParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/validators/InputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/validators/InputValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/validators/InvalidInputException.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/validators/InvalidInputException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/test/java/converters/AdapterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AdapterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/test/java/converters/AddConnectionAdapterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AddConnectionAdapterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/test/java/converters/AddMathematicalObjectAdapterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AddMathematicalObjectAdapterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/test/java/converters/ParameterMapParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/ParameterMapParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/02-application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/02-application.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/helpers/ListLeaves.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/helpers/ListLeaves.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/helpers/PairFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/helpers/PairFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/helpers/PairGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/helpers/PairGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/results/AddMatObjectResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/results/AddMatObjectResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/results/FailedUseCaseResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/results/FailedUseCaseResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/results/FindVertexResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/results/FindVertexResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/results/LeafListingResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/results/LeafListingResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/results/NeighborResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/results/NeighborResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/results/UseCaseResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/results/UseCaseResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/results/ValidCommandResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/results/ValidCommandResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/AddConnectionParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/usecaseparameters/AddConnectionParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/AddMatObjectParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/usecaseparameters/AddMatObjectParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/EmptyParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/usecaseparameters/EmptyParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/FindVertexParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/usecaseparameters/FindVertexParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/RemoveEdgesParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/usecaseparameters/RemoveEdgesParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/SingleObjectParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/usecaseparameters/SingleObjectParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecaseparameters/UseCaseParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/usecaseparameters/UseCaseParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/AbstractUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/usecases/AbstractUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/AddConnectionUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/usecases/AddConnectionUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/AddMathematicalObjectTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/usecases/AddMathematicalObjectTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/FindVerticesUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/usecases/FindVerticesUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/FullValidationUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/usecases/FullValidationUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListLeavesUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/usecases/ListLeavesUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListNeighborsUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/usecases/ListNeighborsUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/MatLearnUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/usecases/MatLearnUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/RemoveEdgesUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/usecases/RemoveEdgesUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/RemoveObjectUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/usecases/RemoveObjectUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/test/java/usecases/FindVerticesUseCaseUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/test/java/de/matlearn/application/usecases/FindVerticesUseCaseUseCaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/test/java/usecases/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/test/java/de/matlearn/application/usecases/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/test/java/usecases/RemoveEdgesUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/test/java/de/matlearn/application/usecases/RemoveEdgesUseCaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/test/java/usecases/UseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/test/java/de/matlearn/application/usecases/UseCaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/03-domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/03-domain.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Axiom.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/entities/Axiom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Corollary.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/entities/Corollary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Lemma.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/entities/Lemma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/MatType.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/entities/MatType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/MathematicalDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/entities/MathematicalDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/NamedVertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/entities/NamedVertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/NamedVertexFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/entities/NamedVertexFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Source.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/entities/Source.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Theorem.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/entities/Theorem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Topic.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/entities/Topic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/exceptions/BackwardDependenceValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/exceptions/BackwardDependenceValidationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/exceptions/CycleFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/exceptions/CycleFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/exceptions/EntityValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/exceptions/EntityValidationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/exceptions/ForwardDependenceValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/exceptions/ForwardDependenceValidationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/exceptions/LeavesNotDefinedValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/exceptions/LeavesNotDefinedValidationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/exceptions/NoTheoremContributionValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/exceptions/NoTheoremContributionValidationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/exceptions/NoTheoremSuccessorValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/exceptions/NoTheoremSuccessorValidationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/exceptions/ValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/exceptions/ValidationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/exceptions/ValidationExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/exceptions/ValidationExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/exceptions/ValidationFunctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/exceptions/ValidationFunctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/exceptions/VertexDoesNotExistValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/exceptions/VertexDoesNotExistValidationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetworkRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/network/ProofNetworkRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetworkSerializationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/network/ProofNetworkSerializationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/validators/ContributionValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/validators/ContributionValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/validators/EdgeValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/validators/EdgeValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/validators/FullValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/validators/FullValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/validators/LeafValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/validators/LeafValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/validators/StrictValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/validators/StrictValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/test/java/NamedVertexFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/test/java/de/matlearn/domain/NamedVertexFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/04-abstraction.iml" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/04-abstraction.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/algorithm/CycleChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/algorithm/CycleChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/algorithm/GenericDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/algorithm/GenericDFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/algorithm/StackVertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/algorithm/StackVertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/graph/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/graph/Edge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/graph/EdgeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/graph/EdgeList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/graph/GenericVertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/graph/GenericVertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/graph/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/graph/UnknownVertexException.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/graph/UnknownVertexException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/src/test/EdgeListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/test/java/de/matlearn/abstraction/EdgeListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/src/test/GraphTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/test/java/de/matlearn/abstraction/GraphTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatLearn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MatLearn.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,21 +179,26 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/03-domain" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="de.matlearn.abstraction" />
+      <recent name="de.matlearn.domain" />
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.main.java.MatLearn">
-    <configuration name="main.java.MatLearn" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.java.MatLearn" />
+  <component name="RunManager" selected="JUnit.NamedVertexFactoryTest (1)">
+    <configuration name="MatLearn" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="de.matlearn.plugins.MatLearn" />
       <module name="00-plugins" />
       <extension name="coverage">
         <pattern>
@@ -73,16 +210,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in 01-adapters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="01-adapters" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in 02-application" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="02-application" />
+    <configuration name="All in MatLearn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MatLearn" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
@@ -99,6 +228,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="test.java.usecases" />
       <option name="MAIN_CLASS_NAME" value="test.java.usecases.FindVerticesUseCaseUseCaseTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NamedVertexFactoryTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="03-domain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.matlearn.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.matlearn.domain" />
+      <option name="MAIN_CLASS_NAME" value="de.matlearn.domain.NamedVertexFactoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -121,11 +265,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.NamedVertexFactoryTest (1)" />
         <item itemvalue="Application.main.java.MatLearn" />
+        <item itemvalue="JUnit.All in MatLearn" />
         <item itemvalue="JUnit.NamedVertexFactoryTest" />
         <item itemvalue="JUnit.FindVerticesUseCaseUseCaseTest" />
-        <item itemvalue="JUnit.All in 01-adapters" />
-        <item itemvalue="JUnit.All in 02-application" />
       </list>
     </recent_temporary>
   </component>
@@ -157,37 +301,37 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/01-adapters/src/main/java/parameters/OptionParameter.java</url>
+          <url>file://$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/parameters/OptionParameter.java</url>
           <line>57</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/01-adapters/src/main/java/commands/AddDefinedObjectCommand.java</url>
+          <url>file://$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/commands/AddDefinedObjectCommand.java</url>
           <line>38</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/04-abstraction/src/main/graph/EdgeList.java</url>
+          <url>file://$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/graph/EdgeList.java</url>
           <line>20</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/01-adapters/src/main/java/converters/AddMathematicalObjectAdapter.java</url>
+          <url>file://$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/converters/AddMathematicalObjectAdapter.java</url>
           <line>11</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/01-adapters/src/test/java/converters/AddConnectionAdapterTest.java</url>
+          <url>file://$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AddConnectionAdapterTest.java</url>
           <line>17</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/01-adapters/src/test/java/converters/AddMathematicalObjectAdapterTest.java</url>
+          <url>file://$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AddMathematicalObjectAdapterTest.java</url>
           <line>22</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/01-adapters/src/test/java/converters/AdapterTest.java</url>
+          <url>file://$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AdapterTest.java</url>
           <line>38</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
