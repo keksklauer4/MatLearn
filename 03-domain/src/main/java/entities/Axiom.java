@@ -18,4 +18,9 @@ public class Axiom extends NamedVertex implements Serializable {
     public boolean isOfType(MatType type) {
         return type == MatType.AXIOM;
     }
+
+    @Override
+    public MatType getType() {
+        return MatType.AXIOM;
+    }
 }

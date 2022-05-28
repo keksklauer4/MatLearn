@@ -12,5 +12,10 @@ public class Source extends NamedVertex implements Serializable {
         return  type == MatType.SOURCE;
     }
 
+    @Override
+    public MatType getType() {
+        return MatType.SOURCE;
+    }
+
     // TODO: implement isValid
 }

@@ -18,4 +18,9 @@ public class Topic extends NamedVertex implements Serializable {
     public boolean isOfType(MatType type) {
         return type == MatType.TOPIC;
     }
+
+    @Override
+    public MatType getType() {
+        return MatType.TOPIC;
+    }
 }

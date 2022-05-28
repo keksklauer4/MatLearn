@@ -36,4 +36,6 @@ public abstract class NamedVertex extends GenericVertex implements Serializable 
     }
 
     public abstract boolean isOfType(MatType type);
+
+    public abstract MatType getType();
 }

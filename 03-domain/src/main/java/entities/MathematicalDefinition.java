@@ -12,5 +12,10 @@ public class MathematicalDefinition extends NamedVertex implements Serializable 
         return  type == MatType.DEFINITION;
     }
 
+    @Override
+    public MatType getType() {
+        return MatType.DEFINITION;
+    }
+
     // TODO: implement isValid
 }

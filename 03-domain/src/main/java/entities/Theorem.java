@@ -21,4 +21,9 @@ public class Theorem extends NamedVertex implements Serializable {
         return leafValidator.allLeafsDefinitionsOrAxioms();
 
     }
+
+    @Override
+    public MatType getType() {
+        return MatType.THEOREM;
+    }
 }

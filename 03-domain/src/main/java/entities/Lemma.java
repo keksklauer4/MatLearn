@@ -23,4 +23,9 @@ public class Lemma extends NamedVertex implements Serializable {
     public boolean isOfType(MatType type) {
         return type == MatType.LEMMA;
     }
+
+    @Override
+    public MatType getType() {
+        return MatType.LEMMA;
+    }
 }

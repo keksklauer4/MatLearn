@@ -26,4 +26,9 @@ public class Corollary extends NamedVertex implements Serializable {
     public boolean isOfType(MatType type) {
         return false;
     }
+
+    @Override
+    public MatType getType() {
+        return MatType.COROLLARY;
+    }
 }
