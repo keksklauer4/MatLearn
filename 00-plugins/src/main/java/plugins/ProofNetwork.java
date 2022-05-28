@@ -6,6 +6,7 @@ import main.java.entities.NamedVertex;
 import main.java.exceptions.ValidationExceptionHandler;
 import main.java.network.ProofNetworkRepository;
 import main.java.network.ProofNetworkSerializationRepository;
+import main.java.validators.StrictValidator;
 
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class ProofNetwork implements ProofNetworkRepository {
 
     public void addVertex(NamedVertex vertex) {
         this.graph.registerVertex(vertex);
-        serialize();
+        modifiedGraph();
     }
 
     public void addEdge(final NamedVertex fromVertex, final NamedVertex toVertex) {
@@ -33,13 +34,13 @@ public class ProofNetwork implements ProofNetworkRepository {
             throw new UnknownVertexException(fromVertex);
         }
         graph.addEdge(fromVertex, toVertex);
-        serialize();
+        modifiedGraph();
     }
 
     @Override
     public void removeVertex(final NamedVertex vertex) {
         graph.removeVertex(vertex);
-        serialize();
+        modifiedGraph();
     }
 
     @Override
@@ -55,7 +56,7 @@ public class ProofNetwork implements ProofNetworkRepository {
     @Override
     public boolean removeEdgeIfExists(int fromId, int toId) {
         boolean exists = graph.removeEdge(fromId, toId);
-        serialize();
+        modifiedGraph();
         return exists;
     }
 
@@ -67,6 +68,12 @@ public class ProofNetwork implements ProofNetworkRepository {
     @Override
     public ValidationExceptionHandler getExceptionHandler() {
         return exceptionHandler;
+    }
+
+    private void modifiedGraph(){
+        StrictValidator validator = new StrictValidator(this);
+        if (validator.validate()) serialize();
+        else deserialize();
     }
 
     private void serialize(){

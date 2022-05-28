@@ -6,28 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="177bdf72-7b70-4342-bb6f-57f946fbfa8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/MatLearn.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/MatLearn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/ProofNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/plugins/ProofNetwork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/serialization/ProofNetworkSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/plugins/ProofNetworkSerializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/FindObjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/FindObjectCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/converters/UseCaseParameterDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/converters/UseCaseParameterDispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/VertexFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/FindVerticesUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-application/src/test/java/usecases/VertexFinderUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/test/java/usecases/FindVerticesUseCaseUseCaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Axiom.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Axiom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Corollary.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Corollary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Lemma.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Lemma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/MathematicalDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/MathematicalDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/NamedVertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/NamedVertex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Source.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Source.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Theorem.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Theorem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/entities/Topic.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/entities/Topic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetworkRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/network/ProofNetworkRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/validators/ContributionValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/validators/ContributionValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/validators/FullValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/validators/FullValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/validators/LeafValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/validators/LeafValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/validators/StrictValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/validators/StrictValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/validators/ValidationExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/exceptions/ValidationExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/algorithm/GenericDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/algorithm/GenericDFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLICommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/cli/CLICommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/cli/UseCaseResultDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/cli/UseCaseResultDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/plugins/ProofNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/plugins/ProofNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/plugins/ValidationExceptionHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/plugins/ValidationExceptionHandlerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/commands/FullValidationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/commands/FullValidationCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/AbstractUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/AbstractUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/AddConnectionUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/AddConnectionUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/FullValidationUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/FullValidationUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListLeavesUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListLeavesUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListNeighborsUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-application/src/main/java/usecases/ListNeighborsUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/exceptions/ValidationExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/exceptions/ValidationExceptionHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

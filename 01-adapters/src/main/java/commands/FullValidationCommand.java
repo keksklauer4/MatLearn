@@ -6,10 +6,9 @@ import main.java.usecases.FullValidationUseCase;
 import main.java.usecases.MatLearnUseCase;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class FullValidationCommand extends AbstractCommand {
-    protected FullValidationCommand(List<Parameter> parameters) {
+    public FullValidationCommand() {
         super(new ArrayList<>());
     }
 

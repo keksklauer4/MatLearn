@@ -13,7 +13,8 @@ public class UseCaseResultDispatcher {
             Map.entry(FindVertexResult.class, new FindVertexOutput()),
             Map.entry(ValidCommandResult.class, new NoOutput()),
             Map.entry(NeighborResult.class, new NeighborOutput()),
-            Map.entry(LeafListingResult.class, new LeafListingOutput())
+            Map.entry(LeafListingResult.class, new LeafListingOutput()),
+            Map.entry(FailedUseCaseResult.class, new FailedUseCaseOutput())
     );
 
     public UseCaseResultDispatcher(final UseCaseResult result) {
@@ -21,6 +22,7 @@ public class UseCaseResultDispatcher {
     }
 
     public void outputResult(){
+        if (result == null) return;
         outputMap.get(result.getClass()).printUseCaseResult(result);
     }
 }

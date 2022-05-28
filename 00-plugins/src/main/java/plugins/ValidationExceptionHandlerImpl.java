@@ -18,8 +18,13 @@ public class ValidationExceptionHandlerImpl implements ValidationExceptionHandle
             functor.execute();
             return true;
         } catch (ValidationException validationException){
-            printer.printLine(validationException.getMessage());
+            handle(validationException);
             return false;
         }
+    }
+
+    @Override
+    public void handle(ValidationException exception) {
+        printer.printLine(exception.getMessage());
     }
 }

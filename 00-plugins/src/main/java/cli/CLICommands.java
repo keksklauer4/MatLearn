@@ -11,6 +11,7 @@ public class CLICommands {
                 new AddDefinedObjectCommand(),
                 new AddTheoremCommand(),
                 new FindObjectCommand(),
+                new FullValidationCommand(),
                 new AddConnectionCommand(),
                 new LeavesCommand(),
                 new ObjectNeighborhoodCommand(),

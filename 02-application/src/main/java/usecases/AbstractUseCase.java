@@ -1,8 +1,13 @@
 package main.java.usecases;
 
+import main.java.entities.NamedVertex;
+import main.java.exceptions.VertexDoesNotExistValidationException;
 import main.java.network.ProofNetworkRepository;
 import main.java.results.UseCaseResult;
 import main.java.usecaseparameters.UseCaseParameter;
+
+import javax.swing.text.html.Option;
+import java.util.Optional;
 
 public abstract class AbstractUseCase<T extends UseCaseParameter> implements MatLearnUseCase {
     protected final ProofNetworkRepository networkRepository;
@@ -25,4 +30,11 @@ public abstract class AbstractUseCase<T extends UseCaseParameter> implements Mat
     }
 
     protected abstract UseCaseResult executeTyped(T parameters);
+
+    protected Optional<NamedVertex> getVertexById(int id) {
+        NamedVertex vertex = networkRepository.getVertexById(id);
+        if (vertex != null) return Optional.of(vertex);
+        networkRepository.getExceptionHandler().handle(new VertexDoesNotExistValidationException(id));
+        return Optional.empty();
+    }
 }
