@@ -1,8 +1,9 @@
-package main.java;
+package main.java.plugins;
 
 import main.graph.Graph;
 import main.graph.UnknownVertexException;
 import main.java.entities.NamedVertex;
+import main.java.exceptions.ValidationExceptionHandler;
 import main.java.network.ProofNetworkRepository;
 import main.java.network.ProofNetworkSerializationRepository;
 
@@ -10,10 +11,12 @@ import java.util.List;
 
 public class ProofNetwork implements ProofNetworkRepository {
     private final ProofNetworkSerializationRepository serializer;
+    private final ValidationExceptionHandler exceptionHandler;
     private Graph<NamedVertex> graph;
 
-    ProofNetwork(final ProofNetworkSerializationRepository serializer) {
+    public ProofNetwork(final ProofNetworkSerializationRepository serializer, final ValidationExceptionHandler exceptionHandler) {
         this.serializer = serializer;
+        this.exceptionHandler = exceptionHandler;
         deserialize();
     }
 
@@ -59,6 +62,11 @@ public class ProofNetwork implements ProofNetworkRepository {
     @Override
     public Graph<NamedVertex> getGraph() {
         return graph;
+    }
+
+    @Override
+    public ValidationExceptionHandler getExceptionHandler() {
+        return exceptionHandler;
     }
 
     private void serialize(){

@@ -3,6 +3,7 @@ package main.java.validators;
 import main.algorithm.GenericDFS;
 import main.graph.Graph;
 import main.java.entities.NamedVertex;
+import main.java.exceptions.LeavesNotDefinedValidationException;
 
 import java.util.HashSet;
 import java.util.List;
@@ -18,15 +19,12 @@ public class LeafValidator extends GenericDFS<NamedVertex> {
         this.ranDFS = false;
     }
 
-    public boolean allLeafsDefinitionsOrAxioms(){
+    public void allLeafsDefinitionsOrAxioms() throws LeavesNotDefinedValidationException{
         runDFSOnce();
         for (NamedVertex leaf : leafs){
-            if (!leaf.isDefinedType()){
-                // TODO: use exception
-                return false;
-            }
+            if (!leaf.isDefinedType())
+                throw new LeavesNotDefinedValidationException(getCurrentVertex().get(), leaf);
         }
-        return true;
     }
 
     private void runDFSOnce(){

@@ -4,7 +4,7 @@ import main.java.converters.ParameterMapKeys;
 import main.java.network.ProofNetworkRepository;
 import main.java.parameters.TextInputParameter;
 import main.java.usecases.MatLearnUseCase;
-import main.java.usecases.VertexFinder;
+import main.java.usecases.FindVerticesUseCase;
 
 import java.util.Collections;
 
@@ -27,6 +27,6 @@ public class FindObjectCommand extends AbstractCommand {
 
     @Override
     public MatLearnUseCase getParametrizedUseCase(ProofNetworkRepository networkRepository) {
-        return new VertexFinder(networkRepository);
+        return new FindVerticesUseCase(networkRepository);
     }
 }

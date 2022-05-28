@@ -8,7 +8,7 @@ import main.java.network.ProofNetworkRepository;
 import main.java.results.FindVertexResult;
 import main.java.usecaseparameters.AddConnectionParameters;
 import main.java.usecaseparameters.FindVertexParameter;
-import main.java.usecases.VertexFinder;
+import main.java.usecases.FindVerticesUseCase;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -18,18 +18,18 @@ import org.mockito.Mockito;
 import java.util.Arrays;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class VertexFinderUseCaseTest extends UseCaseTest<FindVertexResult> {
+public class FindVerticesUseCaseUseCaseTest extends UseCaseTest<FindVertexResult> {
     private ProofNetworkRepository networkRepository;
-    private VertexFinder useCase;
+    private FindVerticesUseCase useCase;
 
-    public VertexFinderUseCaseTest() {
+    public FindVerticesUseCaseUseCaseTest() {
         super(FindVertexResult.class);
     }
 
     @BeforeAll
     void initialize() {
         networkRepository = Mockito.mock(ProofNetworkRepository.class);
-        useCase = new VertexFinder(networkRepository);
+        useCase = new FindVerticesUseCase(networkRepository);
     }
 
     @Test

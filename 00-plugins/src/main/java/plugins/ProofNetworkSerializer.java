@@ -1,4 +1,4 @@
-package main.java.serialization;
+package main.java.plugins;
 
 import main.graph.Graph;
 import main.java.entities.NamedVertex;

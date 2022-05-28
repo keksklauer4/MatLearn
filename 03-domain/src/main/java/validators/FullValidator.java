@@ -2,27 +2,26 @@ package main.java.validators;
 
 import main.algorithm.CycleChecker;
 import main.java.entities.NamedVertex;
+import main.java.exceptions.CycleFoundException;
+import main.java.exceptions.ValidationExceptionHandler;
 import main.java.network.ProofNetworkRepository;
 
 public class FullValidator {
     private final ProofNetworkRepository network;
+    private final ValidationExceptionHandler exceptionHandler;
 
-    public FullValidator(ProofNetworkRepository network) {
+    public FullValidator(final ProofNetworkRepository network) {
         this.network = network;
+        this.exceptionHandler = network.getExceptionHandler();
     }
 
     public boolean isFullyValid(){
-        CycleChecker<NamedVertex> cycleChecker = new CycleChecker<>(network.getGraph());
-        if (cycleChecker.hasCycle()){
-            return false;
-        }
+        boolean valid = (new StrictValidator(network)).validate();
         for (NamedVertex vertex : network.getVertices()){
-            boolean valid = vertex.isValid(network.getGraph())
-                    && vertex.isFullyValid(network.getGraph());
-            if (!valid){
-                return false;
-            }
+            valid |= exceptionHandler.handle(() -> vertex.isFullyValid(network.getGraph()));
         }
-        return true;
+        return valid;
     }
+
+
 }

@@ -1,6 +1,8 @@
 package main.java.entities;
 
 import main.graph.Graph;
+import main.java.exceptions.BackwardDependenceValidationException;
+import main.java.exceptions.ValidationException;
 
 import java.io.Serializable;
 
@@ -10,8 +12,9 @@ public class Axiom extends NamedVertex implements Serializable {
     }
 
     @Override
-    public boolean isValid(final Graph<NamedVertex> graph) {
-        return graph.getBackwardEdges(this).isEmpty();
+    public void isValid(final Graph<NamedVertex> graph) throws ValidationException {
+        if (!graph.getBackwardEdges(this).isEmpty())
+            throw new BackwardDependenceValidationException(this);
     }
 
     @Override

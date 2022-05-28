@@ -2,6 +2,7 @@ package main.java.entities;
 
 import main.graph.GenericVertex;
 import main.graph.Graph;
+import main.java.exceptions.ValidationException;
 
 import java.io.Serializable;
 
@@ -23,13 +24,9 @@ public abstract class NamedVertex extends GenericVertex implements Serializable 
         return description;
     }
 
-    public boolean isValid(final Graph<NamedVertex> graph){
-        return true;
-    }
+    public void isValid(final Graph<NamedVertex> graph) throws ValidationException { }
 
-    public boolean isFullyValid(final Graph<NamedVertex> graph){
-        return true;
-    }
+    public void isFullyValid(final Graph<NamedVertex> graph) throws ValidationException{ }
 
     public boolean isDefinedType(){
         return isOfType(MatType.AXIOM) || isOfType(MatType.DEFINITION);

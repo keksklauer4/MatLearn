@@ -3,6 +3,7 @@ package main.algorithm;
 import main.graph.GenericVertex;
 import main.graph.Graph;
 
+import javax.swing.text.html.Option;
 import java.util.*;
 
 public abstract class GenericDFS<Vertex extends GenericVertex> {
@@ -26,6 +27,10 @@ public abstract class GenericDFS<Vertex extends GenericVertex> {
     protected abstract void unvisitedVertex(final Vertex vertex);
     protected abstract void alreadyVisitedVertex(final Vertex vertex);
     protected abstract List<Vertex> getAdjacent(final Vertex vertex);
+
+    protected Optional<Vertex> getCurrentVertex() {
+        return currentVertex != null ? Optional.of(currentVertex) : Optional.empty();
+    }
 
     protected void setCurrentVertex(Vertex currentVertex) {
         this.currentVertex = currentVertex;

@@ -9,13 +9,11 @@ public class MathematicalDefinition extends NamedVertex implements Serializable 
 
     @Override
     public boolean isOfType(MatType type) {
-        return  type == MatType.DEFINITION;
+        return type == MatType.DEFINITION;
     }
 
     @Override
     public MatType getType() {
         return MatType.DEFINITION;
     }
-
-    // TODO: implement isValid
 }

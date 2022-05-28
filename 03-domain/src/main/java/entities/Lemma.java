@@ -1,6 +1,9 @@
 package main.java.entities;
 
 import main.graph.Graph;
+import main.java.exceptions.LeavesNotDefinedValidationException;
+import main.java.exceptions.NoTheoremContributionValidationException;
+import main.java.exceptions.ValidationException;
 import main.java.validators.ContributionValidator;
 import main.java.validators.LeafValidator;
 
@@ -12,11 +15,11 @@ public class Lemma extends NamedVertex implements Serializable {
     }
 
     @Override
-    public boolean isFullyValid(Graph<NamedVertex> graph) {
-        // contributes to at least one theorem
-        ContributionValidator validator = new ContributionValidator(graph, this);
+    public void isFullyValid(Graph<NamedVertex> graph) throws ValidationException {
+        ContributionValidator contributionValidator = new ContributionValidator(graph, this);
         LeafValidator leafValidator = new LeafValidator(graph, this);
-        return validator.validate() && leafValidator.allLeafsDefinitionsOrAxioms();
+        contributionValidator.validate();
+        leafValidator.allLeafsDefinitionsOrAxioms();
     }
 
     @Override
