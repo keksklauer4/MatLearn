@@ -63,3 +63,12 @@
 
 ## adapter
 ![adapter](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/keksklauer4/MatLearn/finalcountdown/uml/adapter.puml)
+
+
+
+## repository
+![repository](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/keksklauer4/MatLearn/finalcountdown/uml/repository.puml)
+
+
+## aggregate
+![aggregate](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/keksklauer4/MatLearn/finalcountdown/uml/aggregate.puml)
