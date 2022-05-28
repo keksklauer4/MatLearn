@@ -12,14 +12,9 @@ public class Corollary extends NamedVertex implements Serializable {
 
     @Override
     public boolean isFullyValid(Graph<NamedVertex> graph) {
-        List<NamedVertex> successors = graph.getBackwardEdges(this);
-        // successors contains at least one theorem
-        for (NamedVertex vertex : successors){
-            if (vertex.isOfType(MatType.THEOREM)){
-                return true;
-            }
-        }
-        return false;
+        List<NamedVertex> successors = graph.getForwardEdges(this);
+        return successors.stream()
+                .anyMatch(vertex -> vertex.isOfType(MatType.THEOREM));
     }
 
     @Override

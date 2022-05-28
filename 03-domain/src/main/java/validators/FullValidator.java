@@ -12,7 +12,7 @@ public class FullValidator {
     }
 
     public boolean isFullyValid(){
-        CycleChecker<NamedVertex> cycleChecker = new CycleChecker<NamedVertex>(network.getGraph());
+        CycleChecker<NamedVertex> cycleChecker = new CycleChecker<>(network.getGraph());
         if (cycleChecker.hasCycle()){
             return false;
         }
