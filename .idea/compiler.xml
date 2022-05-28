@@ -6,11 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="MatLearn" />
+        <module name="03-domain" />
+        <module name="04-abstraction" />
+        <module name="00-plugins" />
+        <module name="02-application" />
+        <module name="01-adapters" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="03-domain" target="1.8" />
+      <module name="00-plugins" target="11" />
+      <module name="01-adapters" target="11" />
+      <module name="02-application" target="11" />
+      <module name="03-domain" target="11" />
+      <module name="04-abstraction" target="11" />
       <module name="MatLearn" target="1.8" />
     </bytecodeTargetLevel>
   </component>

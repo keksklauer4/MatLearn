@@ -1,0 +1,16 @@
+
+@startuml
+
+interface UseCaseParameter
+
+class RemoveEdgesParameters implements UseCaseParameter {
+    -final List<Integer> vertexFromIds;
+    -final List<Integer> vertexToIds;
+
+    +RemoveEdgesParameters(List<Integer> vertexFromIds, List<Integer> vertexToIds)
+
+    +List<Integer> getVertexFromIds()
+    +List<Integer> getVertexToIds()
+}
+
+@enduml

@@ -1,0 +1,53 @@
+
+@startuml
+
+interface MatLearnUseCase {
+    UseCaseResult execute(UseCaseParameter parameter)
+}
+
+interface UseCaseParameter {
+
+}
+
+interface UseCaseResult {
+
+}
+
+abstract class AbstractUseCase< T extends UseCaseParameter > implements MatLearnUseCase {
+    -final Class<T> expectedParameterType;
+    #final ProofNetworkRepository networkRepository;
+
+    #AbstractUseCase(ProofNetworkRepository networkRepository, Class<T> expectedParameterType)
+
+
+    +UseCaseResult execute(UseCaseParameter parameters)
+
+    -boolean checkCorrectParameterType(UseCaseParameter parameters)
+    #abstract UseCaseResult executeTyped(T parameters);
+}
+
+
+class ListLeavesUseCase {
+    +ListLeavesUseCase(ProofNetworkRepository networkRepository)
+
+    #UseCaseResult executeTyped(SingleObjectParameters parameters)
+}
+class ListLeaves {
+}
+class LeafListingResult implements UseCaseResult {
+}
+interface ProofNetworkRepository {
+}
+class SingleObjectParameters implements UseCaseParameter {
+}
+
+AbstractUseCase o-- ProofNetworkRepository
+MatLearnUseCase o-- UseCaseParameter
+MatLearnUseCase o-- UseCaseResult
+AbstractUseCase <|-- ListLeavesUseCase
+ListLeavesUseCase o-- ListLeaves
+
+
+@enduml
+
+

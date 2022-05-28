@@ -1,0 +1,73 @@
+
+
+@startuml
+
+class GenericVertex {
+    -int id
+
+    +GenericVertex(int id)
+    +int getId()
+    ~int setId()
+}
+
+abstract class NamedVertex{
+    -String name
+    -String description
+
+    +NamedVertex(String name, String description)
+
+    +String getName()
+    +String getDescription()
+    +boolean isValid(final Graph<NamedVertex> graph)
+    +boolean isFullyValid(final Graph<NamedVertex> graph)
+    +boolean isDefinedType()
+    +abstract boolean isOfType(MatType type)
+}
+
+class Axiom {
+    +boolean isValid(final Graph<NamedVertex> graph)
+    +boolean isOfType(MatType type)
+}
+
+class Corollary {
+    +boolean isFullyValid(Graph<NamedVertex> graph)
+    +boolean isOfType(MatType type)
+}
+
+class Lemma {
+    +boolean isFullyValid(Graph<NamedVertex> graph)
+    +boolean isOfType(MatType type)
+}
+
+class MathematicalDefinition {
+    +boolean isValid(final Graph<NamedVertex> graph)
+    +boolean isOfType(MatType type)
+}
+
+class Source {
+    +boolean isValid(final Graph<NamedVertex> graph)
+    +boolean isOfType(MatType type)
+}
+
+class Theorem {
+    +boolean isFullyValid(Graph<NamedVertex> graph)
+    +boolean isOfType(MatType type)
+}
+
+class Topic {
+    +boolean isValid(final Graph<NamedVertex> graph)
+    +boolean isOfType(MatType type)
+}
+
+GenericVertex <|-- NamedVertex
+
+NamedVertex <|-- Axiom
+NamedVertex <|-- Corollary
+NamedVertex <|-- Lemma
+NamedVertex <|-- MathematicalDefinition
+NamedVertex <|-- Source
+NamedVertex <|-- Theorem
+NamedVertex <|-- Topic
+
+@enduml
+
