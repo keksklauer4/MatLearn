@@ -49,17 +49,12 @@ public abstract class GenericDFS<Vertex extends GenericVertex> {
         while(!vertexStack.isEmpty() && !stop){
             StackVertex<Vertex> top = vertexStack.peek();
             visited.add(top.getVertex());
-            if (!top.hasNext()){
-                // visited all edges
-                vertexStack.pop();
-            }
-            else{
-                tryVisitNext(vertexStack);
-            }
+            if (!top.hasNext()) vertexStack.pop();
+            else tryVisitNext(vertexStack);
         }
     }
 
-    private void tryVisitNext(Stack<StackVertex<Vertex>> vertexStack){
+    private void tryVisitNext(final Stack<StackVertex<Vertex>> vertexStack){
         Vertex next = vertexStack.peek().getNext();
         if (visited.contains(next)){
             // already visited this node
