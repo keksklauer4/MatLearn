@@ -1,6 +1,5 @@
 package de.matlearn.adapters.converters;
 
-import de.matlearn.adapters.converters.ParameterMapParser;
 import de.matlearn.domain.entities.MatType;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

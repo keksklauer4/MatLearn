@@ -1,8 +1,8 @@
 package de.matlearn.adapters.converters;
 
-import de.matlearn.domain.entities.MatType;
 import de.matlearn.application.usecaseparameters.AddMatObjectParameters;
 import de.matlearn.application.usecases.AddMathematicalObjectTask;
+import de.matlearn.domain.entities.MatType;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

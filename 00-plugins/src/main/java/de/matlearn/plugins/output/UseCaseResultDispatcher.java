@@ -2,7 +2,6 @@ package de.matlearn.plugins.output;
 
 import de.matlearn.application.results.*;
 import de.matlearn.plugins.cli.CLIPrinter;
-import de.matlearn.plugins.output.*;
 
 import java.util.Map;
 

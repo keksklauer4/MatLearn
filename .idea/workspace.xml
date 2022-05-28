@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="177bdf72-7b70-4342-bb6f-57f946fbfa8f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/cli/CLICommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/cli/CLICommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/cli/CLICommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/cli/CLICommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/cli/CLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/cli/CLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/output/LeafListingOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/output/LeafListingOutput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/output/UseCaseResultDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/output/UseCaseResultDispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/plugins/ProofNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/00-plugins/src/main/java/de/matlearn/plugins/plugins/ProofNetwork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/commands/ExerciseCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/commands/ExerciseCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/converters/UseCaseParameterDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/converters/UseCaseParameterDispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/parameters/ExactlyOneIdParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/parameters/ExactlyOneIdParameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/entities/NamedVertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/entities/NamedVertex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/network/ProofNetworkRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/network/ProofNetworkRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/validators/FullValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/validators/FullValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/validators/StrictValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/validators/StrictValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/algorithm/StackVertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/algorithm/StackVertex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/graph/Graph.java" afterDir="false" />
-    </list>
+    <list default="true" id="177bdf72-7b70-4342-bb6f-57f946fbfa8f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,13 +34,13 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction" />
@@ -196,11 +179,6 @@
           <url>file://$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/helpers/PairGenerator.java</url>
           <line>18</line>
           <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/03-domain/src/main/java/de/matlearn/domain/validators/StrictValidator.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

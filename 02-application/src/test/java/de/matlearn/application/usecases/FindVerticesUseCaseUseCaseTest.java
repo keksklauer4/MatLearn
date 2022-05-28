@@ -1,13 +1,13 @@
 package de.matlearn.application.usecases;
 
 import de.matlearn.application.results.FindVertexResult;
+import de.matlearn.application.usecaseparameters.AddConnectionParameters;
+import de.matlearn.application.usecaseparameters.FindVertexParameter;
 import de.matlearn.domain.entities.Axiom;
 import de.matlearn.domain.entities.NamedVertex;
 import de.matlearn.domain.entities.Source;
 import de.matlearn.domain.entities.Theorem;
 import de.matlearn.domain.network.ProofNetworkRepository;
-import de.matlearn.application.usecaseparameters.AddConnectionParameters;
-import de.matlearn.application.usecaseparameters.FindVertexParameter;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

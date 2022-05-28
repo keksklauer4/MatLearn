@@ -1,10 +1,10 @@
 package de.matlearn.adapters.commands;
 
 import de.matlearn.adapters.converters.ParameterMapKeys;
-import de.matlearn.domain.network.ProofNetworkRepository;
 import de.matlearn.adapters.parameters.ExactlyOneIdParameter;
 import de.matlearn.application.usecases.AddConnectionUseCase;
 import de.matlearn.application.usecases.MatLearnUseCase;
+import de.matlearn.domain.network.ProofNetworkRepository;
 
 import java.util.Arrays;
 

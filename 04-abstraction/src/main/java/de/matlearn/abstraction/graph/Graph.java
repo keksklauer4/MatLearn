@@ -2,7 +2,6 @@ package de.matlearn.abstraction.graph;
 
 import java.io.Serializable;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Graph<Vertex extends GenericVertex> implements Serializable {
     private Map<Integer, Vertex> idToVertex;

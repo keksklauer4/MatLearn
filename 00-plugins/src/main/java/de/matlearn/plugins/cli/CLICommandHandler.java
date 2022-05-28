@@ -2,11 +2,11 @@ package de.matlearn.plugins.cli;
 
 import de.matlearn.adapters.commands.GenericCommand;
 import de.matlearn.adapters.converters.UseCaseParameterDispatcher;
-import de.matlearn.domain.network.ProofNetworkRepository;
 import de.matlearn.adapters.parameters.Parameter;
+import de.matlearn.adapters.validators.InvalidInputException;
 import de.matlearn.application.results.UseCaseResult;
 import de.matlearn.application.usecases.MatLearnUseCase;
-import de.matlearn.adapters.validators.InvalidInputException;
+import de.matlearn.domain.network.ProofNetworkRepository;
 import de.matlearn.plugins.output.UseCaseResultDispatcher;
 
 import java.util.Optional;

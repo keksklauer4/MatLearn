@@ -4,7 +4,6 @@ import de.matlearn.domain.entities.NamedVertex;
 import de.matlearn.domain.exceptions.NoObjectValidationException;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.Random;
 
 public class RandomExtractorImpl implements RandomExtractor {

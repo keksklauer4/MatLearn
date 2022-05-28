@@ -1,6 +1,5 @@
 package de.matlearn.plugins.output;
 
-import de.matlearn.application.results.LeafListingResult;
 import de.matlearn.application.results.ShowAllObjectsResult;
 import de.matlearn.application.results.UseCaseResult;
 import de.matlearn.plugins.cli.CLIPrinter;

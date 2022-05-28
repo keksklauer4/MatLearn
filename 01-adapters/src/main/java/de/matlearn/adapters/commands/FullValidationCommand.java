@@ -1,8 +1,8 @@
 package de.matlearn.adapters.commands;
 
-import de.matlearn.domain.network.ProofNetworkRepository;
 import de.matlearn.application.usecases.FullValidationUseCase;
 import de.matlearn.application.usecases.MatLearnUseCase;
+import de.matlearn.domain.network.ProofNetworkRepository;
 
 import java.util.ArrayList;
 

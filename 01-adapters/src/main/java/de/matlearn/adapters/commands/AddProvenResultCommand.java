@@ -1,16 +1,15 @@
 package de.matlearn.adapters.commands;
 
 import de.matlearn.adapters.converters.ParameterMapKeys;
-import de.matlearn.adapters.parameters.OptionParameter;
-import de.matlearn.domain.entities.MatType;
-import de.matlearn.domain.network.ProofNetworkRepository;
 import de.matlearn.adapters.parameters.IdListParameter;
+import de.matlearn.adapters.parameters.OptionParameter;
 import de.matlearn.adapters.parameters.TextInputParameter;
 import de.matlearn.application.usecases.AddMathematicalObjectTask;
 import de.matlearn.application.usecases.MatLearnUseCase;
+import de.matlearn.domain.entities.MatType;
+import de.matlearn.domain.network.ProofNetworkRepository;
 
 import java.util.Arrays;
-import java.util.Map;
 
 public class AddProvenResultCommand extends AbstractCommand {
     public AddProvenResultCommand(){
