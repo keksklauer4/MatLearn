@@ -4,9 +4,24 @@ import main.java.entities.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.AbstractMap;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class NamedVertexFactoryTest {
     private static final String NAME = "name";
     private static final String DESC = "description";
+
+    private static final Map<MatType, Class<? extends NamedVertex>> vertexTypeMap = Stream.of(
+            new AbstractMap.SimpleEntry<>(MatType.AXIOM, Axiom.class),
+            new AbstractMap.SimpleEntry<>(MatType.COROLLARY, Corollary.class),
+            new AbstractMap.SimpleEntry<>(MatType.DEFINITION, MathematicalDefinition.class),
+            new AbstractMap.SimpleEntry<>(MatType.LEMMA, Lemma.class),
+            new AbstractMap.SimpleEntry<>(MatType.SOURCE, Source.class),
+            new AbstractMap.SimpleEntry<>(MatType.THEOREM, Theorem.class),
+            new AbstractMap.SimpleEntry<>(MatType.TOPIC, Topic.class)
+    ).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 
     @Test
     void test_CreateAxiom(){
@@ -45,31 +60,8 @@ public class NamedVertexFactoryTest {
 
     private void assertCorrectType(NamedVertex vertex, MatType type) {
         Assertions.assertEquals(type, vertex.getType());
-        switch (type){
-            case AXIOM:
-                Assertions.assertEquals(Axiom.class, vertex.getClass());
-                break;
-            case COROLLARY:
-                Assertions.assertEquals(Corollary.class, vertex.getClass());
-                break;
-            case DEFINITION:
-                Assertions.assertEquals(MathematicalDefinition.class, vertex.getClass());
-                break;
-            case LEMMA:
-                Assertions.assertEquals(Lemma.class, vertex.getClass());
-                break;
-            case SOURCE:
-                Assertions.assertEquals(Source.class, vertex.getClass());
-                break;
-            case THEOREM:
-                Assertions.assertEquals(Theorem.class, vertex.getClass());
-                break;
-            case TOPIC:
-                Assertions.assertEquals(Topic.class, vertex.getClass());
-                break;
-            default:
-                throw new RuntimeException("Invalid type.");
-        }
+        Assertions.assertTrue(vertexTypeMap.containsKey(vertex.getType()));
+        Assertions.assertEquals(vertexTypeMap.get(type), vertex.getClass());
     }
 
     private NamedVertex create(MatType type) {
