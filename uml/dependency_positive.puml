@@ -1,23 +1,43 @@
 
 
 @startuml
-
-abstract class GenericVertex
-
-abstract class NamedVertex extends GenericVertex implements Serializable {
-    -String name;
-    -String description;
-
-    +NamedVertex(String name, String description)
-
-    +String getName()
-    +String getDescription()
-    +void isValid(final Graph<NamedVertex> graph) throws ValidationException
-    +void isFullyValid(final Graph<NamedVertex> graph) throws ValidationException
-    +boolean isDefinedType()
-    +String toString()
-    +{abstract} boolean isOfType(MatType type)
-    +{abstract} MatType getType();
+interface PairFunction< T > {
+    void execute(T a, T b);
 }
+
+class PairGenerator<T> {
+    - final List<T> listA;
+    - final List<T> listB;
+
+    + PairGenerator(List<T> listA, List<T> listB)
+
+    +void generate(PairFunction<T> functor)
+}
+
+class RemoveEdgesUseCase extends AbstractUseCase {
+    +RemoveEdgesUseCase(ProofNetworkRepository networkRepository)
+
+
+    # UseCaseResult executeTyped(RemoveEdgesParameters parameters)
+}
+
+abstract class AbstractUseCase<T extends UseCaseParameter> implements MatLearnUseCase {
+    # final ProofNetworkRepository networkRepository;
+    - final Class<T> expectedParameterType;
+
+    # AbstractUseCase(ProofNetworkRepository networkRepository, Class<T> expectedParameterType)
+    + UseCaseResult execute(UseCaseParameter parameters)
+
+    - boolean checkCorrectParameterType(UseCaseParameter parameters)
+    # abstract UseCaseResult executeTyped(T parameters)
+    # Optional<NamedVertex> getVertexById(int id)
+}
+
+interface MatLearnUseCase {
+    UseCaseResult execute(UseCaseParameter parameters)
+}
+
+PairGenerator o-- PairFunction
+RemoveEdgesUseCase o-- PairGenerator
 
 @enduml
