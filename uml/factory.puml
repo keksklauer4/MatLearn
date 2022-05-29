@@ -1,0 +1,36 @@
+
+@startuml
+abstract class GenericVertex
+
+enum MatType
+
+abstract class GenericVertex
+
+abstract class NamedVertex extends GenericVertex implements Serializable {
+    -String name;
+    -String description;
+
+    +NamedVertex(String name, String description)
+
+    +String getName()
+    +String getDescription()
+    +void isValid(final Graph<NamedVertex> graph) throws ValidationException
+    +void isFullyValid(final Graph<NamedVertex> graph) throws ValidationException
+    +boolean isDefinedType()
+    +String toString()
+    +{abstract} boolean isOfType(MatType type)
+    +{abstract} MatType getType();
+}
+
+class NamedVertexFactory {
+    -{static} final Map<MatType, Class<? extends NamedVertex>> vertexTypes
+
+    +{static} NamedVertex create(MatType type, String name, String description)
+    -{static} Class<? extends NamedVertex> getClass(MatType type)
+}
+
+NamedVertexFactory o-- NamedVertex
+NamedVertexFactory o-- MatType
+NamedVertex o-- MatType
+
+@enduml

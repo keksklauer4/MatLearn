@@ -1,0 +1,22 @@
+
+@startuml
+
+class MatLearnUseCaseMock implements MatLearnUseCase {
+    - UseCaseAssertionFunctor functor;
+
+    + MatLearnUseCaseMock(UseCaseAssertionFunctor functor)
+    + UseCaseResult execute(UseCaseParameter parameter)
+}
+
+
+interface UseCaseAssertionFunctor {
+    void execute(UseCaseParameter parameter);
+}
+
+interface MatLearnUseCase {
+    UseCaseResult execute(UseCaseParameter parameter);
+}
+
+MatLearnUseCaseMock o-- UseCaseAssertionFunctor
+
+@enduml

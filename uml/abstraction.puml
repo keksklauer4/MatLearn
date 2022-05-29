@@ -1,0 +1,44 @@
+
+@startuml
+
+class Graph< Vertex extends GenericVertex >  implements Serializable {
+        -Map<Integer, Vertex> idToVertex;
+        -List<Vertex> vertices;
+        -EdgeList<Vertex> edges;
+        -int largestId;
+
+        +Graph()
+        +void registerVertex(Vertex vertex)
+        +Vertex getVertexById(int id)
+        +void addEdge(final Vertex vertexFrom, final Vertex vertexTo)
+        +List<Vertex> getForwardEdges(final Vertex vertex)
+        +List<Vertex> getVertices()
+        +void removeEdge(final Vertex vertexFrom, final Vertex vertexTo)
+        +boolean removeEdge(int fromId, int toId)
+        +void removeVertex(final Vertex vertex)
+        +List<Vertex> getBackwardEdges(final Vertex vertex)
+        -List<Vertex> getEndVertices(final List<Edge> edgeList)
+        -int getNextId()
+}
+
+class EdgeList< Vertex extends GenericVertex > implements Serializable {
+
+}
+
+class GenericVertex implements Serializable {
+    -int id;
+
+    +GenericVertex()
+    +GenericVertex(int id)
+
+     +int getId()
+    ~void setId(int id)
+
+    +int hashCode()
+}
+
+Graph o-- GenericVertex
+Graph o-- EdgeList
+EdgeList o-- GenericVertex
+
+@enduml

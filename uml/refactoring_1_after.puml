@@ -1,0 +1,37 @@
+
+@startuml
+
+abstract class GenericDFS<Vertex extends GenericVertex> {
+    -final Graph<Vertex> graph;
+    -Vertex currentVertex;
+    -Set<Vertex> visited;
+    -boolean stop;
+
+    +GenericDFS(final Graph<Vertex> graph)
+    +GenericDFS(final Graph<Vertex> graph, Vertex currentVertex)
+
+    #void setCurrentVertex(Vertex currentVertex)
+    #Graph<Vertex> getGraph()
+    #void stop()
+    #boolean wasStopped()
+    #void runDFS()
+
+    -void tryVisitNext(final Stack<StackVertex<Vertex>> vertexStack)
+    -StackVertex<Vertex> visitNext(Vertex vertex)
+
+    #{abstract} void unvisitedVertex(final Vertex vertex)
+    #{abstract} void alreadyVisitedVertex(final Vertex vertex)
+    #{abstract} List<Vertex> getAdjacent(final Vertex vertex)
+
+}
+
+class GenericVertex
+class Graph<Vertex extends GenericVertex>
+class StackVertex<Vertex extends GenericVertex>
+
+GenericDFS o-- GenericVertex
+GenericDFS o-- Graph
+GenericDFS o-- StackVertex
+StackVertex o-- GenericVertex
+
+@enduml

@@ -1,0 +1,42 @@
+
+@startuml
+
+
+class ContributionValidator{
+    -Lemma lemma;
+    -boolean foundContribution;
+
+    +ContributionValidator(Graph<NamedVertex> graph, Lemma lemma)
+    +void validate() throws NoTheoremContributionValidationException
+    # void unvisitedVertex(NamedVertex vertex)
+    # void alreadyVisitedVertex(NamedVertex vertex) {}
+    # List<NamedVertex> getAdjacent(NamedVertex vertex)
+}
+
+abstract class GenericDFS<Vertex extends GenericVertex> {
+    - Graph<Vertex> graph;
+    - Vertex currentVertex;
+    - Set<Vertex> visited;
+    - boolean stop;
+
+    + GenericDFS(final Graph<Vertex> graph)
+    + GenericDFS(final Graph<Vertex> graph, Vertex currentVertex)
+
+    # {abstract} void unvisitedVertex(final Vertex vertex)
+    # {abstract} void alreadyVisitedVertex(final Vertex vertex)
+    # {abstract} List<Vertex> getAdjacent(final Vertex vertex)
+
+    # Optional<Vertex> getCurrentVertex()
+    # void setCurrentVertex(Vertex currentVertex)
+    # Graph<Vertex> getGraph()
+    # void stop()
+    # boolean wasStopped()
+    # void runDFS()
+
+    - void tryVisitNext(final Stack<StackVertex<Vertex>> vertexStack)
+    - StackVertex<Vertex> visitNext(Vertex vertex)
+}
+
+GenericDFS <|-- ContributionValidator
+
+@enduml

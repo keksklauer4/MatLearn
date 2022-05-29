@@ -1,0 +1,47 @@
+
+@startuml
+interface ProofNetworkRepository {
+    void addVertex(NamedVertex vertex)
+    boolean addEdge(NamedVertex fromVertex, NamedVertex toVertex)
+    void removeVertex(NamedVertex vertex)
+    boolean removeEdgeIfExists(int fromId, int toId)
+    List<NamedVertex> getVertices()
+    NamedVertex getVertexById(int vertexId)
+    Graph<NamedVertex> getGraph()
+    ValidationExceptionHandler getExceptionHandler()
+}
+
+
+class ProofNetwork implements ProofNetworkRepository {
+    -ProofNetworkSerializationRepository serializer
+    -ValidationExceptionHandler exceptionHandler
+    -Graph<NamedVertex> graph
+
+    +ProofNetwork(final ProofNetworkSerializationRepository serializer, final ValidationExceptionHandler exceptionHandler)
+    +void addVertex(NamedVertex vertex)
+    +boolean addEdge(final NamedVertex fromVertex, final NamedVertex toVertex)
+    +void removeVertex(final NamedVertex vertex)
+    +List<NamedVertex> getVertices()
+    +NamedVertex getVertexById(int vertexId)
+    +boolean removeEdgeIfExists(int fromId, int toId)
+    +Graph<NamedVertex> getGraph()
+    +ValidationExceptionHandler getExceptionHandler()
+
+    -boolean modifiedGraph()
+    -void serialize()
+    -void deserialize()
+}
+
+class StrictValidator
+interface ValidationExceptionHandler
+class Graph<Vertex extends GenericVertex>
+abstract class GenericVertex
+abstract class NamedVertex extends GenericVertex
+
+ProofNetwork o-- StrictValidator
+ProofNetwork o-- ValidationExceptionHandler
+ProofNetwork o-- Graph
+ProofNetwork o-- NamedVertex
+Graph o-- GenericVertex
+
+@enduml

@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="177bdf72-7b70-4342-bb6f-57f946fbfa8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03-domain/03-domain.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/graph/EdgeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/graph/EdgeList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/graph/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/graph/UnknownVertexException.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/graph/UnknownVertexException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/graph/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/graph/GenericVertex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-abstraction/src/test/EdgeListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/test/EdgeListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uml/dependency_positive.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/dependency_positive.puml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,28 +17,43 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="#JAVA_HOME" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="26C9usP4tJujFzeJONz45hJY35t" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="de.matlearn.abstraction" />
+      <recent name="de.matlearn.domain" />
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -58,31 +67,64 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.test in 04-abstraction">
-    <configuration name="EdgeListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="04-abstraction" />
+  <component name="RunManager" selected="JUnit.AddMathematicalObjectAdapterTest">
+    <configuration name="AddConnectionAdapterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="01-adapters" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="de.matlearn.adapters.converters.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.EdgeListTest" />
+      <option name="PACKAGE_NAME" value="de.matlearn.adapters.converters" />
+      <option name="MAIN_CLASS_NAME" value="de.matlearn.adapters.converters.AddConnectionAdapterTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test in 04-abstraction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="04-abstraction" />
+    <configuration name="AddConnectionAdapterTest.test_ValidAddConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="01-adapters" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="de.matlearn.adapters.converters.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
+      <option name="PACKAGE_NAME" value="de.matlearn.adapters.converters" />
+      <option name="MAIN_CLASS_NAME" value="de.matlearn.adapters.converters.AddConnectionAdapterTest" />
+      <option name="METHOD_NAME" value="test_ValidAddConnection" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddMathematicalObjectAdapterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="01-adapters" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.matlearn.adapters.converters.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.matlearn.adapters.converters" />
+      <option name="MAIN_CLASS_NAME" value="de.matlearn.adapters.converters.AddMathematicalObjectAdapterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in 01-adapters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="01-adapters" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in 02-application" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="02-application" />
+      <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -90,11 +132,15 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.test in 04-abstraction" />
-        <item itemvalue="JUnit.EdgeListTest" />
+        <item itemvalue="JUnit.AddMathematicalObjectAdapterTest" />
+        <item itemvalue="JUnit.AddConnectionAdapterTest" />
+        <item itemvalue="JUnit.AddConnectionAdapterTest.test_ValidAddConnection" />
+        <item itemvalue="JUnit.All in 01-adapters" />
+        <item itemvalue="JUnit.All in 02-application" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -120,5 +166,46 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/commands/AddDefinedObjectCommand.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AddMathematicalObjectAdapterTest.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/helpers/PairGenerator.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/converters/UseCaseParameterDispatcher.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AddConnectionAdapterTest.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AdapterTest.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/MatLearn$All_in_04_abstraction.ic" NAME="All in 04-abstraction Coverage Results" MODIFIED="1653720618477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/MatLearn$All_in_03_domain.ic" NAME="All in 03-domain Coverage Results" MODIFIED="1653720639305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/MatLearn$All_in_02_application.ic" NAME="All in 02-application Coverage Results" MODIFIED="1653720683368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

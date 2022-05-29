@@ -1,0 +1,64 @@
+
+@startuml
+
+class GenericDFS<Vertex extends GenericVertex> {
+    -Graph<Vertex> graph;
+    -Vertex currentVertex;
+
+    -Set<Vertex> visited;
+    -boolean stop;
+
+    +GenericDFS(Graph<Vertex> graph)
+    +GenericDFS(Graph<Vertex> graph, Vertex currentVertex)
+
+    #abstract void unvisitedVertex(Vertex vertex)
+    #abstract void alreadyVisitedVertex(Vertex vertex)
+    #abstract List<Vertex> getAdjacent(Vertex vertex)
+    #void setCurrentVertex(Vertex currentVertex)
+    #Graph<Vertex> getGraph()
+    #void stop()
+    #boolean wasStopped()
+    #void runDFS()
+
+    -void tryVisitNext(final Stack<StackVertex<Vertex>> vertexStack)
+    -StackVertex<Vertex> visitNext(Vertex vertex)
+
+}
+
+class ListLeaves extends GenericDFS {
+    - Set<NamedVertex> leaves;
+    - NamedVertex current;
+
+    + ListLeaves(ProofNetworkRepository network, NamedVertex currentVertex)
+    + List<NamedVertex> listLeaves()
+
+    # void unvisitedVertex(NamedVertex vertex)
+    # void alreadyVisitedVertex(NamedVertex vertex)
+    # List<NamedVertex> getAdjacent(NamedVertex vertex)
+}
+
+class Graph< Vertex extends GenericVertex >  implements Serializable {
+        -Map<Integer, Vertex> idToVertex;
+        -List<Vertex> vertices;
+        -EdgeList<Vertex> edges;
+        -int largestId;
+
+        +Graph()
+        +void registerVertex(Vertex vertex)
+        +Vertex getVertexById(int id)
+        +void addEdge(final Vertex vertexFrom, final Vertex vertexTo)
+        +List<Vertex> getForwardEdges(final Vertex vertex)
+        +List<Vertex> getVertices()
+        +void removeEdge(final Vertex vertexFrom, final Vertex vertexTo)
+        +boolean removeEdge(int fromId, int toId)
+        +void removeVertex(final Vertex vertex)
+        +List<Vertex> getBackwardEdges(final Vertex vertex)
+        -List<Vertex> getEndVertices(final List<Edge> edgeList)
+        -int getNextId()
+}
+
+ListLeaves o-- Graph
+GenericDFS o-- Graph
+
+@enduml
+
