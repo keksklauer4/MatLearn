@@ -1,0 +1,27 @@
+
+@startuml
+
+interface RandomExtractor {
+    NamedVertex getRandom(final List<NamedVertex> vertices) throws NoObjectValidationException
+}
+
+class RandomExtractorImpl implements RandomExtractor {
+    public NamedVertex getRandom(List<NamedVertex> vertices) throws NoObjectValidationException
+}
+
+
+class ExerciseUseCase implements MatLearnUseCase {
+    - final ProofNetworkRepository networkRepository;
+    - final RandomExtractor randomExtractor;
+
+    + ExerciseUseCase(ProofNetworkRepository networkRepository, RandomExtractor randomExtractor)
+    + UseCaseResult execute(UseCaseParameter ignored)
+    - boolean canBeAsked(final NamedVertex vertex)
+}
+
+
+ExerciseUseCase o-- RandomExtractor
+
+
+
+@enduml

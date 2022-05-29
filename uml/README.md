@@ -72,3 +72,11 @@
 
 ## aggregate
 ![aggregate](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/keksklauer4/MatLearn/finalcountdown/uml/aggregate.puml)
+
+
+## cohesion
+![cohesion](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/keksklauer4/MatLearn/finalcountdown/uml/cohesion.puml)
+
+
+## aggregate
+![grasp_low_coupling](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/keksklauer4/MatLearn/finalcountdown/uml/grasp_low_coupling.puml)
