@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="177bdf72-7b70-4342-bb6f-57f946fbfa8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AdapterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AddConnectionAdapterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AddConnectionAdapterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AddMathematicalObjectAdapterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AddMathematicalObjectAdapterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/algorithm/CycleChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/algorithm/CycleChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/graph/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-abstraction/src/test/java/de/matlearn/abstraction/GraphTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/test/java/de/matlearn/abstraction/GraphTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uml/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/uml/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -67,82 +73,76 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ExerciseUseCaseTest">
-    <configuration name="All in MatLearn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MatLearn" />
+  <component name="RunManager" selected="JUnit.AddMathematicalObjectAdapterTest">
+    <configuration name="AddConnectionAdapterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="01-adapters" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.matlearn.adapters.converters.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.matlearn.adapters.converters" />
+      <option name="MAIN_CLASS_NAME" value="de.matlearn.adapters.converters.AddConnectionAdapterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddConnectionAdapterTest.test_ValidAddConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="01-adapters" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.matlearn.adapters.converters.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.matlearn.adapters.converters" />
+      <option name="MAIN_CLASS_NAME" value="de.matlearn.adapters.converters.AddConnectionAdapterTest" />
+      <option name="METHOD_NAME" value="test_ValidAddConnection" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddMathematicalObjectAdapterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="01-adapters" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.matlearn.adapters.converters.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.matlearn.adapters.converters" />
+      <option name="MAIN_CLASS_NAME" value="de.matlearn.adapters.converters.AddMathematicalObjectAdapterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in 01-adapters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="01-adapters" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExerciseUseCaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in 02-application" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="02-application" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.matlearn.application.usecases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="de.matlearn.application.usecases" />
-      <option name="MAIN_CLASS_NAME" value="de.matlearn.application.usecases.ExerciseUseCaseTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FindVerticesUseCaseUseCaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="02-application" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.java.usecases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.java.usecases" />
-      <option name="MAIN_CLASS_NAME" value="test.java.usecases.FindVerticesUseCaseUseCaseTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NamedVertexFactoryTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="03-domain" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.matlearn.domain.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="de.matlearn.domain" />
-      <option name="MAIN_CLASS_NAME" value="de.matlearn.domain.NamedVertexFactoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NamedVertexFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="03-domain" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.java.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.java" />
-      <option name="MAIN_CLASS_NAME" value="test.java.NamedVertexFactoryTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ExerciseUseCaseTest" />
-        <item itemvalue="JUnit.NamedVertexFactoryTest (1)" />
-        <item itemvalue="JUnit.All in MatLearn" />
-        <item itemvalue="JUnit.NamedVertexFactoryTest" />
-        <item itemvalue="JUnit.FindVerticesUseCaseUseCaseTest" />
+        <item itemvalue="JUnit.AddMathematicalObjectAdapterTest" />
+        <item itemvalue="JUnit.AddConnectionAdapterTest" />
+        <item itemvalue="JUnit.AddConnectionAdapterTest.test_ValidAddConnection" />
+        <item itemvalue="JUnit.All in 01-adapters" />
+        <item itemvalue="JUnit.All in 02-application" />
       </list>
     </recent_temporary>
   </component>
@@ -182,24 +182,29 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/graph/EdgeList.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AddConnectionAdapterTest.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AddMathematicalObjectAdapterTest.java</url>
-          <line>22</line>
+          <line>25</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/02-application/src/main/java/de/matlearn/application/helpers/PairGenerator.java</url>
           <line>18</line>
           <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/01-adapters/src/main/java/de/matlearn/adapters/converters/UseCaseParameterDispatcher.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AddConnectionAdapterTest.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AdapterTest.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

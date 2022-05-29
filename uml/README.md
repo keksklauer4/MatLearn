@@ -78,5 +78,17 @@
 ![cohesion](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/keksklauer4/MatLearn/finalcountdown/uml/cohesion.puml)
 
 
+## grasp_low_coupling
+![grasp_low_coupling](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/keksklauer4/MatLearn/finalcountdown/uml/grasp_low_coupling.puml)
+
+
+## dip_negative
+![dip_negative](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/keksklauer4/MatLearn/finalcountdown/uml/dip_negative.puml)
+
+
+## grasp_low_coupling_negative
+![grasp_low_coupling_negative](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/keksklauer4/MatLearn/finalcountdown/uml/grasp_low_coupling_negative.puml)
+
+
 ## aggregate
 ![grasp_low_coupling](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/keksklauer4/MatLearn/finalcountdown/uml/grasp_low_coupling.puml)

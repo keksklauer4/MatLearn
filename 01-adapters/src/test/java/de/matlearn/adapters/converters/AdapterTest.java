@@ -1,5 +1,6 @@
 package de.matlearn.adapters.converters;
 
+import de.matlearn.application.results.UseCaseResult;
 import de.matlearn.application.usecaseparameters.UseCaseParameter;
 import de.matlearn.application.usecases.MatLearnUseCase;
 import org.junit.jupiter.api.Assertions;
@@ -7,26 +8,21 @@ import org.mockito.Mockito;
 
 import java.util.Map;
 
-public abstract class AdapterTest<T extends MatLearnUseCase, P extends UseCaseParameter> {
-    protected T useCase;
-    private Class<T> useCaseType;
+public abstract class AdapterTest<P extends UseCaseParameter> {
+    protected MatLearnUseCase useCase;
     private Class<P> parameterType;
     private P expectedParameters;
 
-    public AdapterTest(Class<T> useCaseType, Class<P> parameterType) {
-        this.useCaseType = useCaseType;
+    public AdapterTest(Class<P> parameterType) {
         this.parameterType = parameterType;
-        useCase = Mockito.mock(useCaseType);
-        Mockito.when(useCase.execute(Mockito.any()))
-                .then( obj -> {
-                    Assertions.assertEquals(parameterType, obj.getClass());
-                    if (parameterType.isInstance(obj)) assertCorrectObject((P) obj);
-                    return null;
-                });
     }
 
+    public void setUseCase(MatLearnUseCase useCase) {
+        this.useCase = useCase;
+    }
 
-    protected void assertCorrectObject(final P parameters){
+    protected void assertCorrectObject(final UseCaseParameter parameters){
+        Assertions.assertEquals(parameterType, parameters.getClass());
         Assertions.assertEquals(expectedParameters, parameters);
     }
 
@@ -34,13 +30,4 @@ public abstract class AdapterTest<T extends MatLearnUseCase, P extends UseCasePa
         this.expectedParameters = parameters;
     }
 
-    protected void runDispatcher(final Map<String, Object> parameterMap){
-        UseCaseParameterDispatcher dispatcher = new UseCaseParameterDispatcher(useCase, parameterMap);
-        dispatcher.dispatch();
-    }
-
-    protected void expectExceptionInDispatcher(final Map<String, Object> parameterMap){
-        UseCaseParameterDispatcher dispatcher = new UseCaseParameterDispatcher(useCase, parameterMap);
-        Assertions.assertThrows(RuntimeException.class, dispatcher::dispatch);
-    }
 }
