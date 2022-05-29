@@ -90,5 +90,9 @@
 ![grasp_low_coupling_negative](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/keksklauer4/MatLearn/finalcountdown/uml/grasp_low_coupling_negative.puml)
 
 
-## aggregate
-![grasp_low_coupling](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/keksklauer4/MatLearn/finalcountdown/uml/grasp_low_coupling.puml)
+## mock_1
+![mock_1](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/keksklauer4/MatLearn/finalcountdown/uml/mock_1.puml)
+
+
+## mock_2
+![mock_2](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/keksklauer4/MatLearn/finalcountdown/uml/mock_2.puml)

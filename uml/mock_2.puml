@@ -1,0 +1,22 @@
+
+@startuml
+
+interface ValidationExceptionHandler {
+    boolean handle(ValidationFunctor functor);
+    void handle(ValidationException exception);
+}
+
+
+class ValidationExceptionHandlerMock implements ValidationExceptionHandler {
+    +boolean handle(ValidationFunctor functor)
+    +void handle(ValidationException exception)
+}
+interface ValidationFunctor {
+    void execute() throws ValidationException;
+}
+
+
+ValidationExceptionHandler o-- ValidationFunctor
+ValidationExceptionHandlerMock o-- ValidationFunctor
+
+@enduml

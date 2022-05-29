@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="177bdf72-7b70-4342-bb6f-57f946fbfa8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AdapterTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AddConnectionAdapterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AddConnectionAdapterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AddMathematicalObjectAdapterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-adapters/src/test/java/de/matlearn/adapters/converters/AddMathematicalObjectAdapterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/algorithm/CycleChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/algorithm/CycleChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/main/java/de/matlearn/abstraction/graph/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-abstraction/src/test/java/de/matlearn/abstraction/GraphTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-abstraction/src/test/java/de/matlearn/abstraction/GraphTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/uml/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-domain/src/test/java/de/matlearn/domain/NamedVertexFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-domain/src/test/java/de/matlearn/domain/NamedVertexFactoryTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
