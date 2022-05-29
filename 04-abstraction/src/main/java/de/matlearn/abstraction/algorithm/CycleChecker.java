@@ -30,7 +30,6 @@ public class CycleChecker<Vertex extends GenericVertex> extends GenericDFS<Verte
     @Override
     protected void unvisitedVertex(final Vertex vertex) {
         visitedNewVertex(vertex);
-        // visitedInIteration.put(vertex, currentIteration);
     }
 
     @Override

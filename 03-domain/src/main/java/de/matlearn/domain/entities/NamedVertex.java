@@ -4,7 +4,6 @@ import de.matlearn.abstraction.graph.GenericVertex;
 import de.matlearn.abstraction.graph.Graph;
 import de.matlearn.domain.exceptions.ValidationException;
 
-
 import java.io.Serializable;
 
 public abstract class NamedVertex extends GenericVertex implements Serializable {

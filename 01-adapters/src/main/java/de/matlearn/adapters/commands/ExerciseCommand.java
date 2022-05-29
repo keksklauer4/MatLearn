@@ -1,16 +1,9 @@
 package de.matlearn.adapters.commands;
 
-import de.matlearn.adapters.parameters.Parameter;
-import de.matlearn.adapters.validators.InvalidInputException;
 import de.matlearn.application.helpers.RandomExtractorImpl;
 import de.matlearn.application.usecases.ExerciseUseCase;
 import de.matlearn.application.usecases.MatLearnUseCase;
 import de.matlearn.domain.network.ProofNetworkRepository;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class ExerciseCommand extends ParameterlessCommand {
     @Override

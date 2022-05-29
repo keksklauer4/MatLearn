@@ -1,0 +1,36 @@
+
+@startuml
+interface GenericCommand {
+    List<Parameter> getParameters()
+    String getName()
+    String getHelpText()
+    void setInput(final Parameter p, String input) throws InvalidInputException
+    MatLearnUseCase getParametrizedUseCase(ProofNetworkRepository networkRepository)
+    Map<String, Object> getParameterMap()
+}
+
+abstract class AbstractCommand implements GenericCommand {
+    # final List<Parameter> parameters
+
+    # AbstractCommand(final List<Parameter> parameters)
+    + List<Parameter> getParameters()
+    +void setInput(final Parameter p, final String input) throws InvalidInputException
+    +Map<String, Object> getParameterMap()
+}
+
+interface Parameter {
+    int getId()
+    void validateInput(final String input) throws InvalidInputException
+    String getParameterName()
+
+    String getInput()
+
+    Object getParsedInput() throws InvalidInputException
+    String getKey()
+}
+
+GenericCommand o-- Parameter
+AbstractCommand o-- Parameter
+
+@enduml
+

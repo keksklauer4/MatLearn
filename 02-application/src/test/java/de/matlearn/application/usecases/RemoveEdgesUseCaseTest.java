@@ -2,9 +2,9 @@ package de.matlearn.application.usecases;
 
 import de.matlearn.application.results.UseCaseResult;
 import de.matlearn.application.results.ValidCommandResult;
-import de.matlearn.domain.network.ProofNetworkRepository;
 import de.matlearn.application.usecaseparameters.RemoveEdgesParameters;
 import de.matlearn.application.usecaseparameters.UseCaseParameter;
+import de.matlearn.domain.network.ProofNetworkRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

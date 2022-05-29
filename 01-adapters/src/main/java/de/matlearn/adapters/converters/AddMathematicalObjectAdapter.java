@@ -4,8 +4,6 @@ import de.matlearn.application.results.UseCaseResult;
 import de.matlearn.application.usecaseparameters.AddMatObjectParameters;
 import de.matlearn.application.usecases.MatLearnUseCase;
 
-import java.util.ArrayList;
-
 public class AddMathematicalObjectAdapter implements UseCaseParameterAdapter {
     @Override
     public UseCaseResult executeUseCase(MatLearnUseCase useCase, ParameterMapParser parser) {

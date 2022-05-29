@@ -3,7 +3,6 @@ package de.matlearn.plugins.output;
 import de.matlearn.domain.entities.NamedVertex;
 import de.matlearn.plugins.cli.CLIPrinter;
 
-import java.util.Collections;
 import java.util.List;
 
 public class PrintNamedVertices {

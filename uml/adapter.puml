@@ -1,0 +1,35 @@
+
+@startuml
+
+
+interface UseCaseParameterAdapter {
+    UseCaseResult executeUseCase(MatLearnUseCase useCase, ParameterMapParser parser)
+}
+
+class AddConnectionAdapter implements UseCaseParameterAdapter {
+    +UseCaseResult executeUseCase(MatLearnUseCase useCase, ParameterMapParser parser)
+}
+
+interface UseCaseResult
+
+interface MatLearnUseCase
+
+class UseCaseParameterDispatcher {
+    -MatLearnUseCase useCase;
+    -Map<String, Object> parameterMap;
+
+    -{static} Map<Class<?  extends MatLearnUseCase>, UseCaseParameterAdapter> outputMap
+
+    +UseCaseParameterDispatcher(MatLearnUseCase useCase, Map<String, Object> parameterMap)
+
+    +UseCaseResult dispatch()
+}
+UseCaseParameterDispatcher o-- MatLearnUseCase
+UseCaseParameterDispatcher o-- UseCaseParameterAdapter
+UseCaseParameterDispatcher o-- UseCaseResult
+MatLearnUseCase o-- UseCaseResult
+UseCaseParameterAdapter o-- UseCaseResult
+
+
+
+@enduml

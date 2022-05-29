@@ -1,9 +1,9 @@
 package de.matlearn.application.usecases;
 
+import de.matlearn.application.helpers.PairGenerator;
 import de.matlearn.application.results.UseCaseResult;
 import de.matlearn.application.results.ValidCommandResult;
 import de.matlearn.application.usecaseparameters.RemoveEdgesParameters;
-import de.matlearn.application.helpers.PairGenerator;
 import de.matlearn.domain.network.ProofNetworkRepository;
 
 public class RemoveEdgesUseCase extends AbstractUseCase<RemoveEdgesParameters> implements MatLearnUseCase {

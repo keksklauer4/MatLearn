@@ -2,7 +2,6 @@ package de.matlearn.abstraction.graph;
 
 import java.io.Serializable;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Graph<Vertex extends GenericVertex> implements Serializable {
     private Map<Integer, Vertex> idToVertex;
@@ -36,7 +35,7 @@ public class Graph<Vertex extends GenericVertex> implements Serializable {
     }
 
     public List<Vertex> getForwardEdges(final Vertex vertex){
-        return getEndVertices(edges.getBackwardEdges(vertex));
+        return getEndVertices(edges.getForwardEdges(vertex));
     }
 
     public List<Vertex> getVertices() {

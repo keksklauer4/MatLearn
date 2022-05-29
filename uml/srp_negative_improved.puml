@@ -1,18 +1,17 @@
 
 @startuml
 interface ProofNetworkRepository {
-
-    void addVertex(NamedVertex vertex)
-    void addEdge(NamedVertex fromVertex, NamedVertex toVertex)
-
-    void removeVertex(NamedVertex vertex)
-    void removeEdgeIfExists(int fromId, int toId)
-
-    List<NamedVertex> getVertices()
-    NamedVertex getVertexById(int vertexId)
-
-    Graph<NamedVertex> getGraph()
+     void addVertex(NamedVertex vertex)
+     boolean addEdge(NamedVertex fromVertex, NamedVertex toVertex)
+     void removeVertex(NamedVertex vertex)
+     boolean removeEdgeIfExists(int fromId, int toId)
+     List<NamedVertex> getVertices()
+     NamedVertex getVertexById(int vertexId)
+     Graph<NamedVertex> getGraph()
+     ValidationExceptionHandler getExceptionHandler()
+     boolean fullValidation();
 }
+
 
 class FullValidator {
     -ProofNetworkRepository network;
@@ -20,7 +19,8 @@ class FullValidator {
     +FullValidator(ProofNetworkRepository network)
 
     +boolean isFullyValid()
-
-
 }
+
+FullValidator o-- ProofNetworkRepository
+
 @enduml

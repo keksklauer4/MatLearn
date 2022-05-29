@@ -1,11 +1,11 @@
 package de.matlearn.application.usecases;
 
-import de.matlearn.domain.entities.NamedVertex;
-import de.matlearn.domain.network.ProofNetworkRepository;
 import de.matlearn.application.results.FailedUseCaseResult;
 import de.matlearn.application.results.NeighborResult;
 import de.matlearn.application.results.UseCaseResult;
 import de.matlearn.application.usecaseparameters.SingleObjectParameters;
+import de.matlearn.domain.entities.NamedVertex;
+import de.matlearn.domain.network.ProofNetworkRepository;
 
 import java.util.List;
 import java.util.Optional;

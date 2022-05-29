@@ -59,6 +59,14 @@ public class NamedVertexFactoryTest {
         testCreate(MatType.TOPIC);
     }
 
+    @Test
+    void test_CompleteFactoryTest() {
+        for (MatType type : MatType.values()) {
+            Assertions.assertTrue(vertexTypeMap.containsKey(type));
+            testCreate(type);
+        }
+    }
+
     private void assertCorrectType(NamedVertex vertex, MatType type) {
         Assertions.assertEquals(type, vertex.getType());
         Assertions.assertTrue(vertexTypeMap.containsKey(vertex.getType()));

@@ -2,7 +2,6 @@ package de.matlearn.application.usecases;
 
 import de.matlearn.application.results.UseCaseResult;
 import de.matlearn.application.usecaseparameters.UseCaseParameter;
-import de.matlearn.application.usecases.MatLearnUseCase;
 import org.junit.jupiter.api.Assertions;
 
 public abstract class UseCaseTest <R extends UseCaseResult>  {

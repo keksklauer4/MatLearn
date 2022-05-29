@@ -4,6 +4,8 @@ abstract class GenericVertex
 
 enum MatType
 
+abstract class GenericVertex
+
 abstract class NamedVertex extends GenericVertex implements Serializable {
     -String name;
     -String description;
@@ -12,12 +14,12 @@ abstract class NamedVertex extends GenericVertex implements Serializable {
 
     +String getName()
     +String getDescription()
-
-    +boolean isValid(final Graph<NamedVertex> graph)
-    +boolean isFullyValid(final Graph<NamedVertex> graph)
+    +void isValid(final Graph<NamedVertex> graph) throws ValidationException
+    +void isFullyValid(final Graph<NamedVertex> graph) throws ValidationException
     +boolean isDefinedType()
-
+    +String toString()
     +{abstract} boolean isOfType(MatType type)
+    +{abstract} MatType getType();
 }
 
 class NamedVertexFactory {
@@ -29,5 +31,6 @@ class NamedVertexFactory {
 
 NamedVertexFactory o-- NamedVertex
 NamedVertexFactory o-- MatType
+NamedVertex o-- MatType
 
 @enduml

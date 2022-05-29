@@ -3,8 +3,8 @@ package de.matlearn.domain.validators;
 import de.matlearn.abstraction.algorithm.CycleChecker;
 import de.matlearn.domain.entities.NamedVertex;
 import de.matlearn.domain.exceptions.CycleFoundException;
-import de.matlearn.domain.network.ProofNetworkRepository;
 import de.matlearn.domain.exceptions.ValidationExceptionHandler;
+import de.matlearn.domain.network.ProofNetworkRepository;
 
 public class StrictValidator {
     private final ProofNetworkRepository network;
